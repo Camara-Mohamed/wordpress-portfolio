@@ -1,0 +1,19 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.hidden {
+  position: absolute;
+  overflow: hidden;
+  white-space: nowrap;
+  clip: rect(0 0 0 0);
+  height: 0.0625em;
+  width: 0.0625em;
+  margin: -0.0625em;
+  padding: 0;
+  border: 0;
+}
