@@ -143,6 +143,7 @@ Lors de l'utilisation
   --c-beige-dark: #E0D3B4;
 }
 
+/*
 *,
 *::after,
 *::before {
@@ -162,5 +163,6 @@ Lors de l'utilisation
   padding: 0;
   border: 0;
 }
+*/
 
 /*# sourceMappingURL=styles.css.map */
