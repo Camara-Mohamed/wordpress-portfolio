@@ -3,6 +3,9 @@
 // Enregistrement des menus
 register_nav_menus([
     'header' => 'Navigation principale',
+    'footer' => 'Navigation de pied de page',
+    'footer-resources' => 'Navigation des ressources',
+    'footer-sociales' => 'Navigation de réseaux',
 ]);
 
 function dw_get_navigation_links(string $location): array
