@@ -67,21 +67,18 @@
                             <section class="single__gallery">
                                 <div class="single__gallery--container">
                                     <h3><?php get_sub_field('title') ?></h3>
+                                    <figure class="single__gallery--item" itemprop="image" itemscope
+                                            itemtype="https://schema.org/ImageObject">
                                     <?php
                                     $images = get_sub_field('images');
                                     if ($images) :
                                         foreach ($images as $image) : ?>
-                                            <figure class="single__gallery--item" itemprop="image" itemscope
-                                                    itemtype="https://schema.org/ImageObject">
                                                 <img src="<?= $image['url'] ?>"
                                                      alt="<?= $image['alt'] ?>"
                                                      itemprop="contentUrl">
-                                                <?php if ($image['caption']) : ?>
-                                                    <figcaption itemprop="caption"><?= $image['caption'] ?></figcaption>
-                                                <?php endif; ?>
-                                            </figure>
-                                        <?php endforeach;
-                                    endif; ?>
+                                        <?php endforeach; endif; ?>
+                                        <figcaption itemprop="caption"><?php get_sub_field('title') ?></figcaption>
+                                    </figure>
                                 </div>
                             </section>
                         <?php endif; ?>
