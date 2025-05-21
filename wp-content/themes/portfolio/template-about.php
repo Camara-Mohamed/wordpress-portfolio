@@ -20,7 +20,7 @@
     get_template_part('templates/partials/section-hero', null, $hero_args); ?>
 
     <section class="timeline" aria-labelledby="timeline-title">
-        <div class="timeline-container">
+        <div class="timeline__container">
             <h2 id="timeline__container--title">Mon parcours</h2>
             <?php if ($subtitle = get_field('timeline_subtitle')) : ?>
                 <p class="timeline__container--subtitle"><?= $subtitle ?></p>
