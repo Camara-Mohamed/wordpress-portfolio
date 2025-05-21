@@ -44,7 +44,7 @@
                         false,
                         [
                             'class'    => 'hero-img',
-                            'alt'      => esc_attr($alt),
+                            'alt'      => $alt,
                             'sizes'    => '(max-width: 400px) 100vw, (max-width: 800px) 100vw, 1200px',
                             'srcset'   => wp_get_attachment_image_srcset($image_id, 'hero-lg'),
                             'loading'  => 'lazy'

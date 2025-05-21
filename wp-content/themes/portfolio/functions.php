@@ -9,6 +9,8 @@ if (session_status() === PHP_SESSION_NONE) {
 require_once __DIR__.'/inc/cleanup.php';
 require_once __DIR__.'/inc/assets.php';
 require_once __DIR__.'/inc/menus.php';
+require_once __DIR__.'/inc/contact.php';
+require_once __DIR__.'/inc/post-types.php';
 
 // Support des fonctionnalités WordPress
 add_theme_support('title-tag');
@@ -23,3 +25,7 @@ add_action('after_setup_theme', function () {
 add_image_size('hero-lg', 1200, 675, true);
 add_image_size('hero-md', 800, 450, true);
 add_image_size('hero-sm', 400, 225, true);
+
+// Gestion du formulaire
+add_action('admin_post_submit_contact_form', 'dw_handle_contact_form');
+add_action('admin_post_nopriv_submit_contact_form', 'dw_handle_contact_form');
