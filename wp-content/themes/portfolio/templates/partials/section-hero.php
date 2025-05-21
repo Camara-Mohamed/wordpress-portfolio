@@ -33,16 +33,26 @@
         <?php endif; ?>
 
         <?php if (!empty($images)) : ?>
-            <div class="hero__media">
-                <?php foreach ($images as $image_id) :
-                    $image = wp_get_attachment_image_src($image_id, 'medium');
-                    if ($image) : ?>
-                        <img src="<?php echo $image[0]; ?>"
-                             alt="<?php echo get_post_meta($image_id, '_wp_attachment_image_alt', true); ?>"
-                             class="hero__image">
-                    <?php endif;
-                endforeach; ?>
-            </div>
+            <figure class="hero__figure">
+            <?php foreach ($images as $image_id) :
+                $alt = get_post_meta($image_id, '_wp_attachment_image_alt', true) ?: '';
+                ?>
+                    <?php
+                    echo wp_get_attachment_image(
+                        $image_id,
+                        'hero-lg',
+                        false,
+                        [
+                            'class'    => 'hero-img',
+                            'alt'      => esc_attr($alt),
+                            'sizes'    => '(max-width: 400px) 100vw, (max-width: 800px) 100vw, 1200px',
+                            'srcset'   => wp_get_attachment_image_srcset($image_id, 'hero-lg'),
+                            'loading'  => 'lazy'
+                        ]
+                    );
+                    ?>
+            <?php endforeach; ?>
+            </figure>
         <?php endif; ?>
     </div>
 </section>

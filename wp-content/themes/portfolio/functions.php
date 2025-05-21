@@ -18,3 +18,8 @@ add_theme_support('html5', ['comment-list', 'comment-form', 'search-form', 'gall
 add_action('after_setup_theme', function () {
     show_admin_bar(false);
 });
+
+// Tailles d'images
+add_image_size('hero-lg', 1200, 675, true);
+add_image_size('hero-md', 800, 450, true);
+add_image_size('hero-sm', 400, 225, true);
