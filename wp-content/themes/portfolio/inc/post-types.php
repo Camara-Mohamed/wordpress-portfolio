@@ -14,7 +14,7 @@ register_post_type('contact_message', [
     'supports' => ['title', 'editor'],
 ]);
 
-// Les projets
+// CPT de Projets
 register_post_type('project', [
     'labels' => [
         'name'               => 'Projets',
