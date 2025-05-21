@@ -1,7 +1,7 @@
 <?php
 
-// Initialiser la session
-if (!session_id()) {
+// Vérifier si la session est active ("started")
+if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 
