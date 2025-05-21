@@ -14,7 +14,7 @@ register_post_type('contact_message', [
     'supports' => ['title', 'editor'],
 ]);
 
-// CPT de Projets
+// Les projets
 register_post_type('project', [
     'labels' => [
         'name'               => 'Projets',
@@ -29,4 +29,15 @@ register_post_type('project', [
     'supports'      => ['title', 'editor', 'thumbnail', 'excerpt'],
     'rewrite'       => ['slug' => 'mes-projets'],
     'show_in_rest'  => true
+]);
+
+// Taxonomie par Types
+register_taxonomy('type-project', 'project', [
+    'labels' => [
+        'name'          => 'Types de projet',
+        'singular_name' => 'Type'
+    ],
+    'hierarchical' => true,
+    'show_admin_column' => true,
+    'rewrite' => ['slug' => 'mes-projets']
 ]);
