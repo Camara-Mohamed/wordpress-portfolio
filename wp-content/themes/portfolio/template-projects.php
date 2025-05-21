@@ -37,6 +37,15 @@
             <div class="projects__more">
                 <p>D'autres projets arrivent bientôt...</p>
             </div>
+
+            <div class="pagination">
+                <?php
+                echo paginate_links([
+                    'prev_text' => __('« Précédent'),
+                    'next_text' => __('Suivant »'),
+                ]);
+                ?>
+            </div>
         </section>
 
     </main>

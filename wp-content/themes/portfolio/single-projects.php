@@ -87,6 +87,8 @@
                 <?php endif; ?>
             </article>
 
+            <?php get_template_part('templates/partials/projects-related'); ?>
+
         <?php endwhile; endif; ?>
 
     </main>
