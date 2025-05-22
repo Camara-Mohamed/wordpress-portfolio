@@ -11,11 +11,10 @@
                 <?php
                 $featured = new WP_Query([
                     'post_type' => 'project',
+                    'post_status' => 'publish',
                     'posts_per_page' => 5,
-                    'meta_query' => [[
-                        'key' => 'featured',
-                        'value' => true
-                    ]]
+                    'orderby' => 'date',
+                    'order' => 'DESC',
                 ]);
 
                 if ($featured->have_posts()) : ?>

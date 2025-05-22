@@ -1,10 +1,10 @@
 <?php
 
-$terms = wp_get_post_terms(get_the_ID(), 'type-project', ['fields' => 'ids']);
+$terms = wp_get_post_terms($post->ID, 'type-project', ['fields' => 'ids']);
 if ($terms) :
     $related = new WP_Query([
         'post_type' => 'project',
-        'post__not_in' => [get_the_ID()],
+        'post__not_in' => [$post->ID],
         'posts_per_page' => 3,
         'tax_query' => [[
             'taxonomy' => 'type-project',
