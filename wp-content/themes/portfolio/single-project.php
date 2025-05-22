@@ -6,11 +6,11 @@
 
             <section class="single__hero">
                 <div class="single__hero--container">
-                    <a href="<?= home_url('/projet') ?>" class="single__back">Retour aux projets</a>
+                    <a href="<?= home_url('/mes-projets') ?>" class="single__back">Retour aux projets</a>
                     <h2 class="single__title" itemprop="name"><?= get_the_title() ?></h2>
 
                     <?php
-                    $terms = get_the_terms(get_the_ID(), 'type-project');
+                    $terms = get_the_terms($post->ID, 'type-project');
                     if ($terms && !is_wp_error($terms)) : ?>
                         <div class="single__types">
                             <?php foreach ($terms as $term) : ?>
