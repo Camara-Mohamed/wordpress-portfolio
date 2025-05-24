@@ -2,6 +2,8 @@
 /**
  * Template Name: Mes Projets
  */
+
+$current_page = max(1, get_query_var('paged') ?: get_query_var('page'));
 ?>
 
 <?php get_header(); ?>
@@ -11,7 +13,10 @@
         <?php get_template_part('templates/partials/section-hero'); ?>
 
         <section class="projects">
+            <h2 id="projects__title" class="projects--title hidden">Mes projets</h2>
             <div class="projects__filters">
+                <h3 class="projects__filters--title hidden">Les filtres</h3>
+
                 <?php
                 $terms = get_terms([
                     'taxonomy' => 'type-project',
@@ -35,9 +40,10 @@
             </div>
 
             <div class="projets__grid">
+                <h3 class="projects__grid--title hidden">Les projets</h3>
                 <?php
 
-                $paged = max(1, get_query_var('paged') ?: get_query_var('page'));
+                $paged = max(1, get_query_var('paged'));
                 $args = [
                     'post_type' => 'project',
                     'posts_per_page' => 6,
@@ -69,9 +75,9 @@
                     <?php echo '<div class="pagination">';
                     echo paginate_links([
                         'total' => $projects->max_num_pages,
-                        'current' => $paged,
-                        'prev_text' => __('« Précédent'),
-                        'next_text' => __('Suivant »'),
+                        'current' => $current_page,
+                        'prev_text' => '<span class="pagination__arrow--left">«</span> Précédent',
+                        'next_text' => 'Suivant <span class="pagination__arrow--right">»</span>',
                     ]);
                     echo '</div>';
                 else : ?>
