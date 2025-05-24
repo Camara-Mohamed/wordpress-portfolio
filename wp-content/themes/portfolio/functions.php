@@ -11,6 +11,7 @@ require_once __DIR__.'/inc/assets.php';
 require_once __DIR__.'/inc/menus.php';
 require_once __DIR__.'/inc/contact.php';
 require_once __DIR__.'/inc/post-types.php';
+require_once __DIR__.'/inc/language.php';
 
 // Support des fonctionnalités WordPress
 add_theme_support('title-tag');
