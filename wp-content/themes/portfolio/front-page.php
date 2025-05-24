@@ -5,7 +5,7 @@
 
         <section class="featured" aria-labelledby="featured__title">
             <div class="featured__container">
-                <h2 id="featured__title" class="featured__container--title">Projets à la
+                <h2 id="featured__title" class="featured__container--title hidden">Projets à la
                     une</h2>
 
                 <?php
