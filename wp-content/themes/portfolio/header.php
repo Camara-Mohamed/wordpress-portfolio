@@ -12,10 +12,24 @@
     <meta name="description" content="<?php bloginfo('description'); ?>">
 
     <!-- Title -->
-    <title><?= get_bloginfo('name') ?> | <?= wp_title('') ?></title>
+    <title>
+        <?php
+        if (is_front_page()) {
+            echo 'Accueil - '.get_bloginfo('name');
+        } else {
+            echo wp_title('', false).' - '.get_bloginfo('name');
+        }
+        ?>
+    </title>
 
     <!-- Open Graph -->
-    <meta property="og:title" content="<?= get_bloginfo('name') ?> | <?php wp_title(''); ?>">
+    <meta property="og:title" content="<?php
+    if (is_front_page()) {
+        echo 'Accueil - '.get_bloginfo('name');
+    } else {
+        echo wp_title('', false).' - '.get_bloginfo('name');
+    }
+    ?>">
     <meta property="og:type" content="website">
     <meta property="og:url" content="<?= home_url(); ?>">
     <meta property="og:description" content="<?php bloginfo('description'); ?>">
