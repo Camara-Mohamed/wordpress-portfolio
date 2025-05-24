@@ -1,81 +1,71 @@
 <footer class="footer" role="contentinfo">
     <div class="footer__container">
-        <h2 class="hidden">Navigation de pied de page</h2>
+        <h2 class="hidden"><?php _e('Navigation de pied de page', 'portfolio-detective'); ?></h2>
         <section class="footer__section">
-            <h3 class="hidden">Mes informations</h3>
+            <h3 class="hidden"><?php _e('Mes informations', 'portfolio-detective'); ?></h3>
             <p class="footer__name">Mohamed Camara</p>
             <div class="footer__contact">
-                <h4 class="footer__contact--title">Contactez-moi</h4>
-                <p class="footer__contact--content">Mon profil vous intéresse ?</p>
-                <a href="<?= home_url('/me-contacter'); ?>" class="footer__contact--button">
-                    Me Contacter
+                <h4 class="footer__contact--title"><?php _e('Contactez-moi', 'portfolio-detective'); ?></h4>
+                <p class="footer__contact--content"><?php _e('Mon profil vous intéresse ?',
+                        'portfolio-detective'); ?></p>
+                <a href="<?= dw_translated_url('/me-contacter'); ?>" class="footer__contact--button">
+                    <?php _e('Me Contacter', 'portfolio-detective'); ?>
                 </a>
             </div>
         </section>
 
         <nav class="footer__nav">
-            <h3 class="footer__nav--title">Navigation</h3>
+            <h3 class="footer__nav--title"><?php _e('Navigation', 'portfolio-detective'); ?></h3>
             <?php
-            $nav_items = wp_get_nav_menu_items('footer');
-            if ($nav_items) : ?>
-                <ul class="footer__nav--list">
-                    <?php foreach ($nav_items as $item) : ?>
-                        <li class="footer__nav--item">
-                            <a href="<?php echo $item->url; ?>" class="footer__nav--link">
-                                <?php echo $item->title; ?>
-                            </a>
-                        </li>
-                    <?php endforeach; ?>
-                </ul>
-            <?php endif; ?>
+            wp_nav_menu([
+                'theme_location' => 'footer',
+                'container' => false,
+                'items_wrap' => '<ul class="footer__nav--list">%3$s</ul>',
+                'fallback_cb' => false
+            ]);
+            ?>
         </nav>
 
         <aside class="footer__aside">
-            <h3 class="footer__resources--title">Ressources utilisées</h3>
+            <h3 class="footer__resources--title"><?php _e('Ressources utilisées', 'portfolio-detective'); ?></h3>
             <?php
-            $menu_items = wp_get_nav_menu_items(
-                get_nav_menu_locations()['footer-resources'] ?? 0
-            );
-
-            if ($menu_items) : ?>
-                <ul class="footer__resources--list">
-                    <?php foreach ($menu_items as $item) : ?>
-                        <li class="footer__resources--item">
-                            <a href="<?= $item->url ?>" class="footer__resources--link">
-                                <?= $item->title ?>
-                            </a>
-                        </li>
-                    <?php endforeach; ?>
-                </ul>
-            <?php endif; ?>
+            wp_nav_menu([
+                'theme_location' => 'footer-resources',
+                'container' => false,
+                'items_wrap' => '<ul class="footer__resources--list">%3$s</ul>',
+                'fallback_cb' => false
+            ]);
+            ?>
         </aside>
 
         <aside class="footer__section">
-            <h3 class="footer__sociales--title">Réseaux</h3>
+            <h3 class="footer__sociales--title"><?php _e('Réseaux', 'portfolio-detective'); ?></h3>
             <?php
-            $menu_items = wp_get_nav_menu_items(
-                get_nav_menu_locations()['footer-sociales'] ?? 0
-            );
-
-            if ($menu_items) : ?>
-                <ul class="footer__sociales--list">
-                    <?php foreach ($menu_items as $item) : ?>
-                        <li class="footer__sociales--item">
-                            <a href="<?= $item->url ?>" class="footer__sociales--link">
-                                <?= $item->title ?>
-                            </a>
-                        </li>
-                    <?php endforeach; ?>
-                </ul>
-            <?php endif; ?>
+            wp_nav_menu([
+                'theme_location' => 'footer-sociales',
+                'container' => false,
+                'items_wrap' => '<ul class="footer__sociales--list">%3$s</ul>',
+                'fallback_cb' => false
+            ]);
+            ?>
         </aside>
     </div>
 
     <article class="footer__legal" itemscope itemtype="https://schema.org/CreativeWork">
-        <h2 class="hidden">Mentions légales</h2>
-        <p class="footer__legal--copyright" itemprop="copyrightYear">Copyright © <?= date('Y'); ?> <span
-                itemprop="copyrightHolder">Mohamed Camara</span>. Tous droits réservés.</p>
-        <a href="<?= home_url('/mentions-legales'); ?>" class="footer__legal--link" itemprop="usageInfo">Mentions
-            légales</a>
+        <h2 class="hidden"><?php _e('Mentions légales', 'portfolio-detective'); ?></h2>
+        <p class="footer__legal--copyright" itemprop="copyrightYear">
+            <?php
+            printf(
+                esc_html__('Copyright © %1$s %2$s. Tous droits réservés.', 'portfolio-detective'),
+                date('Y'),
+                '<span itemprop="copyrightHolder">Mohamed Camara</span>'
+            );
+            ?>
+        </p>
+        <a href="<?= dw_translated_url('/mentions-legales'); ?>" class="footer__legal--link" itemprop="usageInfo">
+            <?php _e('Mentions légales', 'portfolio-detective'); ?>
+        </a>
     </article>
 </footer>
+</body>
+</html>

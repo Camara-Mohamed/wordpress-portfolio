@@ -8,14 +8,15 @@
     <!-- Meta de base -->
     <meta name="author" content="Mohamed Camara">
     <meta name="keywords"
-          content="Mohamed Camara, portfolio, développeur web, designer Graphique, développeur, front-end, back-end, full-stack, HEPL, technique graphique, étudiant, wordpress, html, css, javascript">
+          content="<?= __('Mohamed Camara, portfolio, développeur web, designer Graphique, développeur, front-end, 
+          back-end, full-stack, HEPL, technique graphique, étudiant, wordpress, html, css, javascript') ?>">
     <meta name="description" content="<?php bloginfo('description'); ?>">
 
     <!-- Title -->
     <title>
         <?php
         if (is_front_page()) {
-            echo 'Accueil - '.get_bloginfo('name');
+            echo _e('Accueil', 'portfolio-detective').' -  '.get_bloginfo('name');
         } else {
             echo wp_title('', false).' - '.get_bloginfo('name');
         }
@@ -25,7 +26,7 @@
     <!-- Open Graph -->
     <meta property="og:title" content="<?php
     if (is_front_page()) {
-        echo 'Accueil - '.get_bloginfo('name');
+        echo _e('Accueil', 'portfolio-detective').'- '.get_bloginfo('name');
     } else {
         echo wp_title('', false).' - '.get_bloginfo('name');
     }
@@ -43,12 +44,13 @@
 <body itemscope itemtype="https://schema.org/Person">
 <h1 class="hidden"><?= get_the_title(); ?></h1>
 
-<a class="skip__link hidden" href="#main-content">Aller au contenu principal</a>
+<a class="skip__link hidden" href="#main-content"><?php __('Aller au contenu principal', 'portfolio-detective')
+    ?></a>
 
 <header id="header" class="header" role="banner">
     <div class="header__container">
-        <nav class="header__nav" aria-label="Navigation principale">
-            <h2 class="hidden">Navigation principale</h2>
+        <nav class="header__nav" aria-label="<?php __('Navigation principale', 'portfolio-detective'); ?>">
+            <h2 class="hidden"><?php __('Navigation principale', 'portfolio-detective'); ?></h2>
             <a href="<?= home_url('/'); ?>" itemprop="url"><?= get_bloginfo('name') ?></a>
 
             <ul class="header__nav--container">
@@ -59,6 +61,17 @@
                         </a>
                     </li>
                 <?php endforeach; ?>
+
+                <li class="nav__item--language">
+                    <?php foreach (dw_get_languages() as $lang): ?>
+                        <a href="<?= $lang->url; ?>"
+                           class="nav__link--language"
+                           hreflang="<?= $lang->locale; ?>"
+                           title="<?= sprintf(__('Passer en %s', 'portfolio-detective'), $lang->label); ?>">
+                            <?= strtoupper($lang->code); ?>
+                        </a>
+                    <?php endforeach; ?>
+                </li>
             </ul>
         </nav>
     </div>

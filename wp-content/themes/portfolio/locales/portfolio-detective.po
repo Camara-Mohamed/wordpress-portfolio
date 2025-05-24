@@ -1,0 +1,85 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Portfolio Detective\n"
+"POT-Creation-Date: 2025-05-24 13:28+0200\n"
+"PO-Revision-Date: 2025-05-24 13:35+0200\n"
+"Last-Translator: \n"
+"Language-Team: Mohamed Camara camara.mohmd@gmail.com\n"
+"Language: fr_BE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.6\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;esc_html__;esc_attr__;pll__;pll_e\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: footer.php:3
+msgid "Navigation de pied de page"
+msgstr "Navigation de pied de page"
+
+#: footer.php:5
+msgid "Mes informations"
+msgstr "Mes informations"
+
+#: footer.php:8
+msgid "Contactez-moi"
+msgstr "Contactez-moi"
+
+#: footer.php:9
+msgid "Mon profil vous intéresse ?"
+msgstr "Mon profil vous intéresse ?"
+
+#: footer.php:12
+msgid "Me Contacter"
+msgstr "Me Contacter"
+
+#: footer.php:18
+msgid "Navigation"
+msgstr "Navigation"
+
+#: footer.php:30
+msgid "Ressources utilisées"
+msgstr "Ressources utilisées"
+
+#: footer.php:42
+msgid "Réseaux"
+msgstr "Réseaux"
+
+#: footer.php:55 footer.php:66
+msgid "Mentions légales"
+msgstr "Mentions légales"
+
+#: footer.php:59
+#, php-format
+msgid "Copyright © %1$s %2$s. Tous droits réservés."
+msgstr "Copyright © %1$s %2$s. Tous droits réservés."
+
+#: header.php:11
+msgid ""
+"Mohamed Camara, portfolio, développeur web, designer Graphique, développeur, "
+"front-end, \n"
+"          back-end, full-stack, HEPL, technique graphique, étudiant, "
+"wordpress, html, css, javascript"
+msgstr ""
+"Mohamed Camara, portfolio, développeur web, designer Graphique, développeur, "
+"front-end, \n"
+"          back-end, full-stack, HEPL, technique graphique, étudiant, "
+"wordpress, html, css, javascript"
+
+#: header.php:19 header.php:29
+msgid "Accueil"
+msgstr "Accueil"
+
+#: header.php:47
+msgid "Aller au contenu principal"
+msgstr "Aller au contenu principal"
+
+#: header.php:52 header.php:53
+msgid "Navigation principale"
+msgstr "Navigation principale"
+
+#: header.php:70
+#, php-format
+msgid "Passer en %s"
+msgstr "Passer en %s"
