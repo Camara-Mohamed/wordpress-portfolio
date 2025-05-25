@@ -1,12 +1,13 @@
 <?php get_header(); ?>
 
     <main id="main-content" class="main-content" role="main">
-
         <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
             <section class="single__hero">
                 <div class="single__hero--container">
-                    <a href="<?= home_url('/mes-projets') ?>" class="single__back">Retour aux projets</a>
+                    <a href="<?= dw_translated_url('/mes-projets') ?>" class="single__back">
+                        <?php _e('Retour aux projets', 'portfolio-detective'); ?>
+                    </a>
                     <h2 class="single__title" itemprop="name"><?= get_the_title() ?></h2>
 
                     <?php
@@ -21,19 +22,19 @@
 
                     <div class="single__links">
                         <?php if ($github = get_field('github')) : ?>
-                            <a href="<?= $github ?>" class="single__link single__link--github"
-                               itemprop="codeRepository">
-                                Voir le GitHub
+                            <a href="<?= $github ?>" class="single__link single__link--github" itemprop="codeRepository">
+                                <?php _e('En savoir plus', 'portfolio-detective'); ?>
                             </a>
                         <?php endif; ?>
 
                         <?php if ($live = get_field('live')) : ?>
-                            <a href="<?= $live ?>" class="single__link single__link--live"
-                               itemprop="url">
-                                Voir le projet
+                            <a href="<?= $live ?>" class="single__link single__link--live" itemprop="url">
+                                <?php _e('Voir le projet', 'portfolio-detective'); ?>
                             </a>
                         <?php else : ?>
-                            <span class="single__link single__link--disabled">Projet non disponible</span>
+                            <span class="single__link single__link--disabled">
+                            <?php _e('Projet non disponible', 'portfolio-detective'); ?>
+                        </span>
                         <?php endif; ?>
                     </div>
                 </div>
@@ -66,18 +67,17 @@
                         <?php elseif (get_row_layout() == 'galery') : ?>
                             <section class="single__gallery">
                                 <div class="single__gallery--container">
-                                    <h3><?php get_sub_field('title') ?></h3>
-                                    <figure class="single__gallery--item" itemprop="image" itemscope
-                                            itemtype="https://schema.org/ImageObject">
-                                    <?php
-                                    $images = get_sub_field('images');
-                                    if ($images) :
-                                        foreach ($images as $image) : ?>
+                                    <h3><?php the_sub_field('title') ?></h3>
+                                    <figure class="single__gallery--item" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+                                        <?php
+                                        $images = get_sub_field('images');
+                                        if ($images) :
+                                            foreach ($images as $image) : ?>
                                                 <img src="<?= $image['url'] ?>"
                                                      alt="<?= $image['alt'] ?>"
                                                      itemprop="contentUrl">
-                                        <?php endforeach; endif; ?>
-                                        <figcaption itemprop="caption"><?php get_sub_field('title') ?></figcaption>
+                                            <?php endforeach; endif; ?>
+                                        <figcaption itemprop="caption"><?php the_sub_field('title') ?></figcaption>
                                     </figure>
                                 </div>
                             </section>
@@ -90,7 +90,6 @@
             <?php get_template_part('templates/partials/projects-related'); ?>
 
         <?php endwhile; endif; ?>
-
     </main>
 
 <?php get_footer(); ?>

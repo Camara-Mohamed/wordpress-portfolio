@@ -5,8 +5,9 @@
 
         <section class="featured" aria-labelledby="featured__title">
             <div class="featured__container">
-                <h2 id="featured__title" class="featured__container--title hidden">Projets à la
-                    une</h2>
+                <h2 id="featured__title" class="featured__container--title hidden">
+                    <?php _e('Projets à la une', 'portfolio-detective'); ?>
+                </h2>
 
                 <?php
                 $featured = new WP_Query([
@@ -25,13 +26,14 @@
                     </div>
 
                     <div class="featured__more">
-                        <a href="<?= home_url('/mes-projets'); ?>"
-                           class="featured__more--link">
-                            Voir tous mes projets
+                        <a href="<?= dw_translated_url('/mes-projets'); ?>" class="featured__more--link">
+                            <?php _e('Voir tous mes projets', 'portfolio-detective'); ?>
                         </a>
                     </div>
                 <?php else : ?>
-                    <p class="featured__empty">Aucun projet pour le moment.</p>
+                    <p class="featured__empty">
+                        <?php _e('Aucun projet pour le moment.', 'portfolio-detective'); ?>
+                    </p>
                 <?php endif; ?>
             </div>
         </section>

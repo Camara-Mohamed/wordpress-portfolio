@@ -31,10 +31,12 @@ register_post_type('project', [
 // Taxonomie par Types
 register_taxonomy('type-project', 'project', [
     'labels' => [
-        'name'          => 'Types de projet',
-        'singular_name' => 'Type'
+        'name'          => __('Types de projet', 'portfolio-detective'),
+        'singular_name' => __('Type', 'portfolio-detective')
     ],
     'hierarchical' => true,
     'show_admin_column' => true,
-    'rewrite' => ['slug' => 'types-projet']
+    'rewrite' => ['slug' => 'mes-projets'],
+    'public' => true,
+    'polylang_translatable' => true
 ]);
