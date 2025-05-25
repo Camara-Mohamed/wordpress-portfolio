@@ -9,7 +9,7 @@
             ?>
         <?php else : ?>
             <section class="no-content">
-                <p>Aucun contenu trouvé.</p>
+                <p><?php _e('Aucun contenu trouvé.', 'portfolio-detective'); ?></p>
             </section>
         <?php endif; ?>
     </main>

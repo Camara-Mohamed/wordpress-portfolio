@@ -11,32 +11,33 @@
 
         <section class="contact__section" aria-labelledby="contact-title">
             <div class="contact__container">
-                <h2 id="contact-title" class="contact__title hidden">Me contacter</h2>
+                <h2 id="contact-title" class="contact__title hidden"><?php _e('Me contacter',
+                        'portfolio-detective'); ?></h2>
 
                 <div class="contact__grid">
                     <aside class="contact__info">
-                        <h3 class="contact__info--title">Mes coordonnées</h3>
+                        <h3 class="contact__info--title"><?php _e('Mes coordonnées', 'portfolio-detective'); ?></h3>
 
                         <ul class="contact__details">
                             <li class="contact__details--item">
-                                <strong>Adresse :</strong>
-                                <p>4031 Angleur, Belgique</p>
+                                <strong><?php _e('Adresse :', 'portfolio-detective'); ?></strong>
+                                <p><?php _e('4031 Angleur, Belgique') ?></p>
                             </li>
                             <li class="contact__details--item">
-                                <strong>Email :</strong>
+                                <strong><?php _e('Email :', 'portfolio-detective'); ?></strong>
                                 <a href="mailto:camara.mohmd@gmail.com">camara.mohmd@gmail.com</a>
                             </li>
                             <li class="contact__details--item">
-                                <strong>Téléphone :</strong>
+                                <strong><?php _e('Téléphone :', 'portfolio-detective'); ?></strong>
                                 <a href="tel:+32465298377">+32 (0) 465 29 83 77</a>
                             </li>
                             <li class="contact__details--item">
-                                <strong>CV :</strong>
+                                <strong><?php _e('CV :', 'portfolio-detective'); ?></strong>
                                 <?php
                                 $cv_file = get_field('cv_file');
                                 if ($cv_file) : ?>
                                     <a href="<?= $cv_file['url'] ?>" download class="contact-details__link">
-                                        Télécharger mon CV
+                                        <?php _e('Télécharger mon CV', 'portfolio-detective'); ?>
                                     </a>
                                 <?php endif; ?>
                             </li>
@@ -44,8 +45,9 @@
                     </aside>
 
                     <div class="contact__form">
-                        <h3 class="contact__form--title">Formulaire de contact</h3>
-                        <p class="contact__form--note">(Champs obligatoires)</p>
+                        <h3 class="contact__form--title"><?php _e('Formulaire de contact',
+                                'portfolio-detective'); ?></h3>
+                        <p class="contact__form--note"><?php _e('(Champs obligatoires)', 'portfolio-detective'); ?></p>
 
                         <?php if (isset($_SESSION['contact_form_success'])) : ?>
                             <div class="contact__form--feedback contact__form-success">
@@ -58,8 +60,10 @@
                             <input type="hidden" name="action" value="submit_contact_form">
 
                             <div class="contact__form--field">
-                                <label for="fullname" class="contact__form--label">Nom Complet <abbr
-                                            title="Champs Obligatoire">*</abbr></label>
+                                <label for="fullname" class="contact__form--label">
+                                    <?php _e('Nom Complet', 'portfolio-detective'); ?>
+                                    <abbr title="<?php _e('Champs Obligatoire', 'portfolio-detective'); ?>">*</abbr>
+                                </label>
                                 <input type="text" id="fullname" name="fullname" required class="contact__form--input"
                                        value="<?= $_SESSION['contact_form_old']['fullname'] ?? ''; ?>">
                                 <?php if (isset($_SESSION['contact_form_errors']['fullname'])) : ?>
@@ -68,8 +72,10 @@
                             </div>
 
                             <div class="contact__form--field">
-                                <label for="email" class="contact__form--label">Adresse Mail <abbr
-                                            title="Champs Obligatoire">*</abbr></label>
+                                <label for="email" class="contact__form--label">
+                                    <?php _e('Adresse Mail', 'portfolio-detective'); ?>
+                                    <abbr title="<?php _e('Champs Obligatoire', 'portfolio-detective'); ?>">*</abbr>
+                                </label>
                                 <input type="email" id="email" name="email" required class="contact__form--input"
                                        value="<?= $_SESSION['contact_form_old']['email'] ?? ''; ?>">
                                 <?php if (isset($_SESSION['contact_form_errors']['email'])) : ?>
@@ -78,31 +84,45 @@
                             </div>
 
                             <div class="contact__form--field">
-                                <label for="subject" class="contact__form--label">Sujet <abbr
-                                            title="Champs Obligatoire">*</abbr></label>
+                                <label for="subject" class="contact__form--label">
+                                    <?php _e('Sujet', 'portfolio-detective'); ?>
+                                    <abbr title="<?php _e('Champs Obligatoire', 'portfolio-detective'); ?>">*</abbr>
+                                </label>
                                 <select id="subject" name="subject" required class="contact__form--select">
-                                    <option value="">Sélectionnez un sujet...</option>
-                                    <option value="Collaboration" <?= isset($_SESSION['contact_form_old']['subject']) && $_SESSION['contact_form_old']['subject'] === 'Collaboration' ? 'selected' : ''; ?>>Collaboration</option>
-                                    <option value="Question" <?= isset($_SESSION['contact_form_old']['subject']) && $_SESSION['contact_form_old']['subject'] === 'Question' ? 'selected' : ''; ?>>Question</option>
-                                    <option value="Recrutement" <?= isset($_SESSION['contact_form_old']['subject']) && $_SESSION['contact_form_old']['subject'] === 'Recrutement' ? 'selected' : ''; ?>>Recrutement</option>
-                                    <option value="Autre" <?= isset($_SESSION['contact_form_old']['subject']) && $_SESSION['contact_form_old']['subject'] === 'Autre' ? 'selected' : ''; ?>>Autre</option>
+                                    <option value=""><?php _e('Sélectionnez un sujet...',
+                                            'portfolio-detective'); ?></option>
+                                    <option value="Collaboration" <?= isset($_SESSION['contact_form_old']['subject']) && $_SESSION['contact_form_old']['subject'] === 'Collaboration' ? 'selected' : ''; ?>>
+                                        <?php _e('Collaboration', 'portfolio-detective'); ?>
+                                    </option>
+                                    <option value="Question" <?= isset($_SESSION['contact_form_old']['subject']) && $_SESSION['contact_form_old']['subject'] === 'Question' ? 'selected' : ''; ?>>
+                                        <?php _e('Question', 'portfolio-detective'); ?>
+                                    </option>
+                                    <option value="Recrutement" <?= isset($_SESSION['contact_form_old']['subject']) && $_SESSION['contact_form_old']['subject'] === 'Recrutement' ? 'selected' : ''; ?>>
+                                        <?php _e('Recrutement', 'portfolio-detective'); ?>
+                                    </option>
+                                    <option value="Autre" <?= isset($_SESSION['contact_form_old']['subject']) && $_SESSION['contact_form_old']['subject'] === 'Autre' ? 'selected' : ''; ?>>
+                                        <?php _e('Autre', 'portfolio-detective'); ?>
+                                    </option>
                                 </select>
                                 <?php if (isset($_SESSION['contact_form_errors']['subject'])) : ?>
                                     <span class="contact__form--error"><?= $_SESSION['contact_form_errors']['subject']; ?></span>
                                 <?php endif; ?>
                             </div>
 
-                            <!-- Message -->
                             <div class="contact__form--field">
-                                <label for="message" class="contact__form--label">Message <abbr
-                                            title="Champs Obligatoire">*</abbr></label>
+                                <label for="message" class="contact__form--label">
+                                    <?php _e('Message', 'portfolio-detective'); ?>
+                                    <abbr title="<?php _e('Champs Obligatoire', 'portfolio-detective'); ?>">*</abbr>
+                                </label>
                                 <textarea id="message" name="message" rows="5" required class="contact__form--textarea"><?= $_SESSION['contact_form_old']['message'] ?? ''; ?></textarea>
                                 <?php if (isset($_SESSION['contact_form_errors']['message'])) : ?>
                                     <span class="contact__form--error"><?= $_SESSION['contact_form_errors']['message']; ?></span>
                                 <?php endif; ?>
                             </div>
 
-                            <button type="submit" class="contact__form--submit button">Envoyer</button>
+                            <button type="submit" class="contact__form--submit button">
+                                <?php _e('Envoyer', 'portfolio-detective'); ?>
+                            </button>
                         </form>
                     </div>
                 </div>

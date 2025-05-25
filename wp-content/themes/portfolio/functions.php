@@ -9,7 +9,7 @@ if (session_status() === PHP_SESSION_NONE) {
 require_once __DIR__.'/inc/cleanup.php';
 require_once __DIR__.'/inc/assets.php';
 require_once __DIR__.'/inc/menus.php';
-require_once __DIR__.'/inc/contact.php';
+require_once __DIR__.'/forms/contact.php';
 require_once __DIR__.'/inc/post-types.php';
 require_once __DIR__.'/inc/language.php';
 

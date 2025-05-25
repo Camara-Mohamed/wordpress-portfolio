@@ -26,7 +26,7 @@
                        class="hero__action hero__action--<?= $style ?>"
                        target="<?= $button['target'] ?: '_self' ?>"
                        itemprop="significantLink">
-                        <?= $button['title'] ?>
+                        <?= esc_html($button['title']) ?>
                     </a>
                 <?php endwhile; ?>
             </div>
@@ -34,9 +34,9 @@
 
         <?php if (!empty($images)) : ?>
             <figure class="hero__figure">
-            <?php foreach ($images as $image_id) :
-                $alt = get_post_meta($image_id, '_wp_attachment_image_alt', true) ?: '';
-                ?>
+                <?php foreach ($images as $image_id) :
+                    $alt = get_post_meta($image_id, '_wp_attachment_image_alt', true) ?: '';
+                    ?>
                     <?php
                     echo wp_get_attachment_image(
                         $image_id,
@@ -44,14 +44,15 @@
                         false,
                         [
                             'class'    => 'hero-img',
-                            'alt'      => $alt,
+                            'alt'      => esc_attr($alt),
                             'sizes'    => '(max-width: 400px) 100vw, (max-width: 800px) 100vw, 1200px',
                             'srcset'   => wp_get_attachment_image_srcset($image_id, 'hero-lg'),
-                            'loading'  => 'lazy'
+                            'loading'  => 'lazy',
+                            'itemprop' => 'image'
                         ]
                     );
                     ?>
-            <?php endforeach; ?>
+                <?php endforeach; ?>
             </figure>
         <?php endif; ?>
     </div>
