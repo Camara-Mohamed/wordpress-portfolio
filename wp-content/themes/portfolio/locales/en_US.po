@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Portfolio Detective\n"
-"POT-Creation-Date: 2025-05-25 05:53+0200\n"
-"PO-Revision-Date: 2025-05-25 05:54+0200\n"
+"POT-Creation-Date: 2025-05-25 17:21+0200\n"
+"PO-Revision-Date: 2025-05-25 17:21+0200\n"
 "Last-Translator: \n"
 "Language-Team: Mohamed Camara camara.mohmd@gmail.com\n"
 "Language: en_US\n"
@@ -180,6 +180,14 @@ msgstr "Main navigation"
 msgid "Passer en %s"
 msgstr "Switch to %s"
 
+#: inc/post-types.php:34
+msgid "Types de projet"
+msgstr "Project types"
+
+#: inc/post-types.php:35
+msgid "Type"
+msgstr "Type"
+
 #: index.php:12
 msgid "Aucun contenu trouvé."
 msgstr "No content found."
@@ -189,8 +197,8 @@ msgid "Retour aux projets"
 msgstr "Back to projects"
 
 #: single-project.php:26
-msgid "Voir le GitHub"
-msgstr "View on GitHub"
+msgid "En savoir plus"
+msgstr "Read more"
 
 #: single-project.php:32
 msgid "Voir le projet"
@@ -318,25 +326,39 @@ msgid "Les filtres"
 msgstr "Filters"
 
 #: template-projects.php:34
+msgid "/mes-projets/"
+msgstr "/my-projects/"
+
+#: template-projects.php:35
 msgid "Tous"
 msgstr "All"
 
-#: template-projects.php:50
+#: template-projects.php:40 templates/partials/projects-card.php:24
+msgid "/mes-projets/?filter="
+msgstr "/my-projects/?filter="
+
+#: template-projects.php:51
 msgid "Les projets"
 msgstr "The projects"
 
-#: template-projects.php:87
+#: template-projects.php:89
 msgid "Précédent"
 msgstr "Previous"
 
-#: template-projects.php:88
+#: template-projects.php:91
 msgid "Suivant"
 msgstr "Next"
 
-#: template-projects.php:93
+#: template-projects.php:97
 msgid "Aucun projet trouvé."
 msgstr "No projects found."
 
 #: templates/partials/projects-related.php:19
 msgid "Projets similaires"
 msgstr "Related projects"
+
+#~ msgid "Tous les projets"
+#~ msgstr "All projects"
+
+#~ msgid "Voir le GitHub"
+#~ msgstr "View on GitHub"

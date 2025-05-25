@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Portfolio Detective\n"
-"POT-Creation-Date: 2025-05-25 05:39+0200\n"
-"PO-Revision-Date: 2025-05-25 05:53+0200\n"
+"POT-Creation-Date: 2025-05-25 17:19+0200\n"
+"PO-Revision-Date: 2025-05-25 17:20+0200\n"
 "Last-Translator: \n"
 "Language-Team: Mohamed Camara camara.mohmd@gmail.com\n"
 "Language: fr_BE\n"
@@ -36,7 +36,6 @@ msgid "Retour à l'accueil"
 msgstr "Retour à l'accueil"
 
 #: 404.php:16 front-page.php:29 single-project.php:8 template-about.php:126
-#| msgid "Mes projets"
 msgid "/mes-projets"
 msgstr "/mes-projets"
 
@@ -61,7 +60,6 @@ msgid "Mon profil vous intéresse ?"
 msgstr "Mon profil vous intéresse ?"
 
 #: footer.php:11 template-about.php:123
-#| msgid "Me contacter"
 msgid "/me-contacter"
 msgstr "/me-contacter"
 
@@ -91,7 +89,6 @@ msgid "Copyright © %1$s %2$s. Tous droits réservés."
 msgstr "Copyright © %1$s %2$s. Tous droits réservés."
 
 #: footer.php:65
-#| msgid "Mentions légales"
 msgid "/mentions-legales"
 msgstr "/mentions-legales"
 
@@ -182,6 +179,14 @@ msgstr "Navigation principale"
 msgid "Passer en %s"
 msgstr "Passer en %s"
 
+#: inc/post-types.php:34
+msgid "Types de projet"
+msgstr "Types de projet"
+
+#: inc/post-types.php:35
+msgid "Type"
+msgstr "Type"
+
 #: index.php:12
 msgid "Aucun contenu trouvé."
 msgstr "Aucun contenu trouvé."
@@ -191,8 +196,8 @@ msgid "Retour aux projets"
 msgstr "Retour aux projets"
 
 #: single-project.php:26
-msgid "Voir le GitHub"
-msgstr "Voir le GitHub"
+msgid "En savoir plus"
+msgstr "En savoir plus"
 
 #: single-project.php:32
 msgid "Voir le projet"
@@ -320,25 +325,40 @@ msgid "Les filtres"
 msgstr "Les filtres"
 
 #: template-projects.php:34
+msgid "/mes-projets/"
+msgstr "/mes-projets/"
+
+#: template-projects.php:35
 msgid "Tous"
 msgstr "Tous"
 
-#: template-projects.php:50
+#: template-projects.php:40 templates/partials/projects-card.php:24
+msgid "/mes-projets/?filter="
+msgstr "/mes-projets/?filter="
+
+#: template-projects.php:51
 msgid "Les projets"
 msgstr "Les projets"
 
-#: template-projects.php:87
+#: template-projects.php:89
 msgid "Précédent"
 msgstr "Précédent"
 
-#: template-projects.php:88
+#: template-projects.php:91
 msgid "Suivant"
 msgstr "Suivant"
 
-#: template-projects.php:93
+#: template-projects.php:97
 msgid "Aucun projet trouvé."
 msgstr "Aucun projet trouvé."
 
 #: templates/partials/projects-related.php:19
 msgid "Projets similaires"
 msgstr "Projets similaires"
+
+#~| msgid "Voir tous mes projets"
+#~ msgid "Tous les projets"
+#~ msgstr "Tous les projets"
+
+#~ msgid "Voir le GitHub"
+#~ msgstr "Voir le GitHub"

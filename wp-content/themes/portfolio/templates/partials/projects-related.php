@@ -14,13 +14,15 @@ if ($terms) :
     ]);
 
     if ($related->have_posts()) : ?>
-        <section class="related__projects">
-            <h2 class="related__projects--title">Projets similaires</h2>
+        <section class="related__projects" aria-labelledby="related-projects-title">
+            <h2 id="related-projects-title" class="related__projects--title">
+                <?php _e('Projets similaires', 'portfolio-detective'); ?>
+            </h2>
             <div class="projects__grid">
                 <?php while ($related->have_posts()) : $related->the_post(); ?>
                     <?php get_template_part('templates/partials/projects-card'); ?>
                 <?php endwhile; ?>
             </div>
         </section>
-    <?php endif; wp_reset_postdata();
+    <?php endif;
 endif; ?>
