@@ -38,8 +38,9 @@ function dw_get_languages(): array
 }
 
 function dw_translated_url($path) {
-    if (function_exists('pll__')) {
-        return home_url(pll__($path));
+    if (function_exists('pll_home_url')) {
+        return pll_home_url($path);
     }
+
     return home_url($path);
 }
