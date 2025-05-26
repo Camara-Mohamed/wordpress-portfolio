@@ -31,13 +31,13 @@ $current_page = max(1, get_query_var('paged') ?: get_query_var('page'));
                 if ($terms) : ?>
                     <ul class="filter__list">
                         <li class="<?= !isset($_GET['filter']) ? 'active' : '' ?>">
-                            <a href="<?= dw_translated_url('/mes-projets/') ?>">
+                            <a href="<?= get_post_type_archive_link('project') ?>">
                                 <?php _e('Tous', 'portfolio-detective'); ?>
                             </a>
                         </li>
                         <?php foreach ($terms as $term) : ?>
                             <li class="<?= isset($_GET['filter']) && $_GET['filter'] === $term->slug ? 'active' : '' ?>">
-                                <a href="<?= dw_translated_url('/mes-projets/?filter=' . $term->slug) ?>">
+                                <a href="<?= add_query_arg('filter', $term->slug, get_post_type_archive_link('project')) ?>">
                                     <?= $term->name ?>
                                 </a>
                             </li>

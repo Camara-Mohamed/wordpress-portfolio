@@ -21,9 +21,9 @@
                 if ($project_types) :
                     foreach ($project_types as $type) : ?>
                         <span class="card__type" itemprop="genre">
-                            <a href="<?= dw_translated_url('/mes-projets/?filter=' . $type->slug); ?>" class="project-card__type" rel="tag">
-                                <?= $type->name ?>
-                            </a>
+                            <p class="project-card__type">
+                                    <?= $type->name ?>
+                                </p>
                         </span>
                     <?php endforeach;
                 endif; ?>
