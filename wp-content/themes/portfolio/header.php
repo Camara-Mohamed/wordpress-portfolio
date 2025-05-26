@@ -53,6 +53,13 @@
             <h2 class="hidden"><?php __('Navigation principale', 'portfolio-detective'); ?></h2>
             <a href="<?= home_url('/'); ?>" itemprop="url"><?= get_bloginfo('name') ?></a>
 
+            <input type="checkbox" id="burger-menu" class="hidden" />
+            <label for="burger-menu" class="header__nav--burger">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+
             <ul class="header__nav--container">
                 <?php foreach (dw_get_navigation_links('header') as $link): ?>
                     <li class="nav__item<?= $link->current ? ' nav__item--current' : '' ?>">
