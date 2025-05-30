@@ -5,7 +5,7 @@
 
         <section class="featured" aria-labelledby="featured__title">
             <div class="featured__container">
-                <h2 id="featured__title" class="featured__container--title hidden">
+                <h2 id="featured__title" class="featured__container--title sro" aria-level="2">
                     <?php _e('Projets à la une', 'portfolio-detective'); ?>
                 </h2>
 
@@ -26,7 +26,9 @@
                     </div>
 
                     <div class="featured__more">
-                        <a href="<?= dw_translated_url('/mes-projets'); ?>" class="featured__more--link">
+                        <a href="<?= dw_translated_url('/mes-projets'); ?>" class="featured__more--link"
+                           aria-label="<?php _e('Voir la liste de mes projets', 'portfolio-detective'); ?>"
+                           title="<?php _e('Voir tous mes projets', 'portfolio-detective'); ?>">
                             <?php _e('Voir tous mes projets', 'portfolio-detective'); ?>
                         </a>
                     </div>

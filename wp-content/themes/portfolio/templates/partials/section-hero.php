@@ -2,7 +2,7 @@
 
 <section class="hero" aria-labelledby="hero-title" itemscope itemtype="https://schema.org/WPHeader">
     <div class="hero__container">
-        <h2 id="hero-title" class="hero__title" itemprop="headline">
+        <h2 id="hero-title" class="hero__title" itemprop="headline" aria-level="2">
             <?= get_field('hero_title') ?: get_the_title() ?>
         </h2>
 
@@ -24,9 +24,11 @@
                     ?>
                     <a href="<?= $button['url'] ?>"
                        class="hero__action hero__action--<?= $style ?>"
-                       target="<?= $button['target'] ?: '_self' ?>"
-                       itemprop="significantLink">
-                        <?= esc_html($button['title']) ?>
+                       itemprop="significantLink"
+                       aria-label="<?= __('Aller à la page', 'portfolio-detective').' '.$button['title'] ?>"
+                       title="<?=
+                       __('Aller à :', 'portfolio-detective').' '.$button['title'] ?>">
+                        <?= $button['title'] ?>
                     </a>
                 <?php endwhile; ?>
             </div>
@@ -44,7 +46,7 @@
                         false,
                         [
                             'class'    => 'hero-img',
-                            'alt'      => esc_attr($alt),
+                            'alt' => $alt,
                             'sizes'    => '(max-width: 400px) 100vw, (max-width: 800px) 100vw, 1200px',
                             'srcset'   => wp_get_attachment_image_srcset($image_id, 'hero-lg'),
                             'loading'  => 'lazy',

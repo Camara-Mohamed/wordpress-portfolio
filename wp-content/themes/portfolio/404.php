@@ -10,10 +10,15 @@
                     </p>
 
                     <div class="error-404__actions">
-                        <a href="<?= dw_translated_url('/'); ?>" class="error-404__action button button__primary">
+                        <a href="<?= dw_translated_url('/'); ?>" class="error-404__action button button__primary"
+                           aria-label="<?php _e('Revenir à la page d\'accueil', 'portfolio-detective'); ?>"
+                           title="<?php _e('Revenir à l\'accueil', 'portfolio-detective'); ?>">
                             <?php _e('Retour à l\'accueil', 'portfolio-detective'); ?>
                         </a>
-                        <a href="<?= dw_translated_url('/mes-projets'); ?>" class="error-404__button button button__secondary">
+                        <a href="<?= dw_translated_url('/mes-projets'); ?>"
+                           class="error-404__button button button__secondary"
+                           aria-label="<?php _e('Voir la liste de mes projets', 'portfolio-detective'); ?>"
+                           title="<?php _e('Voir tous mes projets', 'portfolio-detective'); ?>">
                             <?php _e('Voir mes projets', 'portfolio-detective'); ?>
                         </a>
                     </div>

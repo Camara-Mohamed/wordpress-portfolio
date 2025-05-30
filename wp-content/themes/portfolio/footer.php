@@ -1,14 +1,16 @@
 <footer class="footer" role="contentinfo">
     <div class="footer__container">
-        <h2 class="hidden"><?php _e('Navigation de pied de page', 'portfolio-detective'); ?></h2>
+        <h2 class="sro" aria-level="2"><?php _e('Navigation de pied de page', 'portfolio-detective'); ?></h2>
         <section class="footer__section">
-            <h3 class="hidden"><?php _e('Mes informations', 'portfolio-detective'); ?></h3>
+            <h3 class="sro"><?php _e('Mes informations', 'portfolio-detective'); ?></h3>
             <p class="footer__name">Mohamed Camara</p>
             <div class="footer__contact">
                 <h4 class="footer__contact--title"><?php _e('Contactez-moi', 'portfolio-detective'); ?></h4>
                 <p class="footer__contact--content"><?php _e('Mon profil vous intéresse ?',
                         'portfolio-detective'); ?></p>
-                <a href="<?= dw_translated_url('/me-contacter'); ?>" class="footer__contact--button">
+                <a href="<?= dw_translated_url('/me-contacter'); ?>" class="footer__contact--button"
+                   aria-label="<?php _e('Aller à la page de contact', 'portfolio-detective'); ?>"
+                   title="<?php _e('Aller à la page de contact', 'portfolio-detective'); ?>">
                     <?php _e('Me Contacter', 'portfolio-detective'); ?>
                 </a>
             </div>
@@ -52,7 +54,7 @@
     </div>
 
     <article class="footer__legal" itemscope itemtype="https://schema.org/CreativeWork">
-        <h2 class="hidden"><?php _e('Mentions légales', 'portfolio-detective'); ?></h2>
+        <h2 class="sro"><?php _e('Mentions légales', 'portfolio-detective'); ?></h2>
         <p class="footer__legal--copyright" itemprop="copyrightYear">
             <?php
             printf(
@@ -62,7 +64,9 @@
             );
             ?>
         </p>
-        <a href="<?= dw_translated_url('/mentions-legales'); ?>" class="footer__legal--link" itemprop="usageInfo">
+        <a href="<?= dw_translated_url('/mentions-legales'); ?>" class="footer__legal--link" itemprop="usageInfo"
+           aria-label="<?php _e('Aller à la page des mentions légales', 'portfolio-detective'); ?>"
+           title="<?php _e('Aller aux mentions légales', 'portfolio-detective'); ?>">
             <?php _e('Mentions légales', 'portfolio-detective'); ?>
         </a>
     </article>

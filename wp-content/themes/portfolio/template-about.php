@@ -19,7 +19,8 @@
 
         <section class="timeline" aria-labelledby="timeline-title">
             <div class="timeline__container">
-                <h2 id="timeline__container--title"><?php _e('Mon parcours', 'portfolio-detective'); ?></h2>
+                <h2 id="timeline__container--title" aria-level="2"><?php _e('Mon parcours', 'portfolio-detective');
+                    ?></h2>
                 <?php if ($subtitle = get_field('timeline_subtitle')) : ?>
                     <p class="timeline__container--subtitle"><?= $subtitle ?></p>
                 <?php endif; ?>
@@ -42,7 +43,8 @@
 
         <section class="skills" aria-labelledby="skills-title">
             <div class="skills__container">
-                <h2 id="skills__container--title"><?php _e('Mes compétences', 'portfolio-detective'); ?></h2>
+                <h2 id="skills__container--title" aria-level="2"><?php _e('Mes compétences', 'portfolio-detective');
+                    ?></h2>
                 <?php if ($subtitle = get_field('skills_subtitle')) : ?>
                     <p class="skills__container--subtitle"><?= $subtitle ?></p>
                 <?php endif; ?>
@@ -114,16 +116,20 @@
 
         <section class="cta" aria-labelledby="cta-title">
             <div class="container">
-                <h2 id="cta__title"><?php _e('Travaillons ensemble', 'portfolio-detective'); ?></h2>
+                <h2 id="cta__title" aria-level="2"><?php _e('Travaillons ensemble', 'portfolio-detective'); ?></h2>
                 <?php if ($subtitle = get_field('cta_subtitle')) : ?>
                     <p class="cta__subtitle"><?= $subtitle ?></p>
                 <?php endif; ?>
 
                 <div class="cta__buttons">
-                    <a href="<?= dw_translated_url('/me-contacter'); ?>" class="button button__primary">
+                    <a href="<?= dw_translated_url('/me-contacter'); ?>" class="button button__primary" title="<?php
+                    _e('Aller sur la page de contact', 'portfolio-detective');
+                    ?>">
                         <?php _e('Me contacter', 'portfolio-detective'); ?>
                     </a>
-                    <a href="<?= dw_translated_url('/mes-projets'); ?>" class="button button__secondary">
+                    <a href="<?= dw_translated_url('/mes-projets'); ?>" class="button button__secondary" title="<?php
+                    _e('Aller sur la page de mes projets', 'portfolio-detective');
+                    ?>">
                         <?php _e('Voir mes projets', 'portfolio-detective'); ?>
                     </a>
                 </div>
