@@ -16,7 +16,7 @@ $current_page = max(1, get_query_var('paged') ?: get_query_var('page'));
                 <?php _e('Mes projets', 'portfolio-detective'); ?>
             </h2>
 
-            <div class="projects__filters">
+            <section class="projects__filters">
                 <h3 class="projects__filters--title sro">
                     <?php _e('Les filtres', 'portfolio-detective'); ?>
                 </h3>
@@ -29,19 +29,19 @@ $current_page = max(1, get_query_var('paged') ?: get_query_var('page'));
                 ]);
 
                 if ($terms) : ?>
-                    <ul class="filter__list" role="list">
-                        <li class="<?= !isset($_GET['filter']) ? 'active' : '' ?>" role="listitem">
+                    <ul class="filter__list">
+                        <li class="<?= !isset($_GET['filter']) ? 'active' : '' ?>">
                             <a href="<?= get_post_type_archive_link('project') ?>" role="button"
-                               title="<?php __('Voir tous les projets', 'portfolio-detective'); ?>">
+                               title="<?php _e('Voir tous les projets', 'portfolio-detective'); ?>">
                                 <?php _e('Tous', 'portfolio-detective'); ?>
                             </a>
                         </li>
                         <?php foreach ($terms as $term) : ?>
                             <li class="<?= isset($_GET['filter']) && $_GET['filter'] === $term->slug ? 'active' : ''
-                            ?>" role="listitem">
+                            ?>">
                                 <a href="<?= add_query_arg('filter', $term->slug,
                                     get_post_type_archive_link('project')) ?>" role="button"
-                                   title="<?php __('Voir les', 'portfolio-detective').' '
+                                   title="<?php _e('Voir les', 'portfolio-detective').' '
                                    .$term->name; ?>">
                                     <?= $term->name ?>
                                 </a>
@@ -49,9 +49,9 @@ $current_page = max(1, get_query_var('paged') ?: get_query_var('page'));
                         <?php endforeach; ?>
                     </ul>
                 <?php endif; ?>
-            </div>
+            </section>
 
-            <div class="projets__grid">
+            <section class="projets__grid">
                 <h3 class="projects__grid--title sro">
                     <?php _e('Les projets', 'portfolio-detective'); ?>
                 </h3>
@@ -83,9 +83,10 @@ $current_page = max(1, get_query_var('paged') ?: get_query_var('page'));
                         get_template_part('templates/partials/projects-card');
                     endwhile; ?>
 
-                    <div class="projets__coming">
+                    <article class="projets__coming">
+                        <h2 class="sro"><?php _e('D\'autres projets arrivent') ?></h2>
                         <p class="projets__coming--content">?</p>
-                    </div>
+                    </article>
 
                     <?php echo '<div class="pagination">';
                     echo paginate_links([
@@ -102,7 +103,7 @@ $current_page = max(1, get_query_var('paged') ?: get_query_var('page'));
                         <p><?php _e('Aucun projet trouvé.', 'portfolio-detective'); ?></p>
                     </div>
                 <?php endif; ?>
-            </div>
+            </section>
         </section>
     </main>
 

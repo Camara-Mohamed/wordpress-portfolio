@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Portfolio Detective\n"
-"POT-Creation-Date: 2025-05-30 09:30+0200\n"
-"PO-Revision-Date: 2025-05-30 09:43+0200\n"
+"POT-Creation-Date: 2025-05-30 11:27+0200\n"
+"PO-Revision-Date: 2025-05-30 11:30+0200\n"
 "Last-Translator: \n"
 "Language-Team: Mohamed Camara camara.mohmd@gmail.com\n"
 "Language: fr_BE\n"
@@ -99,24 +99,24 @@ msgstr "Ressources utilisées"
 msgid "Réseaux"
 msgstr "Réseaux"
 
-#: footer.php:57 footer.php:70 template-legales.php:15
+#: footer.php:57 footer.php:69 template-legales.php:15
 msgid "Mentions légales"
 msgstr "Mentions légales"
 
-#: footer.php:61
+#: footer.php:60
 #, php-format
 msgid "Copyright © %1$s %2$s. Tous droits réservés."
 msgstr "Copyright © %1$s %2$s. Tous droits réservés."
 
-#: footer.php:67
+#: footer.php:66
 msgid "/mentions-legales"
 msgstr "/mentions-legales"
 
-#: footer.php:68
+#: footer.php:67
 msgid "Aller à la page des mentions légales"
 msgstr "Aller à la page des mentions légales"
 
-#: footer.php:69
+#: footer.php:68
 msgid "Aller aux mentions légales"
 msgstr "Aller aux mentions légales"
 
@@ -170,7 +170,12 @@ msgstr "Merci pour votre message! Nous vous répondrons dès que possible."
 msgid "Projets à la une"
 msgstr "Projets à la une"
 
-#: front-page.php:37
+#: front-page.php:28
+#| msgid "Voir tous mes projets"
+msgid "Voir plus de projets"
+msgstr "Voir plus de projets"
+
+#: front-page.php:38
 msgid "Aucun projet pour le moment."
 msgstr "Aucun projet pour le moment."
 
@@ -423,29 +428,39 @@ msgstr "Voir les"
 msgid "Les projets"
 msgstr "Les projets"
 
-#: template-projects.php:94
+#: template-projects.php:87
+msgid "D'autres projets arrivent"
+msgstr "D'autres projets to come"
+
+#: template-projects.php:95
 msgid "Précédent"
 msgstr "Précédent"
 
-#: template-projects.php:96
+#: template-projects.php:97
 msgid "Suivant"
 msgstr "Suivant"
 
-#: template-projects.php:102
+#: template-projects.php:103
 msgid "Aucun projet trouvé."
 msgstr "Aucun projet trouvé."
+
+#: templates/partials/projects-card.php:3
+msgid "Voir le projet :"
+msgstr "Voir le projet :"
+
+#: templates/partials/projects-card.php:4
+msgid "Voir"
+msgstr "Voir"
 
 #: templates/partials/projects-related.php:20
 msgid "Projets similaires"
 msgstr "Projets similaires"
 
 #: templates/partials/section-hero.php:28
-#| msgid "(Aller à la page)"
 msgid "Aller à la page"
 msgstr "Aller à la page"
 
 #: templates/partials/section-hero.php:30
-#| msgid "(Aller à :)"
 msgid "Aller à :"
 msgstr "Aller à :"
 

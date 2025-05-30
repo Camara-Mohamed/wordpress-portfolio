@@ -26,7 +26,7 @@
     <!-- Open Graph -->
     <meta property="og:title" content="<?php
     if (is_front_page()) {
-        echo _e('Accueil', 'portfolio-detective').'- '.get_bloginfo('name');
+        echo _e('Accueil', 'portfolio-detective').' - '.get_bloginfo('name');
     } else {
         echo wp_title('', false).' - '.get_bloginfo('name');
     }
@@ -43,7 +43,7 @@
 
 <noscript>
     <p class="no-js__message">
-        <?php __('Pour accéder à toutes les fonctionnalités de ce site, vous devez activer JavaScript.',
+        <?php _e('Pour accéder à toutes les fonctionnalités de ce site, vous devez activer JavaScript.',
             'portfolio-detective') ?> <br>
         <?php _e('Voici les', 'portfolio-detective') ?><a href="https://www.enable-javascript.com/fr/" hreflang="fr"
                                                           title="<?= __
@@ -54,17 +54,16 @@
 
 <h1 class="sro" role="heading" aria-level="1"><?= get_the_title(); ?></h1>
 
-<a class="skip__link sro" href="#main-content"><?php __('Aller au contenu principal', 'portfolio-detective')
+<a class="skip__link sro" href="#main-content"><?php _e('Aller au contenu principal', 'portfolio-detective')
     ?></a>
 
-<header id="header" class="header" role="banner">
+<header id="header" class="header">
     <div class="header__container">
-        <nav class="header__nav" aria-label="<?php __('Navigation principale', 'portfolio-detective'); ?>"
-             role="navigation"
-             aria-level="1">
-            <h2 class="sro" role="heading" aria-level="2"><?php _e('Navigation principale',
+        <nav class="header__nav" aria-label="<?php _e('Navigation principale', 'portfolio-detective'); ?>"
+             role="navigation">
+            <h2 class="sro" aria-level="2"><?php _e('Navigation principale',
                     'portfolio-detective'); ?></h2>
-            <a href="<?= home_url('/'); ?>" itemprop="url" title="<?php __('Aller à la page d\'accueil'); ?>"><?=
+            <a href="<?= home_url('/'); ?>" itemprop="url" title="<?php _e('Aller à la page d\'accueil'); ?>"><?=
                 get_bloginfo('name') ?></a>
 
             <input type="checkbox" id="burger-menu" class="sro" aria-label="Burger menu"/>
@@ -72,12 +71,12 @@
                 <span></span>
             </label>
 
-            <ul class="header__nav--container" role="menu">
+            <ul class="header__nav--container">
                 <?php foreach (dw_get_navigation_links('header') as $link): ?>
                     <li class="nav__item<?= $link->current ? ' nav__item--current' : '' ?>">
                         <a href="<?= $link->href ?>" class="nav__link"
                            title="<?= __('Aller à ma page : ', 'portfolio-detective').
-                           $link->label; ?>" role="menuitem"
+                           $link->label; ?>"
                            aria-label="<?= __('Aller à ma page :', 'portfolio-detective').' '.
                            $link->label; ?>">
                             <?= $link->label ?>
@@ -91,8 +90,7 @@
                            class="nav__link--language"
                            hreflang="<?= $lang->locale; ?>"
                            title="<?= __('Changer en ', 'portfolio-detective'), $lang->label; ?>"
-                           aria-label="<?= __('Changer la langue en ', 'portfolio-detective'), $lang->label; ?>"
-                           role="menuitem">
+                           aria-label="<?= __('Changer la langue en ', 'portfolio-detective'), $lang->label; ?>">
                             <?= strtoupper($lang->code); ?>
                         </a>
                     <?php endforeach; ?>

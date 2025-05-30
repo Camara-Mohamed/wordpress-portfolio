@@ -1,7 +1,8 @@
 <?php
 
 // Initialiser les traductions
-function portfolio_theme_setup() {
+function portfolio_theme_setup(): void
+{
     load_theme_textdomain('portfolio-detective', get_template_directory() . '/locales');
 }
 add_action('after_setup_theme', 'portfolio_theme_setup');
@@ -37,7 +38,8 @@ function dw_get_languages(): array
     return [];
 }
 
-function dw_translated_url($path) {
+function dw_translated_url($path): ?string
+{
     if (function_exists('pll_home_url')) {
         return pll_home_url($path);
     }
