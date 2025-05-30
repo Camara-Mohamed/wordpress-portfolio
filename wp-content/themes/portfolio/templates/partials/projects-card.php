@@ -1,7 +1,9 @@
 <article class="project__card" itemscope itemtype="https://schema.org/CreativeWork">
-    <a href="<?php the_permalink(); ?>" class="project__card--link" itemprop="url">
+    <a href="<?php the_permalink(); ?>" class="project__card--link" itemprop="url"
+       aria-label="<?php _e('Voir le projet :', 'portfolio-detective').' '.the_title(); ?>"
+       title="<?php _e('Voir', 'portfolio-detective').' '.the_title(); ?>">
         <div class="project__card--content" itemprop="description">
-            <h4 class="card__title" itemprop="name"><?php the_title(); ?></h4>
+            <h3 class="card__title" itemprop="name"><?php the_title(); ?></h3>
 
             <?php if ($subtitle = get_field('subtitle')) : ?>
                 <p class="card__subtitle" itemprop="alternativeHeadline">
@@ -16,17 +18,17 @@
                     </span>
                 <?php endif; ?>
 
+                <div class="card__type" itemprop="genre">
                 <?php
                 $project_types = get_the_terms($post->ID, 'type-project');
                 if ($project_types) :
                     foreach ($project_types as $type) : ?>
-                        <span class="card__type" itemprop="genre">
                             <p class="project-card__type">
                                     <?= $type->name ?>
-                                </p>
-                        </span>
+                            </p>
                     <?php endforeach;
                 endif; ?>
+                </div>
             </div>
         </div>
     </a>

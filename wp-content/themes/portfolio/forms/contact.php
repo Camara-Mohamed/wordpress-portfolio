@@ -1,6 +1,9 @@
 <?php
 
-function dw_handle_contact_form() {
+use JetBrains\PhpStorm\NoReturn;
+
+#[NoReturn] function dw_handle_contact_form(): void
+{
 
     // Initialiser les données de session
     $_SESSION['contact_form_old'] = $_POST;

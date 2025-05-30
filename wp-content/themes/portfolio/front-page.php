@@ -23,14 +23,15 @@
                         <?php while ($featured->have_posts()) : $featured->the_post(); ?>
                             <?php get_template_part('templates/partials/projects-card'); ?>
                         <?php endwhile; ?>
-                    </div>
 
-                    <div class="featured__more">
-                        <a href="<?= dw_translated_url('/mes-projets'); ?>" class="featured__more--link"
-                           aria-label="<?php _e('Voir la liste de mes projets', 'portfolio-detective'); ?>"
-                           title="<?php _e('Voir tous mes projets', 'portfolio-detective'); ?>">
-                            <?php _e('Voir tous mes projets', 'portfolio-detective'); ?>
-                        </a>
+                        <article class="featured__more">
+                            <h3 class="sro"><?php _e('Voir plus de projets') ?></h3>
+                            <a href="<?= dw_translated_url('/mes-projets'); ?>" class="featured__more--link"
+                               aria-label="<?php _e('Voir la liste de mes projets', 'portfolio-detective'); ?>"
+                               title="<?php _e('Voir tous mes projets', 'portfolio-detective'); ?>">
+                                <?php _e('Voir tous mes projets', 'portfolio-detective'); ?>
+                            </a>
+                        </article>
                     </div>
                 <?php else : ?>
                     <p class="featured__empty">

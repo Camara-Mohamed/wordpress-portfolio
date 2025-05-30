@@ -1,4 +1,4 @@
-<footer class="footer" role="contentinfo">
+<footer class="footer">
     <div class="footer__container">
         <h2 class="sro" aria-level="2"><?php _e('Navigation de pied de page', 'portfolio-detective'); ?></h2>
         <section class="footer__section">
@@ -54,11 +54,10 @@
     </div>
 
     <article class="footer__legal" itemscope itemtype="https://schema.org/CreativeWork">
-        <h2 class="sro"><?php _e('Mentions légales', 'portfolio-detective'); ?></h2>
+        <h3 class="sro"><?php _e('Mentions légales', 'portfolio-detective'); ?></h3>
         <p class="footer__legal--copyright" itemprop="copyrightYear">
             <?php
-            printf(
-                esc_html__('Copyright © %1$s %2$s. Tous droits réservés.', 'portfolio-detective'),
+            printf(__('Copyright © %1$s %2$s. Tous droits réservés.', 'portfolio-detective'),
                 date('Y'),
                 '<span itemprop="copyrightHolder">Mohamed Camara</span>'
             );

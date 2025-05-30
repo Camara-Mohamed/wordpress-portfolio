@@ -18,24 +18,24 @@
                     <aside class="contact__info">
                         <h3 class="contact__info--title"><?php _e('Mes coordonnées', 'portfolio-detective'); ?></h3>
 
-                        <ul class="contact__details" role="list">
-                            <li class="contact__details--item" role="listitem">
+                        <ul class="contact__details">
+                            <li class="contact__details--item">
                                 <strong><?php _e('Adresse :', 'portfolio-detective'); ?></strong>
                                 <p><?php _e('4031 Angleur, Belgique') ?></p>
                             </li>
-                            <li class="contact__details--item" role="listitem">
+                            <li class="contact__details--item">
                                 <strong><?php _e('Email :', 'portfolio-detective'); ?></strong>
                                 <a href="mailto:camara.mohmd@gmail.com" title="<?php
                                 _e('Envoyer un mail', 'portfolio-detective');
                                 ?>">camara.mohmd@gmail.com</a>
                             </li>
-                            <li class="contact__details--item" role="listitem">
+                            <li class="contact__details--item">
                                 <strong><?php _e('Téléphone :', 'portfolio-detective'); ?></strong>
                                 <a href="tel:+32465298377" title="<?php
                                 _e('Appeler à ce numèro', 'portfolio-detective');
                                 ?>">+32 (0) 465 29 83 77</a>
                             </li>
-                            <li class="contact__details--item" role="listitem">
+                            <li class="contact__details--item">
                                 <strong><?php _e('CV :', 'portfolio-detective'); ?></strong>
                                 <?php
                                 $cv_file = get_field('cv_file');
@@ -63,7 +63,7 @@
                         <?php endif; ?>
 
                         <form method="POST" action="<?= admin_url('admin-post.php'); ?>" class="form">
-                            <input type="sro" name="action" value="submit_contact_form">
+                            <input type="hidden" name="action" value="submit_contact_form">
 
                             <div class="contact__form--field">
                                 <label for="fullname" class="contact__form--label">
