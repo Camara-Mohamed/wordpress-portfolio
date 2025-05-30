@@ -12,12 +12,12 @@ $current_page = max(1, get_query_var('paged') ?: get_query_var('page'));
         <?php get_template_part('templates/partials/section-hero'); ?>
 
         <section class="projects">
-            <h2 id="projects__title" class="projects--title hidden">
+            <h2 id="projects__title" class="projects--title sro" aria-level="2">
                 <?php _e('Mes projets', 'portfolio-detective'); ?>
             </h2>
 
             <div class="projects__filters">
-                <h3 class="projects__filters--title hidden">
+                <h3 class="projects__filters--title sro">
                     <?php _e('Les filtres', 'portfolio-detective'); ?>
                 </h3>
 
@@ -29,15 +29,20 @@ $current_page = max(1, get_query_var('paged') ?: get_query_var('page'));
                 ]);
 
                 if ($terms) : ?>
-                    <ul class="filter__list">
-                        <li class="<?= !isset($_GET['filter']) ? 'active' : '' ?>">
-                            <a href="<?= get_post_type_archive_link('project') ?>">
+                    <ul class="filter__list" role="list">
+                        <li class="<?= !isset($_GET['filter']) ? 'active' : '' ?>" role="listitem">
+                            <a href="<?= get_post_type_archive_link('project') ?>" role="button"
+                               title="<?php __('Voir tous les projets', 'portfolio-detective'); ?>">
                                 <?php _e('Tous', 'portfolio-detective'); ?>
                             </a>
                         </li>
                         <?php foreach ($terms as $term) : ?>
-                            <li class="<?= isset($_GET['filter']) && $_GET['filter'] === $term->slug ? 'active' : '' ?>">
-                                <a href="<?= add_query_arg('filter', $term->slug, get_post_type_archive_link('project')) ?>">
+                            <li class="<?= isset($_GET['filter']) && $_GET['filter'] === $term->slug ? 'active' : ''
+                            ?>" role="listitem">
+                                <a href="<?= add_query_arg('filter', $term->slug,
+                                    get_post_type_archive_link('project')) ?>" role="button"
+                                   title="<?php __('Voir les', 'portfolio-detective').' '
+                                   .$term->name; ?>">
                                     <?= $term->name ?>
                                 </a>
                             </li>
@@ -47,7 +52,7 @@ $current_page = max(1, get_query_var('paged') ?: get_query_var('page'));
             </div>
 
             <div class="projets__grid">
-                <h3 class="projects__grid--title hidden">
+                <h3 class="projects__grid--title sro">
                     <?php _e('Les projets', 'portfolio-detective'); ?>
                 </h3>
 
@@ -79,7 +84,7 @@ $current_page = max(1, get_query_var('paged') ?: get_query_var('page'));
                     endwhile; ?>
 
                     <div class="projets__coming">
-                        <p>?</p>
+                        <p class="projets__coming--content">?</p>
                     </div>
 
                     <?php echo '<div class="pagination">';
@@ -96,8 +101,7 @@ $current_page = max(1, get_query_var('paged') ?: get_query_var('page'));
                     <div class="no-projects">
                         <p><?php _e('Aucun projet trouvé.', 'portfolio-detective'); ?></p>
                     </div>
-                <?php endif;
-                wp_reset_postdata(); ?>
+                <?php endif; ?>
             </div>
         </section>
     </main>

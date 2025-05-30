@@ -11,32 +11,38 @@
 
         <section class="contact__section" aria-labelledby="contact-title">
             <div class="contact__container">
-                <h2 id="contact-title" class="contact__title hidden"><?php _e('Me contacter',
+                <h2 id="contact-title" class="contact__title sro" aria-level="2"><?php _e('Me contacter',
                         'portfolio-detective'); ?></h2>
 
                 <div class="contact__grid">
                     <aside class="contact__info">
                         <h3 class="contact__info--title"><?php _e('Mes coordonnées', 'portfolio-detective'); ?></h3>
 
-                        <ul class="contact__details">
-                            <li class="contact__details--item">
+                        <ul class="contact__details" role="list">
+                            <li class="contact__details--item" role="listitem">
                                 <strong><?php _e('Adresse :', 'portfolio-detective'); ?></strong>
                                 <p><?php _e('4031 Angleur, Belgique') ?></p>
                             </li>
-                            <li class="contact__details--item">
+                            <li class="contact__details--item" role="listitem">
                                 <strong><?php _e('Email :', 'portfolio-detective'); ?></strong>
-                                <a href="mailto:camara.mohmd@gmail.com">camara.mohmd@gmail.com</a>
+                                <a href="mailto:camara.mohmd@gmail.com" title="<?php
+                                _e('Envoyer un mail', 'portfolio-detective');
+                                ?>">camara.mohmd@gmail.com</a>
                             </li>
-                            <li class="contact__details--item">
+                            <li class="contact__details--item" role="listitem">
                                 <strong><?php _e('Téléphone :', 'portfolio-detective'); ?></strong>
-                                <a href="tel:+32465298377">+32 (0) 465 29 83 77</a>
+                                <a href="tel:+32465298377" title="<?php
+                                _e('Appeler à ce numèro', 'portfolio-detective');
+                                ?>">+32 (0) 465 29 83 77</a>
                             </li>
-                            <li class="contact__details--item">
+                            <li class="contact__details--item" role="listitem">
                                 <strong><?php _e('CV :', 'portfolio-detective'); ?></strong>
                                 <?php
                                 $cv_file = get_field('cv_file');
                                 if ($cv_file) : ?>
-                                    <a href="<?= $cv_file['url'] ?>" download class="contact-details__link">
+                                    <a href="<?= $cv_file['url'] ?>" download class="contact-details__link" title="<?php
+                                    _e('Télécharger mon CV', 'portfolio-detective');
+                                    ?>">
                                         <?php _e('Télécharger mon CV', 'portfolio-detective'); ?>
                                     </a>
                                 <?php endif; ?>
@@ -57,7 +63,7 @@
                         <?php endif; ?>
 
                         <form method="POST" action="<?= admin_url('admin-post.php'); ?>" class="form">
-                            <input type="hidden" name="action" value="submit_contact_form">
+                            <input type="sro" name="action" value="submit_contact_form">
 
                             <div class="contact__form--field">
                                 <label for="fullname" class="contact__form--label">

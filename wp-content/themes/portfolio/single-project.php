@@ -1,19 +1,20 @@
 <?php get_header(); ?>
 
-    <main id="main-content" class="main-content" role="main">
+    <main id="main-content" class="main-content" role="main" itemscope itemtype="https://schema.org/CreativeWork">
         <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
             <section class="single__hero">
                 <div class="single__hero--container">
-                    <a href="<?= dw_translated_url('/mes-projets') ?>" class="single__back">
+                    <a href="<?= dw_translated_url('/mes-projets') ?>" class="single__back"
+                       title="<?php _e('Retourner à la liste de mes projets', 'portfolio-detective'); ?>">
                         <?php _e('Retour aux projets', 'portfolio-detective'); ?>
                     </a>
-                    <h2 class="single__title" itemprop="name"><?= get_the_title() ?></h2>
+                    <h2 class="single__title" itemprop="name" aria-level="2"><?= get_the_title() ?></h2>
 
                     <?php
                     $terms = get_the_terms($post->ID, 'type-project');
                     if ($terms && !is_wp_error($terms)) : ?>
-                        <div class="single__types">
+                        <div class="single__types" aria-label="<?php _e('Types de projet', 'portfolio-detective'); ?>">
                             <?php foreach ($terms as $term) : ?>
                                 <span class="single__type" itemprop="keywords"><?= $term->name ?></span>
                             <?php endforeach; ?>
@@ -22,17 +23,20 @@
 
                     <div class="single__links">
                         <?php if ($github = get_field('github')) : ?>
-                            <a href="<?= $github ?>" class="single__link single__link--github" itemprop="codeRepository">
+                            <a href="<?= $github ?>" class="single__link single__link--github"
+                               itemprop="codeRepository"
+                               title="<?php _e('Lien vers le dépôt du projet', 'portfolio-detective'); ?>">
                                 <?php _e('En savoir plus', 'portfolio-detective'); ?>
                             </a>
                         <?php endif; ?>
 
                         <?php if ($live = get_field('live')) : ?>
-                            <a href="<?= $live ?>" class="single__link single__link--live" itemprop="url">
+                            <a href="<?= $live ?>" class="single__link single__link--live" itemprop="url"
+                               title="<?php _e('Voir le projet', 'portfolio-detective'); ?>">
                                 <?php _e('Voir le projet', 'portfolio-detective'); ?>
                             </a>
                         <?php else : ?>
-                            <span class="single__link single__link--disabled">
+                            <span class="single__link single__link--disabled" aria-disabled="true">
                             <?php _e('Projet non disponible', 'portfolio-detective'); ?>
                         </span>
                         <?php endif; ?>
@@ -44,7 +48,7 @@
                 <?php if ($subtitle = get_field('subtitle')) : ?>
                     <section class="single__content--subtitle">
                         <div class="single__content--container">
-                            <h2 itemprop="headline"><?= $subtitle ?></h2>
+                            <h2 itemprop="headline" aria-level="2"><?= $subtitle ?></h2>
                         </div>
                     </section>
                 <?php endif; ?>

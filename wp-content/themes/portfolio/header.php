@@ -34,36 +34,52 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="<?= home_url(); ?>">
     <meta property="og:description" content="<?php bloginfo('description'); ?>">
-
-    <!-- TODO : Mon Logo -->
     <meta property="og:image"
-          content="<?= get_template_directory_uri(); ?>">
+          content="<?= get_template_directory_uri().'/resources/svg/logo-simple.svg'; ?>">
 
     <?php wp_head(); ?>
 </head>
 <body itemscope itemtype="https://schema.org/Person">
-<h1 class="hidden"><?= get_the_title(); ?></h1>
 
-<a class="skip__link hidden" href="#main-content"><?php __('Aller au contenu principal', 'portfolio-detective')
+<noscript>
+    <p class="no-js__message">
+        <?php __('Pour accéder à toutes les fonctionnalités de ce site, vous devez activer JavaScript.',
+            'portfolio-detective') ?> <br>
+        <?php _e('Voici les', 'portfolio-detective') ?><a href="https://www.enable-javascript.com/fr/" hreflang="fr"
+                                                          title="<?= __
+                                                          ('vers le site enable-javascript',
+                                                              'portfolio-detective') ?>"><?php _e('instructions pour activer JavaScript dans votre navigateur Web') ?></a>.
+    </p>
+</noscript>
+
+<h1 class="sro" role="heading" aria-level="1"><?= get_the_title(); ?></h1>
+
+<a class="skip__link sro" href="#main-content"><?php __('Aller au contenu principal', 'portfolio-detective')
     ?></a>
 
 <header id="header" class="header" role="banner">
     <div class="header__container">
-        <nav class="header__nav" aria-label="<?php __('Navigation principale', 'portfolio-detective'); ?>">
-            <h2 class="hidden"><?php __('Navigation principale', 'portfolio-detective'); ?></h2>
-            <a href="<?= home_url('/'); ?>" itemprop="url"><?= get_bloginfo('name') ?></a>
+        <nav class="header__nav" aria-label="<?php __('Navigation principale', 'portfolio-detective'); ?>"
+             role="navigation"
+             aria-level="1">
+            <h2 class="sro" role="heading" aria-level="2"><?php _e('Navigation principale',
+                    'portfolio-detective'); ?></h2>
+            <a href="<?= home_url('/'); ?>" itemprop="url" title="<?php __('Aller à la page d\'accueil'); ?>"><?=
+                get_bloginfo('name') ?></a>
 
-            <input type="checkbox" id="burger-menu" class="hidden" />
+            <input type="checkbox" id="burger-menu" class="sro" aria-label="Burger menu"/>
             <label for="burger-menu" class="header__nav--burger">
                 <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
+            </label>
 
-            <ul class="header__nav--container">
+            <ul class="header__nav--container" role="menu">
                 <?php foreach (dw_get_navigation_links('header') as $link): ?>
                     <li class="nav__item<?= $link->current ? ' nav__item--current' : '' ?>">
-                        <a href="<?= $link->href ?>" class="nav__link">
+                        <a href="<?= $link->href ?>" class="nav__link"
+                           title="<?= __('Aller à ma page : ', 'portfolio-detective').
+                           $link->label; ?>" role="menuitem"
+                           aria-label="<?= __('Aller à ma page :', 'portfolio-detective').' '.
+                           $link->label; ?>">
                             <?= $link->label ?>
                         </a>
                     </li>
@@ -74,7 +90,9 @@
                         <a href="<?= $lang->url; ?>"
                            class="nav__link--language"
                            hreflang="<?= $lang->locale; ?>"
-                           title="<?= sprintf(__('Passer en %s', 'portfolio-detective'), $lang->label); ?>">
+                           title="<?= __('Changer en ', 'portfolio-detective'), $lang->label; ?>"
+                           aria-label="<?= __('Changer la langue en ', 'portfolio-detective'), $lang->label; ?>"
+                           role="menuitem">
                             <?= strtoupper($lang->code); ?>
                         </a>
                     <?php endforeach; ?>
