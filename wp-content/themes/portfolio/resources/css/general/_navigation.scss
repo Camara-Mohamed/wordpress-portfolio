@@ -36,14 +36,14 @@
 
     .nav__item {
       color: var(--c-beige-light);
-      font-size: 1.25rem;
+      font-size: 1.125rem;
       font-weight: 500;
       list-style: none;
 
       &--current {
         .nav__item--link {
           color: var(--c-red);
-          font-weight: 700;
+          font-weight: 500;
 
           &::before {
             content: '';
