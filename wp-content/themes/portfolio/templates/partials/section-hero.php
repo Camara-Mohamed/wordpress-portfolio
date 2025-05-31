@@ -40,10 +40,12 @@
     <div class="hero__images">
         <?php if (!empty($images)) : ?>
             <figure class="hero__figure">
+                <div class="hero__figure--container">
                 <?php foreach ($images as $image_id) :
                     $alt = get_post_meta($image_id, '_wp_attachment_image_alt', true) ?: '';
                     ?>
                     <div class="hero__figure--box">
+                        <div class="hero__figure--box-int">
                         <?php
                         echo wp_get_attachment_image(
                             $image_id,
@@ -59,8 +61,11 @@
                             ]
                         );
                         ?>
+                        </div>
                     </div>
                 <?php endforeach; ?>
+                    <img class="approved" src="../../resources/svg/approved.svg" alt="<?php _e('Cachet approuver', 'portfolio-detective') ?>" />
+                </div>
             </figure>
         <?php endif; ?>
     </div>

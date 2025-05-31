@@ -1,25 +1,22 @@
 .footer {
   margin-top: auto;
   display: flex;
-  width: 100%;
   flex-direction: column;
   align-items: center;
   color: var(--c-brown);
-  background-color: var(--c-beige-light);
+  background-color: transparent;
   padding: 0;
 
   &__container {
     display: flex;
     flex-direction: row;
-    padding: 1rem 1.5rem;
+    padding: 1rem 0;
     align-items: flex-start;
     justify-content: space-between;
     gap: 1rem;
     align-self: stretch;
     width: 100%;
     height: auto;
-    margin: 0 auto;
-    max-width: 1900px;
     background-color: var(--c-beige-light);
 
     .footer {
@@ -105,6 +102,8 @@
 
         h3.footer__nav--title, h3.footer__resources--title, h3.footer__sociales--title {
           color: var(--c-red);
+          font-family: var(--ff-primary), serif;
+          font-weight: 600;
           font-size: 1.25rem;
         }
 
@@ -138,9 +137,8 @@
 
   &__legal {
     background-color: var(--c-brown);
-    width: 100%;
     display: flex;
-    padding: 1rem 1.5rem;
+    padding: 1rem 0;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -148,10 +146,10 @@
     align-self: stretch;
     color: var(--c-beige-light);
     font-weight: 400;
-    max-width: 1900px;
 
     &--copyright {
       font-size: 1rem;
+      line-height: 1.4;
     }
 
     &--link {
