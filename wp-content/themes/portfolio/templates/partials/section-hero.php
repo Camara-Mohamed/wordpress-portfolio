@@ -39,13 +39,14 @@
                 <?php foreach ($images as $image_id) :
                     $alt = get_post_meta($image_id, '_wp_attachment_image_alt', true) ?: '';
                     ?>
+                    <div class="hero__figure--box">
                     <?php
                     echo wp_get_attachment_image(
                         $image_id,
                         'hero-lg',
                         false,
                         [
-                            'class'    => 'hero-img',
+                            'class' => 'hero__figure--img',
                             'alt' => $alt,
                             'sizes'    => '(max-width: 400px) 100vw, (max-width: 800px) 100vw, 1200px',
                             'srcset'   => wp_get_attachment_image_srcset($image_id, 'hero-lg'),
@@ -54,6 +55,7 @@
                         ]
                     );
                     ?>
+                    </div>
                 <?php endforeach; ?>
             </figure>
         <?php endif; ?>

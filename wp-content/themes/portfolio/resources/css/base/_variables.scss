@@ -2,7 +2,7 @@
 
   /* Font family */
   --ff-primary: 'Crimson Pro', Georgia, serif;
-  --ff-secondary: 'Special Elite', cursive, serif;
+  --ff-secondary: 'Special Elite', system-ui;
 
   /* Couleurs de base */
   --c-black: #000000;
@@ -15,5 +15,8 @@
   --c-beige-light: #F8F3E0;
   --c-beige-mid: #F5E8C9;
   --c-beige-dark: #E0D3B4;
+
+  --g-black-01 : rgba(0, 0, 0, 0.10);
+  --g-beige-01 : rgba(224, 211, 180, 0.2);
 
 }

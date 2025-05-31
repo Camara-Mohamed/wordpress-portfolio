@@ -38,6 +38,10 @@
           content="<?= get_template_directory_uri().'/resources/svg/logo-simple.svg'; ?>">
 
     <?php wp_head(); ?>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
 </head>
 <body itemscope itemtype="https://schema.org/Person">
 
@@ -45,7 +49,7 @@
     <p class="no-js__message">
         <?php _e('Pour accéder à toutes les fonctionnalités de ce site, vous devez activer JavaScript.',
             'portfolio-detective') ?> <br>
-        <?php _e('Voici les', 'portfolio-detective') ?><a href="https://www.enable-javascript.com/fr/" hreflang="fr"
+        <?php _e('Voici les', 'portfolio-detective') ?> <a href="https://www.enable-javascript.com/fr/" hreflang="fr"
                                                           title="<?= __
                                                           ('vers le site enable-javascript',
                                                               'portfolio-detective') ?>"><?php _e('instructions pour activer JavaScript dans votre navigateur Web') ?></a>.
@@ -54,7 +58,7 @@
 
 <h1 class="sro" role="heading" aria-level="1"><?= get_the_title(); ?></h1>
 
-<a class="skip__link sro" href="#main-content"><?php _e('Aller au contenu principal', 'portfolio-detective')
+<a class="skip__link" href="#main-content"><?php _e('Aller au contenu principal', 'portfolio-detective')
     ?></a>
 
 <header id="header" class="header">
@@ -63,18 +67,34 @@
              role="navigation">
             <h2 class="sro" aria-level="2"><?php _e('Navigation principale',
                     'portfolio-detective'); ?></h2>
-            <a href="<?= home_url('/'); ?>" itemprop="url" title="<?php _e('Aller à la page d\'accueil'); ?>"><?=
-                get_bloginfo('name') ?></a>
+            <a class="header__nav--title" href="<?= home_url('/'); ?>" itemprop="url"
+               title="<?php _e('Aller à la page d\'accueil');
+               ?>">
+                <svg xmlns="http://www.w3.org/2000/svg" width="51" height="51" viewBox="0 0 51 51" fill="none">
+                    <g clip-path="url(#clip0_487_768)">
+                        <path d="M11.7219 25.5C11.7219 18.1132 17.7615 12.1245 25.2112 12.1245V0.5C11.2876 0.5 0 11.6924 0 25.5C0 39.3076 11.2876 50.5 25.2127 50.5V38.877C17.7631 38.877 11.7234 32.8883 11.7234 25.5015L11.7219 25.5Z" fill="#F5E8C9"/>
+                        <path d="M51 50.5V36.5533V24.9303H39.2766H25.2127V36.5533H39.2766V50.5H51Z" fill="#C1272D"/>
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_487_768">
+                            <rect width="51" height="50" fill="white" transform="translate(0 0.5)"/>
+                        </clipPath>
+                    </defs>
+                </svg>
+                <?= get_bloginfo('name') ?>
+            </a>
 
-            <input type="checkbox" id="burger-menu" class="sro" aria-label="Burger menu"/>
+            <input type="checkbox" id="burger-menu" class="sro burger-checkbox" aria-label="Menu principal"/>
             <label for="burger-menu" class="header__nav--burger">
-                <span></span>
+                <span class="burger__line burger__line-1"></span>
+                <span class="burger__line burger--line-2"></span>
+                <span class="burger__line burger--line-3"></span>
             </label>
 
             <ul class="header__nav--container">
                 <?php foreach (dw_get_navigation_links('header') as $link): ?>
                     <li class="nav__item<?= $link->current ? ' nav__item--current' : '' ?>">
-                        <a href="<?= $link->href ?>" class="nav__link"
+                        <a href="<?= $link->href ?>" class="nav__item--link"
                            title="<?= __('Aller à ma page : ', 'portfolio-detective').
                            $link->label; ?>"
                            aria-label="<?= __('Aller à ma page :', 'portfolio-detective').' '.
