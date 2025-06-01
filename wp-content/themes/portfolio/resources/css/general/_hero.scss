@@ -1,40 +1,50 @@
 @use '../base/breakpoints';
 
-.hero {
-  display: inline-flex;
-  flex-direction: row;
-  align-items: flex-start;
-  width: 100%;
-  gap: 12.25rem;
+.hero, .error-404 {
+  display: flex;
+  flex-direction: column;
   margin-bottom: 4rem;
+  gap: 4rem;
+  max-width: 1600px;
+  width: 100%;
+  align-items: center;
+
+  @include breakpoints.desktop {
+    display: flex;
+    flex-direction: row;
+  }
 
   &__container {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    width: 100%;
+    @include breakpoints.mobile {
+      width: 100%;
+    }
+  }
+
+  &__images {
+    @include breakpoints.desktop {
+      width: 100%;
+    }
 
     @include breakpoints.tablet {
       width: 80%;
-    }
-
-    @include breakpoints.desktop {
-      width: 100%;
-      justify-content: space-between;
+      justify-content: center;
+      align-items: center;
     }
   }
 
-  &__text {
+  &__container, .error-404__container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  &__text, .error-404__content {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-
-    @include breakpoints.desktop {
-      width: 100%;
-    }
   }
 
-  &__title {
+  &__title, .error-404__title {
     color: var(--c-red);
     font-size: 2.5rem;
     line-height: 1.1;
@@ -52,7 +62,7 @@
   &__subtitle {
     color: var(--c-brown);
     font-size: 1.5rem;
-    font-weight: 600;
+    font-weight: 500;
     margin-bottom: 1rem;
     font-family: var(--ff-primary), serif;
 
@@ -65,134 +75,148 @@
     }
   }
 
-  p {
+  p, .error-404__text {
     color: var(--c-brown);
     font-size: 1.125rem;
     font-weight: 400;
-    width: 100%;
     line-height: 1.4;
-
-    @include breakpoints.tablet {
-      width: 80%;
-    }
-
-    @include breakpoints.desktop {
-      width: 80%;
-    }
   }
 
-  &__actions {
+  .error-404__actions {
+    margin-top: 1rem;
+  }
+
+  &__actions, .error-404__actions {
     display: flex;
     align-items: flex-start;
     gap: 1rem;
+    flex-wrap: wrap;
 
     @include breakpoints.mobile {
       flex-direction: row;
       flex-wrap: wrap;
     }
 
-    .hero__action {
+    .hero__action, .error-404__action {
       display: flex;
-      padding: 1rem;
       justify-content: center;
       align-items: center;
       font-family: var(--ff-secondary), system-ui;
       font-size: 1rem;
       text-align: center;
       transition: all 0.3s ease;
+      border: .0625rem solid transparent;
+      padding: 1rem;
 
       @include breakpoints.mobile {
         width: auto;
-        min-width: 180px;
+        padding: 0.875rem;
       }
+    }
 
-      &--primary {
-        background-color: var(--c-brown);
-        color: var(--c-beige-light);
-        text-decoration: none;
+    .hero__action--primary, .button__primary {
+      background-color: var(--c-brown);
+      color: var(--c-beige-light);
+      text-decoration: none;
 
-        &:hover,
-        &:focus {
-          background-color: var(--c-beige-light);
-          color: var(--c-brown);
-          border: 0.0625rem solid var(--c-brown);
-        }
+      &:hover,
+      &:focus {
+        background-color: var(--c-beige-light);
+        color: var(--c-brown);
+        border: 0.0625rem solid var(--c-brown);
       }
+    }
 
-      &--secondary {
-        background-color: var(--c-red);
-        color: var(--c-beige-light);
-        text-decoration: none;
+    .hero__action--secondary, .button__secondary {
+      background-color: var(--c-red);
+      color: var(--c-beige-light);
+      text-decoration: none;
 
-        &:hover,
-        &:focus {
-          background-color: var(--c-beige-light);
-          color: var(--c-red);
-          border: 0.0625rem solid var(--c-red);
-        }
+      &:hover,
+      &:focus {
+        background-color: var(--c-beige-light);
+        color: var(--c-red);
+        border: 0.0625rem solid var(--c-red);
       }
-
     }
   }
 
   &__images {
-    position: relative;
-    width: 100%;
-
-    @include breakpoints.tablet {
-      width: 80%;
-      align-self: center;
-    }
-
-    @include breakpoints.desktop {
-      width: 40%;
-    }
-
     .hero__figure {
-      margin: 0;
-      width: 100%;
-
       &--container {
         display: flex;
+        justify-content: center;
         position: relative;
-        min-height: 300px;
-
-        @include breakpoints.tablet {
-          min-height: 400px;
-        }
-      }
-
-      &--container:first-child {
-        display: inline-flex;
-        transform: rotate(-10deg);
-        padding: 0.25rem;
-        align-items: center;
-        border: 0.0625rem dashed var(--g-brown-02);
-
-
+        gap: 1rem;
+        padding: 2rem 0;
       }
 
       .hero__figure--box {
-        transform: rotate(13deg);
+        display: inline-flex;
+        padding: 0.25rem;
+        align-items: center;
+        border: 0.0625rem dashed var(--g-brown-02);
+        position: relative;
+        box-sizing: border-box;
+        max-width: 100%;
 
-        &:after {
-          content: url("../../svg/scotch.svg");
+        &:first-child {
+          width: 60%;
+          transform: rotate(-10deg);
+          z-index: 1;
+          margin-right: -3rem;
+
+          @include breakpoints.mobile {
+            align-self: flex-start;
+          }
+
+          @include breakpoints.tablet {
+            align-self: flex-start;
+          }
+
         }
-      }
 
-      &::before {
+        &:last-child {
+          width: 80%;
+          transform: rotate(13deg);
+          z-index: 2;
+          margin-left: -3rem;
 
+          @include breakpoints.mobile {
+            align-self: flex-end;
+          }
+
+          @include breakpoints.tablet {
+            align-self: flex-end;
+          }
+        }
       }
 
       .hero__figure--box-int {
         display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        width: 100%;
+        align-items: center;
+        justify-content: center;
         height: auto;
-        border: 1px solid var(--c-brown);
+        border: 0.0625rem solid var(--c-brown);
         background: var(--c-beige-mid);
         box-shadow: 0.25rem 0.25rem 0 0 var(--g-beige-01);
+        padding: 10%;
+        position: relative;
+        box-sizing: border-box;
+        width: 100%;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+          transform: scale(1.2);
+        }
+
+        .hero__figure--img {
+          height: auto;
+          width: 100%;
+          max-width: 100%;
+          object-fit: contain;
+          display: block;
+        }
       }
 
       .approved {

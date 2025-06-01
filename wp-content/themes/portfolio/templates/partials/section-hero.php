@@ -64,7 +64,6 @@
                         </div>
                     </div>
                 <?php endforeach; ?>
-                    <img class="approved" src="../../resources/svg/approved.svg" alt="<?php _e('Cachet approuver', 'portfolio-detective') ?>" />
                 </div>
             </figure>
         <?php endif; ?>
