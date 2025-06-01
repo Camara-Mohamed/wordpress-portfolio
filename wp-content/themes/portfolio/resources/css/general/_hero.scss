@@ -3,32 +3,41 @@
 .hero, .error-404 {
   display: flex;
   flex-direction: column;
-  margin-bottom: 4rem;
-  gap: 4rem;
+  gap: 2rem;
   max-width: 1600px;
   width: 100%;
+  box-sizing: border-box;
   align-items: center;
 
   @include breakpoints.desktop {
     display: flex;
     flex-direction: row;
+    gap: 4rem;
+    align-items: flex-start;
   }
 
   &__container {
-    @include breakpoints.mobile {
-      width: 100%;
+    width: 100%;
+
+    @include breakpoints.desktop {
+      width: 55%;
     }
   }
 
   &__images {
-    @include breakpoints.desktop {
-      width: 100%;
-    }
+    width: 100%;
+    margin-top: 2rem;
 
     @include breakpoints.tablet {
       width: 80%;
       justify-content: center;
       align-items: center;
+    }
+
+    @include breakpoints.desktop {
+      width: 45%;
+      margin-top: 0;
+      order: initial;
     }
   }
 
@@ -36,6 +45,7 @@
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    overflow: hidden;
   }
 
   &__text, .error-404__content {
@@ -80,6 +90,15 @@
     font-size: 1.125rem;
     font-weight: 400;
     line-height: 1.4;
+    width: 100%;
+
+    @include breakpoints.tablet {
+      width: 90%;
+    }
+
+    @include breakpoints.desktop {
+      width: 80%;
+    }
   }
 
   .error-404__actions {
@@ -110,7 +129,7 @@
 
       @include breakpoints.mobile {
         width: auto;
-        padding: 0.875rem;
+        padding: 0.875rem 1.25rem;
       }
     }
 
@@ -149,6 +168,11 @@
         position: relative;
         gap: 1rem;
         padding: 2rem 0;
+        min-height: 300px;
+
+        @include breakpoints.tablet {
+          min-height: 400px;
+        }
       }
 
       .hero__figure--box {
@@ -167,13 +191,14 @@
           margin-right: -3rem;
 
           @include breakpoints.mobile {
-            align-self: flex-start;
+            width: 55%;
+            transform: rotate(-8deg);
           }
 
           @include breakpoints.tablet {
-            align-self: flex-start;
+            width: 50%;
+            transform: rotate(-7deg);
           }
-
         }
 
         &:last-child {
@@ -183,11 +208,13 @@
           margin-left: -3rem;
 
           @include breakpoints.mobile {
-            align-self: flex-end;
+            width: 70%;
+            transform: rotate(11deg);
           }
 
           @include breakpoints.tablet {
-            align-self: flex-end;
+            width: 60%;
+            transform: rotate(9deg);
           }
         }
       }
@@ -196,14 +223,13 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        height: auto;
         border: 0.0625rem solid var(--c-brown);
         background: var(--c-beige-mid);
         box-shadow: 0.25rem 0.25rem 0 0 var(--g-beige-01);
         padding: 10%;
-        position: relative;
         box-sizing: border-box;
         width: 100%;
+        height: auto;
         transition: all 0.3s ease-in-out;
 
         &:hover {

@@ -259,6 +259,7 @@ img {
   color: var(--c-beige-light);
   display: flex;
   height: auto;
+  width: 100vw;
   padding-top: 1rem;
   padding-bottom: 1rem;
   flex-direction: column;
@@ -279,6 +280,7 @@ img {
   color: var(--c-brown);
   background-color: transparent;
   padding: 0;
+  width: 100vw;
 }
 .footer__container {
   display: flex;
@@ -541,27 +543,31 @@ img {
 .hero, .error-404 {
   display: flex;
   flex-direction: column;
-  margin-bottom: 4rem;
-  gap: 4rem;
+  gap: 2rem;
   max-width: 1600px;
   width: 100%;
+  box-sizing: border-box;
   align-items: center;
 }
 @media only screen and (min-width: 1024px) {
   .hero, .error-404 {
     display: flex;
     flex-direction: row;
+    gap: 4rem;
+    align-items: flex-start;
   }
 }
-@media only screen and (max-width: 479px) {
-  .hero__container, .error-404__container {
-    width: 100%;
-  }
+.hero__container, .error-404__container {
+  width: 100%;
 }
 @media only screen and (min-width: 1024px) {
-  .hero__images, .error-404__images {
-    width: 100%;
+  .hero__container, .error-404__container {
+    width: 55%;
   }
+}
+.hero__images, .error-404__images {
+  width: 100%;
+  margin-top: 2rem;
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   .hero__images, .error-404__images {
@@ -570,10 +576,18 @@ img {
     align-items: center;
   }
 }
+@media only screen and (min-width: 1024px) {
+  .hero__images, .error-404__images {
+    width: 45%;
+    margin-top: 0;
+    order: initial;
+  }
+}
 .hero__container, .hero .error-404__container, .error-404__container, .error-404 .error-404__container {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  overflow: hidden;
 }
 .hero__text, .hero .error-404__content, .error-404__text, .error-404 .error-404__content {
   display: flex;
@@ -618,6 +632,17 @@ img {
   font-size: 1.125rem;
   font-weight: 400;
   line-height: 1.4;
+  width: 100%;
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .hero p, .hero .error-404__text, .error-404 p, .error-404 .error-404__text {
+    width: 90%;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .hero p, .hero .error-404__text, .error-404 p, .error-404 .error-404__text {
+    width: 80%;
+  }
 }
 .hero .error-404__actions, .error-404 .error-404__actions {
   margin-top: 1rem;
@@ -648,7 +673,7 @@ img {
 @media only screen and (max-width: 479px) {
   .hero__actions .hero__action, .hero__actions .error-404__action, .hero .error-404__actions .hero__action, .hero .error-404__actions .error-404__action, .error-404__actions .hero__action, .error-404__actions .error-404__action, .error-404 .error-404__actions .hero__action, .error-404 .error-404__actions .error-404__action {
     width: auto;
-    padding: 0.875rem;
+    padding: 0.875rem 1.25rem;
   }
 }
 .hero__actions .hero__action--primary, .hero__actions .button__primary, .hero .error-404__actions .hero__action--primary, .hero .error-404__actions .button__primary, .error-404__actions .hero__action--primary, .error-404__actions .button__primary, .error-404 .error-404__actions .hero__action--primary, .error-404 .error-404__actions .button__primary {
@@ -677,6 +702,12 @@ img {
   position: relative;
   gap: 1rem;
   padding: 2rem 0;
+  min-height: 300px;
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .hero__images .hero__figure--container, .error-404__images .hero__figure--container {
+    min-height: 400px;
+  }
 }
 .hero__images .hero__figure .hero__figure--box, .error-404__images .hero__figure .hero__figure--box {
   display: inline-flex;
@@ -695,12 +726,14 @@ img {
 }
 @media only screen and (max-width: 479px) {
   .hero__images .hero__figure .hero__figure--box:first-child, .error-404__images .hero__figure .hero__figure--box:first-child {
-    align-self: flex-start;
+    width: 55%;
+    transform: rotate(-8deg);
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   .hero__images .hero__figure .hero__figure--box:first-child, .error-404__images .hero__figure .hero__figure--box:first-child {
-    align-self: flex-start;
+    width: 50%;
+    transform: rotate(-7deg);
   }
 }
 .hero__images .hero__figure .hero__figure--box:last-child, .error-404__images .hero__figure .hero__figure--box:last-child {
@@ -711,26 +744,27 @@ img {
 }
 @media only screen and (max-width: 479px) {
   .hero__images .hero__figure .hero__figure--box:last-child, .error-404__images .hero__figure .hero__figure--box:last-child {
-    align-self: flex-end;
+    width: 70%;
+    transform: rotate(11deg);
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   .hero__images .hero__figure .hero__figure--box:last-child, .error-404__images .hero__figure .hero__figure--box:last-child {
-    align-self: flex-end;
+    width: 60%;
+    transform: rotate(9deg);
   }
 }
 .hero__images .hero__figure .hero__figure--box-int, .error-404__images .hero__figure .hero__figure--box-int {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: auto;
   border: 0.0625rem solid var(--c-brown);
   background: var(--c-beige-mid);
   box-shadow: 0.25rem 0.25rem 0 0 var(--g-beige-01);
   padding: 10%;
-  position: relative;
   box-sizing: border-box;
   width: 100%;
+  height: auto;
   transition: all 0.3s ease-in-out;
 }
 .hero__images .hero__figure .hero__figure--box-int:hover, .error-404__images .hero__figure .hero__figure--box-int:hover {
