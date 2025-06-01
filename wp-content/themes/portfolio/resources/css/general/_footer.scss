@@ -1,3 +1,5 @@
+@use '../base/breakpoints';
+
 .footer {
   margin-top: auto;
   display: flex;
@@ -79,7 +81,8 @@
             width: auto;
             text-decoration: none;
             text-align: center;
-            transition: .3s;
+            transition: all 0.3s ease;
+            border: .0625rem solid transparent;
 
             &:hover,
             &:focus {
@@ -146,6 +149,14 @@
     align-self: stretch;
     color: var(--c-beige-light);
     font-weight: 400;
+
+    @include breakpoints.mobile {
+      align-items: flex-start;
+    }
+
+    @include breakpoints.desktop {
+      align-items: flex-start;
+    }
 
     &--copyright {
       font-size: 1rem;

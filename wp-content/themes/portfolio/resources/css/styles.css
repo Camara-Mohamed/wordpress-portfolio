@@ -209,17 +209,11 @@ header, footer.footer {
   }
 }
 
-#main-content {
-  position: relative;
-  margin: 0 auto;
-  flex: 1 0 auto;
-}
-
 img {
-  width: 100%;
   height: auto;
   object-fit: cover;
   max-width: 100%;
+  display: block;
 }
 
 .sro {
@@ -351,7 +345,8 @@ img {
   width: auto;
   text-decoration: none;
   text-align: center;
-  transition: 0.3s;
+  transition: all 0.3s ease;
+  border: 0.0625rem solid transparent;
 }
 .footer__container .footer__section .footer__contact--button:hover, .footer__container .footer__section .footer__contact--button:focus {
   background-color: var(--c-beige-light);
@@ -404,6 +399,16 @@ img {
   align-self: stretch;
   color: var(--c-beige-light);
   font-weight: 400;
+}
+@media only screen and (max-width: 479px) {
+  .footer__legal {
+    align-items: flex-start;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .footer__legal {
+    align-items: flex-start;
+  }
 }
 .footer__legal--copyright {
   font-size: 1rem;
@@ -533,191 +538,212 @@ img {
     width: calc(50% - 0.5rem);
   }
 }
-.hero {
-  display: inline-flex;
-  flex-direction: row;
-  align-items: flex-start;
-  width: 100%;
-  gap: 12.25rem;
+.hero, .error-404 {
+  display: flex;
+  flex-direction: column;
   margin-bottom: 4rem;
+  gap: 4rem;
+  max-width: 1600px;
+  width: 100%;
+  align-items: center;
 }
-.hero__container {
+@media only screen and (min-width: 1024px) {
+  .hero, .error-404 {
+    display: flex;
+    flex-direction: row;
+  }
+}
+@media only screen and (max-width: 479px) {
+  .hero__container, .error-404__container {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .hero__images, .error-404__images {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .hero__images, .error-404__images {
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.hero__container, .hero .error-404__container, .error-404__container, .error-404 .error-404__container {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  width: 100%;
 }
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
-  .hero__container {
-    width: 80%;
-  }
-}
-@media only screen and (min-width: 1024px) {
-  .hero__container {
-    width: 100%;
-    justify-content: space-between;
-  }
-}
-.hero__text {
+.hero__text, .hero .error-404__content, .error-404__text, .error-404 .error-404__content {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
-@media only screen and (min-width: 1024px) {
-  .hero__text {
-    width: 100%;
-  }
-}
-.hero__title {
+.hero__title, .hero .error-404__title, .error-404__title, .error-404 .error-404__title {
   color: var(--c-red);
   font-size: 2.5rem;
   line-height: 1.1;
   margin-bottom: 0.125rem;
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
-  .hero__title {
+  .hero__title, .hero .error-404__title, .error-404__title, .error-404 .error-404__title {
     font-size: 3.5rem;
   }
 }
 @media only screen and (min-width: 1024px) {
-  .hero__title {
+  .hero__title, .hero .error-404__title, .error-404__title, .error-404 .error-404__title {
     font-size: 4rem;
   }
 }
-.hero__subtitle {
+.hero__subtitle, .error-404__subtitle {
   color: var(--c-brown);
   font-size: 1.5rem;
-  font-weight: 600;
+  font-weight: 500;
   margin-bottom: 1rem;
   font-family: var(--ff-primary), serif;
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
-  .hero__subtitle {
+  .hero__subtitle, .error-404__subtitle {
     font-size: 1.75rem;
   }
 }
 @media only screen and (min-width: 1024px) {
-  .hero__subtitle {
+  .hero__subtitle, .error-404__subtitle {
     font-size: 2rem;
   }
 }
-.hero p {
+.hero p, .hero .error-404__text, .error-404 p, .error-404 .error-404__text {
   color: var(--c-brown);
   font-size: 1.125rem;
   font-weight: 400;
-  width: 100%;
   line-height: 1.4;
 }
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
-  .hero p {
-    width: 80%;
-  }
+.hero .error-404__actions, .error-404 .error-404__actions {
+  margin-top: 1rem;
 }
-@media only screen and (min-width: 1024px) {
-  .hero p {
-    width: 80%;
-  }
-}
-.hero__actions {
+.hero__actions, .hero .error-404__actions, .error-404__actions, .error-404 .error-404__actions {
   display: flex;
   align-items: flex-start;
   gap: 1rem;
+  flex-wrap: wrap;
 }
 @media only screen and (max-width: 479px) {
-  .hero__actions {
+  .hero__actions, .hero .error-404__actions, .error-404__actions, .error-404 .error-404__actions {
     flex-direction: row;
     flex-wrap: wrap;
   }
 }
-.hero__actions .hero__action {
+.hero__actions .hero__action, .hero__actions .error-404__action, .hero .error-404__actions .hero__action, .hero .error-404__actions .error-404__action, .error-404__actions .hero__action, .error-404__actions .error-404__action, .error-404 .error-404__actions .hero__action, .error-404 .error-404__actions .error-404__action {
   display: flex;
-  padding: 1rem;
   justify-content: center;
   align-items: center;
   font-family: var(--ff-secondary), system-ui;
   font-size: 1rem;
   text-align: center;
   transition: all 0.3s ease;
+  border: 0.0625rem solid transparent;
+  padding: 1rem;
 }
 @media only screen and (max-width: 479px) {
-  .hero__actions .hero__action {
+  .hero__actions .hero__action, .hero__actions .error-404__action, .hero .error-404__actions .hero__action, .hero .error-404__actions .error-404__action, .error-404__actions .hero__action, .error-404__actions .error-404__action, .error-404 .error-404__actions .hero__action, .error-404 .error-404__actions .error-404__action {
     width: auto;
-    min-width: 180px;
+    padding: 0.875rem;
   }
 }
-.hero__actions .hero__action--primary {
+.hero__actions .hero__action--primary, .hero__actions .button__primary, .hero .error-404__actions .hero__action--primary, .hero .error-404__actions .button__primary, .error-404__actions .hero__action--primary, .error-404__actions .button__primary, .error-404 .error-404__actions .hero__action--primary, .error-404 .error-404__actions .button__primary {
   background-color: var(--c-brown);
   color: var(--c-beige-light);
   text-decoration: none;
 }
-.hero__actions .hero__action--primary:hover, .hero__actions .hero__action--primary:focus {
+.hero__actions .hero__action--primary:hover, .hero__actions .hero__action--primary:focus, .hero__actions .button__primary:hover, .hero__actions .button__primary:focus, .hero .error-404__actions .hero__action--primary:hover, .hero .error-404__actions .hero__action--primary:focus, .hero .error-404__actions .button__primary:hover, .hero .error-404__actions .button__primary:focus, .error-404__actions .hero__action--primary:hover, .error-404__actions .hero__action--primary:focus, .error-404__actions .button__primary:hover, .error-404__actions .button__primary:focus, .error-404 .error-404__actions .hero__action--primary:hover, .error-404 .error-404__actions .hero__action--primary:focus, .error-404 .error-404__actions .button__primary:hover, .error-404 .error-404__actions .button__primary:focus {
   background-color: var(--c-beige-light);
   color: var(--c-brown);
   border: 0.0625rem solid var(--c-brown);
 }
-.hero__actions .hero__action--secondary {
+.hero__actions .hero__action--secondary, .hero__actions .button__secondary, .hero .error-404__actions .hero__action--secondary, .hero .error-404__actions .button__secondary, .error-404__actions .hero__action--secondary, .error-404__actions .button__secondary, .error-404 .error-404__actions .hero__action--secondary, .error-404 .error-404__actions .button__secondary {
   background-color: var(--c-red);
   color: var(--c-beige-light);
   text-decoration: none;
 }
-.hero__actions .hero__action--secondary:hover, .hero__actions .hero__action--secondary:focus {
+.hero__actions .hero__action--secondary:hover, .hero__actions .hero__action--secondary:focus, .hero__actions .button__secondary:hover, .hero__actions .button__secondary:focus, .hero .error-404__actions .hero__action--secondary:hover, .hero .error-404__actions .hero__action--secondary:focus, .hero .error-404__actions .button__secondary:hover, .hero .error-404__actions .button__secondary:focus, .error-404__actions .hero__action--secondary:hover, .error-404__actions .hero__action--secondary:focus, .error-404__actions .button__secondary:hover, .error-404__actions .button__secondary:focus, .error-404 .error-404__actions .hero__action--secondary:hover, .error-404 .error-404__actions .hero__action--secondary:focus, .error-404 .error-404__actions .button__secondary:hover, .error-404 .error-404__actions .button__secondary:focus {
   background-color: var(--c-beige-light);
   color: var(--c-red);
   border: 0.0625rem solid var(--c-red);
 }
-.hero__images {
-  position: relative;
-  width: 100%;
-}
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
-  .hero__images {
-    width: 80%;
-    align-self: center;
-  }
-}
-@media only screen and (min-width: 1024px) {
-  .hero__images {
-    width: 40%;
-  }
-}
-.hero__images .hero__figure {
-  margin: 0;
-  width: 100%;
-}
-.hero__images .hero__figure--container {
+.hero__images .hero__figure--container, .error-404__images .hero__figure--container {
   display: flex;
+  justify-content: center;
   position: relative;
-  min-height: 300px;
+  gap: 1rem;
+  padding: 2rem 0;
 }
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
-  .hero__images .hero__figure--container {
-    min-height: 400px;
-  }
-}
-.hero__images .hero__figure--container:first-child {
+.hero__images .hero__figure .hero__figure--box, .error-404__images .hero__figure .hero__figure--box {
   display: inline-flex;
-  transform: rotate(-10deg);
   padding: 0.25rem;
   align-items: center;
   border: 0.0625rem dashed var(--g-brown-02);
+  position: relative;
+  box-sizing: border-box;
+  max-width: 100%;
 }
-.hero__images .hero__figure .hero__figure--box {
+.hero__images .hero__figure .hero__figure--box:first-child, .error-404__images .hero__figure .hero__figure--box:first-child {
+  width: 60%;
+  transform: rotate(-10deg);
+  z-index: 1;
+  margin-right: -3rem;
+}
+@media only screen and (max-width: 479px) {
+  .hero__images .hero__figure .hero__figure--box:first-child, .error-404__images .hero__figure .hero__figure--box:first-child {
+    align-self: flex-start;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .hero__images .hero__figure .hero__figure--box:first-child, .error-404__images .hero__figure .hero__figure--box:first-child {
+    align-self: flex-start;
+  }
+}
+.hero__images .hero__figure .hero__figure--box:last-child, .error-404__images .hero__figure .hero__figure--box:last-child {
+  width: 80%;
   transform: rotate(13deg);
+  z-index: 2;
+  margin-left: -3rem;
 }
-.hero__images .hero__figure .hero__figure--box:after {
-  content: url("../../svg/scotch.svg");
+@media only screen and (max-width: 479px) {
+  .hero__images .hero__figure .hero__figure--box:last-child, .error-404__images .hero__figure .hero__figure--box:last-child {
+    align-self: flex-end;
+  }
 }
-.hero__images .hero__figure .hero__figure--box-int {
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .hero__images .hero__figure .hero__figure--box:last-child, .error-404__images .hero__figure .hero__figure--box:last-child {
+    align-self: flex-end;
+  }
+}
+.hero__images .hero__figure .hero__figure--box-int, .error-404__images .hero__figure .hero__figure--box-int {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  width: 100%;
+  align-items: center;
+  justify-content: center;
   height: auto;
-  border: 1px solid var(--c-brown);
+  border: 0.0625rem solid var(--c-brown);
   background: var(--c-beige-mid);
   box-shadow: 0.25rem 0.25rem 0 0 var(--g-beige-01);
+  padding: 10%;
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  transition: all 0.3s ease-in-out;
 }
-.hero__images .hero__figure .approved {
+.hero__images .hero__figure .hero__figure--box-int:hover, .error-404__images .hero__figure .hero__figure--box-int:hover {
+  transform: scale(1.2);
+}
+.hero__images .hero__figure .hero__figure--box-int .hero__figure--img, .error-404__images .hero__figure .hero__figure--box-int .hero__figure--img {
+  height: auto;
+  width: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  display: block;
+}
+.hero__images .hero__figure .approved, .error-404__images .hero__figure .approved {
   position: absolute;
 }
 
