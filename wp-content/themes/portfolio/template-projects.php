@@ -30,17 +30,18 @@ $current_page = max(1, get_query_var('paged') ?: get_query_var('page'));
 
                 if ($terms) : ?>
                     <ul class="filter__list">
-                        <li class="<?= !isset($_GET['filter']) ? 'active' : '' ?>">
-                            <a href="<?= get_post_type_archive_link('project') ?>" role="button"
+                        <li class="filter__list--item <?= !isset($_GET['filter']) ? 'active' : '' ?>">
+                            <a class="filter__list--link" href="<?= get_post_type_archive_link('project') ?>" role="button"
                                title="<?php _e('Voir tous les projets', 'portfolio-detective'); ?>">
                                 <?php _e('Tous', 'portfolio-detective'); ?>
                             </a>
                         </li>
                         <?php foreach ($terms as $term) : ?>
-                            <li class="<?= isset($_GET['filter']) && $_GET['filter'] === $term->slug ? 'active' : ''
+                            <li class="filter__list--item <?= isset($_GET['filter']) && $_GET['filter'] ===
+                            $term->slug ? 'active' : ''
                             ?>">
                                 <a href="<?= add_query_arg('filter', $term->slug,
-                                    get_post_type_archive_link('project')) ?>" role="button"
+                                    get_post_type_archive_link('project')) ?>" class="filter__list--link" role="button"
                                    title="<?php _e('Voir les', 'portfolio-detective').' '
                                    .$term->name; ?>">
                                     <?= $term->name ?>

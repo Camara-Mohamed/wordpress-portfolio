@@ -781,4 +781,49 @@ img {
   position: absolute;
 }
 
+.projects__filters {
+  display: flex;
+  justify-content: start;
+  margin: 4rem 0 2rem 0;
+}
+.projects__filters .filter__list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.projects__filters .filter__list--item {
+  display: flex;
+  padding: 1rem;
+  justify-content: center;
+  align-items: center;
+  border: 0.0625rem solid var(--c-red);
+  transition: all 0.3s ease;
+  color: var(--c-beige-light);
+}
+.projects__filters .filter__list--item:hover, .projects__filters .filter__list--item:focus {
+  background: var(--c-red);
+}
+.projects__filters .filter__list--item:hover .filter__list--link, .projects__filters .filter__list--item:focus .filter__list--link {
+  color: var(--c-beige-light);
+}
+.projects__filters .filter__list--item.active {
+  background: var(--c-red);
+}
+.projects__filters .filter__list--item.active .filter__list--link {
+  color: var(--c-beige-light);
+  font-weight: 500;
+}
+.projects__filters .filter__list--link {
+  color: var(--c-red);
+  text-align: center;
+  font-family: var(--ff-secondary), system-ui;
+  font-size: 1rem;
+  font-weight: 400;
+  text-decoration: none;
+}
+
 /*# sourceMappingURL=styles.css.map */
