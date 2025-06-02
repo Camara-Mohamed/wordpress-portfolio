@@ -1,0 +1,54 @@
+@use '../base/breakpoints';
+
+.project__card {
+  display: inline-flex;
+  padding: 10px;
+  flex-direction: column;
+  align-items: flex-start;
+  background: var(--c-beige-mid);
+  box-shadow: 0.25rem 0.5rem .25rem 0 var(--g-beige-01);
+
+  &--link {
+    text-decoration: none;
+    display: flex;
+    min-width: 16.25rem;
+    height: auto;
+    padding: 1.5rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    border: 0.0625rem dashed var(--g-brown-02);
+
+    .project__card--content {
+      .card__subtitle {
+
+      }
+
+      .card__meta {
+
+      }
+
+      .card__type {
+        position: absolute;
+        display: inline-flex;
+        transform: rotate(25deg);
+        padding: 0.5rem 1rem;
+        justify-content: center;
+        align-items: center;
+        background: var(--c-red);
+        width: auto;
+
+        .project-card__type {
+          color: var(--c-beige-light);
+          text-align: center;
+          font-family: var(--ff-secondary), system-ui;
+          font-size: 1rem;
+          text-decoration: none;
+          text-transform: capitalize;
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+}
+
