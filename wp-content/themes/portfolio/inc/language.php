@@ -37,12 +37,3 @@ function dw_get_languages(): array
 
     return [];
 }
-
-function dw_translated_url($path): ?string
-{
-    if (function_exists('pll_home_url')) {
-        return pll_home_url($path);
-    }
-
-    return home_url($path);
-}
