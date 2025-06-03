@@ -2,11 +2,8 @@
 
 .projects, .featured {
   display: flex;
-  padding: 4rem 2rem;
   flex-direction: column;
   align-items: center;
-  width: 100%;
-  background-color: var(--c-brown);
   position: relative;
 
   .projets__grid, .featured__container {
