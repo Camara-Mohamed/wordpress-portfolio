@@ -40,7 +40,8 @@
                                 <?php
                                 $cv_file = get_field('cv_file');
                                 if ($cv_file) : ?>
-                                    <a href="<?= $cv_file['url'] ?>" download class="contact-details__link" title="<?php
+                                    <a href="<?= $cv_file['url'] ?>" download class="contact__details--link"
+                                       title="<?php
                                     _e('Télécharger mon CV', 'portfolio-detective');
                                     ?>">
                                         <?php _e('Télécharger mon CV', 'portfolio-detective'); ?>
@@ -53,7 +54,8 @@
                     <div class="contact__form">
                         <h3 class="contact__form--title"><?php _e('Formulaire de contact',
                                 'portfolio-detective'); ?></h3>
-                        <p class="contact__form--note"><?php _e('(Champs obligatoires)', 'portfolio-detective'); ?></p>
+                        <p class="contact__form--note"><abbr title="<?php _e('Champs Obligatoire', 'portfolio-detective'); ?>">*</abbr> <?php _e('(Champs obligatoires)', 'portfolio-detective');
+                        ?></p>
 
                         <?php if (isset($_SESSION['contact_form_success'])) : ?>
                             <div class="contact__form--feedback contact__form-success">
