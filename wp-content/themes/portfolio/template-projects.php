@@ -85,8 +85,10 @@ $current_page = max(1, get_query_var('paged') ?: get_query_var('page'));
                     endwhile; ?>
 
                     <article class="projets__coming">
-                        <h2 class="sro"><?php _e('D\'autres projets arrivent') ?></h2>
-                        <p class="projets__coming--content">?</p>
+                        <h3 class="sro"><?php _e('D\'autres projets arrivent') ?></h3>
+                        <div class="projets__coming--content">
+                            <p class="projets__coming--text">?</p>
+                        </div>
                     </article>
 
                     <?php echo '<div class="pagination">';

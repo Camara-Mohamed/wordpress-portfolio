@@ -11,7 +11,7 @@
                 </p>
             <?php endif; ?>
 
-            <div class="card__meta">
+            <div class="card__data">
                 <?php if ($tools = get_field('tools')) : ?>
                     <span class="card__tools" itemprop="keywords">
                         <?php echo implode(', ', $tools); ?>
