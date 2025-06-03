@@ -1,0 +1,114 @@
+.contact__section {
+  display: flex;
+  flex-direction: column;
+
+  .contact__grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
+
+    .contact__info {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+
+      &--title {
+        color: var(--c-brown);
+        font-size: 1.5rem;
+        font-weight: 600;
+        font-family: var(--ff-primary), Georgia, serif;
+      }
+
+      .contact__details {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+
+        &--item {
+          display: inline-flex;
+          gap: 0.25rem;
+          color: var(--c-brown);
+          font-size: 0.875rem;
+          font-weight: 300;
+
+          & strong {
+            font-weight: 600;
+          }
+        }
+
+        &--link {
+          color: var(--c-red);
+          text-decoration: underline;
+
+          &:hover,
+          &:focus {
+            color: var(--c-brown);
+          }
+        }
+      }
+
+      .contact__form {
+        display: flex;
+        flex-direction: column;
+        gap: 2.25rem;
+
+        .contact__form--title {
+          color: var(--c-brown);
+          font-size: 1.5rem;
+          font-weight: 600;
+          font-family: var(--ff-primary), Georgia, serif;
+        }
+
+        & abbr {
+          color: var(--c-red);
+          font-size: 0.875rem;
+        }
+
+        &--note {
+          font-size: 1.125rem;
+        }
+
+        &--feedback {
+          font-size: 1.25rem;
+          font-weight: 600;
+
+          &:before {
+            content: '|';
+            color: var(--c-red);
+            margin-right: 1rem;
+          }
+        }
+
+        .form {
+          display: inline-flex;
+          padding: 1.5rem;
+          justify-content: center;
+          align-items: center;
+          gap: 1rem;
+
+          .contact__form--field {
+            .contact__form--label {
+
+            }
+
+            .contact__form--input, .contact__form--textarea {
+
+            }
+
+            .contact__form--error {
+
+            }
+
+            .contact__form--select {
+
+            }
+          }
+
+          .contact__form--submit {
+
+          }
+        }
+      }
+    }
+  }
+}

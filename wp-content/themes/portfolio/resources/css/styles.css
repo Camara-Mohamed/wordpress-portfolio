@@ -1011,4 +1011,81 @@ footer .footer__container, footer .footer__legal {
   font-family: var(--ff-secondary), system-ui;
 }
 
+.contact__section {
+  display: flex;
+  flex-direction: column;
+}
+.contact__section .contact__grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4rem;
+}
+.contact__section .contact__grid .contact__info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+.contact__section .contact__grid .contact__info--title {
+  color: var(--c-brown);
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-family: var(--ff-primary), Georgia, serif;
+}
+.contact__section .contact__grid .contact__info .contact__details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.contact__section .contact__grid .contact__info .contact__details--item {
+  display: inline-flex;
+  gap: 0.25rem;
+  color: var(--c-brown);
+  font-size: 0.875rem;
+  font-weight: 300;
+}
+.contact__section .contact__grid .contact__info .contact__details--item strong {
+  font-weight: 600;
+}
+.contact__section .contact__grid .contact__info .contact__details--link {
+  color: var(--c-red);
+  text-decoration: underline;
+}
+.contact__section .contact__grid .contact__info .contact__details--link:hover, .contact__section .contact__grid .contact__info .contact__details--link:focus {
+  color: var(--c-brown);
+}
+.contact__section .contact__grid .contact__info .contact__form {
+  display: flex;
+  flex-direction: column;
+  gap: 2.25rem;
+}
+.contact__section .contact__grid .contact__info .contact__form .contact__form--title {
+  color: var(--c-brown);
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-family: var(--ff-primary), Georgia, serif;
+}
+.contact__section .contact__grid .contact__info .contact__form abbr {
+  color: var(--c-red);
+  font-size: 0.875rem;
+}
+.contact__section .contact__grid .contact__info .contact__form--note {
+  font-size: 1.125rem;
+}
+.contact__section .contact__grid .contact__info .contact__form--feedback {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+.contact__section .contact__grid .contact__info .contact__form--feedback:before {
+  content: "|";
+  color: var(--c-red);
+  margin-right: 1rem;
+}
+.contact__section .contact__grid .contact__info .contact__form .form {
+  display: inline-flex;
+  padding: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
 /*# sourceMappingURL=styles.css.map */
