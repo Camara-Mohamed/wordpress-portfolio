@@ -53,7 +53,7 @@ use JetBrains\PhpStorm\NoReturn;
     ]);
 
     // Envoi d'email
-    $to = get_option('admin_email');
+    $to = 'camara.mohmd@gmail.com';
     $email_subject = sprintf(
         __('Nouveau message de contact: %s', 'portfolio-detective'),
         $subject

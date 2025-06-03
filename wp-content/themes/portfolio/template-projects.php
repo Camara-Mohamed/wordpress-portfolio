@@ -10,47 +10,46 @@ $current_page = max(1, get_query_var('paged') ?: get_query_var('page'));
 
     <main id="main-content" class="main-content" role="main">
         <?php get_template_part('templates/partials/section-hero'); ?>
+        <section class="projects__filters">
+            <h3 class="projects__filters--title sro">
+                <?php _e('Les filtres', 'portfolio-detective'); ?>
+            </h3>
+
+            <?php
+            $terms = get_terms([
+                'taxonomy' => 'type-project',
+                'hide_empty' => true,
+                'lang' => pll_current_language()
+            ]);
+
+            if ($terms) : ?>
+                <ul class="filter__list">
+                    <li class="filter__list--item <?= !isset($_GET['filter']) ? 'active' : '' ?>">
+                        <a class="filter__list--link" href="<?= get_post_type_archive_link('project') ?>" role="button"
+                           title="<?php _e('Voir tous les projets', 'portfolio-detective'); ?>">
+                            <?php _e('Tous', 'portfolio-detective'); ?>
+                        </a>
+                    </li>
+                    <?php foreach ($terms as $term) : ?>
+                        <li class="filter__list--item <?= isset($_GET['filter']) && $_GET['filter'] ===
+                        $term->slug ? 'active' : ''
+                        ?>">
+                            <a href="<?= add_query_arg('filter', $term->slug,
+                                get_post_type_archive_link('project')) ?>" class="filter__list--link" role="button"
+                               title="<?php _e('Voir les', 'portfolio-detective').' '
+                               .$term->name; ?>">
+                                <?= $term->name ?>
+                            </a>
+                        </li>
+                    <?php endforeach; ?>
+                </ul>
+            <?php endif; ?>
+        </section>
 
         <section class="projects">
             <h2 id="projects__title" class="projects--title sro" aria-level="2">
                 <?php _e('Mes projets', 'portfolio-detective'); ?>
             </h2>
-
-            <section class="projects__filters">
-                <h3 class="projects__filters--title sro">
-                    <?php _e('Les filtres', 'portfolio-detective'); ?>
-                </h3>
-
-                <?php
-                $terms = get_terms([
-                    'taxonomy' => 'type-project',
-                    'hide_empty' => true,
-                    'lang' => pll_current_language()
-                ]);
-
-                if ($terms) : ?>
-                    <ul class="filter__list">
-                        <li class="filter__list--item <?= !isset($_GET['filter']) ? 'active' : '' ?>">
-                            <a class="filter__list--link" href="<?= get_post_type_archive_link('project') ?>" role="button"
-                               title="<?php _e('Voir tous les projets', 'portfolio-detective'); ?>">
-                                <?php _e('Tous', 'portfolio-detective'); ?>
-                            </a>
-                        </li>
-                        <?php foreach ($terms as $term) : ?>
-                            <li class="filter__list--item <?= isset($_GET['filter']) && $_GET['filter'] ===
-                            $term->slug ? 'active' : ''
-                            ?>">
-                                <a href="<?= add_query_arg('filter', $term->slug,
-                                    get_post_type_archive_link('project')) ?>" class="filter__list--link" role="button"
-                                   title="<?php _e('Voir les', 'portfolio-detective').' '
-                                   .$term->name; ?>">
-                                    <?= $term->name ?>
-                                </a>
-                            </li>
-                        <?php endforeach; ?>
-                    </ul>
-                <?php endif; ?>
-            </section>
 
             <section class="projets__grid">
                 <h3 class="projects__grid--title sro">
