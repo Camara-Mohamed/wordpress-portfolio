@@ -1,0 +1,58 @@
+@use "../../base/breakpoints";
+
+.contact__section {
+  display: flex;
+  flex-direction: column;
+
+  .contact__grid {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    flex-wrap: wrap;
+    gap: 4rem;
+
+    @include breakpoints.tablet {
+      grid-template-columns: 1fr;
+    }
+
+    .contact__info {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+
+      &--title {
+        color: var(--c-brown);
+        font-size: 1.5rem;
+        font-weight: 600;
+        font-family: var(--ff-primary), Georgia, serif;
+      }
+
+      .contact__details {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+
+        &--item {
+          display: inline-flex;
+          gap: 0.25rem;
+          color: var(--c-brown);
+          font-size: 0.875rem;
+          font-weight: 300;
+
+          & strong {
+            font-weight: 600;
+          }
+        }
+
+        &--link {
+          color: var(--c-red);
+          text-decoration: underline;
+
+          &:hover,
+          &:focus {
+            color: var(--c-brown);
+          }
+        }
+      }
+    }
+  }
+}
