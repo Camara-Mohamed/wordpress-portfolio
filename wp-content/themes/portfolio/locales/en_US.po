@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Portfolio Detective\n"
-"POT-Creation-Date: 2025-05-30 11:28+0200\n"
-"PO-Revision-Date: 2025-05-30 11:30+0200\n"
+"POT-Creation-Date: 2025-06-03 19:39+0200\n"
+"PO-Revision-Date: 2025-06-03 19:39+0200\n"
 "Last-Translator: \n"
 "Language-Team: Mohamed Camara camara.mohmd@gmail.com\n"
 "Language: en_US\n"
@@ -15,7 +15,7 @@ msgstr ""
 "__;_e;esc_html__;esc_attr__;pll__;pll_e;dw_translated_url;pll_home_url\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: 404.php:5
+#: 404.php:7
 msgid "Erreur 404"
 msgstr "404 Error"
 
@@ -26,10 +26,6 @@ msgid ""
 msgstr ""
 "The page you are looking for could not be found. It may have been moved or "
 "deleted."
-
-#: 404.php:13
-msgid "/"
-msgstr "/"
 
 #: 404.php:14
 msgid "Revenir à la page d'accueil"
@@ -43,19 +39,20 @@ msgstr "Back to home page"
 msgid "Retour à l'accueil"
 msgstr "Back to home"
 
-#: 404.php:18 front-page.php:29 single-project.php:8 template-about.php:130
+#: 404.php:18 front-page.php:30 single-project.php:8 template-about.php:131
+#: template-projects.php:28
 msgid "/mes-projets"
 msgstr "/my-projects"
 
-#: 404.php:20 front-page.php:30
+#: 404.php:20 front-page.php:32
 msgid "Voir la liste de mes projets"
 msgstr "See the list of my projects"
 
-#: 404.php:21 front-page.php:31 front-page.php:32
+#: 404.php:21 front-page.php:33 front-page.php:34
 msgid "Voir tous mes projets"
 msgstr "View all my projects"
 
-#: 404.php:22 template-about.php:133
+#: 404.php:22 template-about.php:134
 msgid "Voir mes projets"
 msgstr "View my projects"
 
@@ -67,85 +64,89 @@ msgstr "Footer navigation"
 msgid "Mes informations"
 msgstr "My information"
 
-#: footer.php:8
+#: footer.php:7 header.php:71
+msgid "Aller à la page d'accueil"
+msgstr "Go to home page"
+
+#: footer.php:25
 msgid "Contactez-moi"
 msgstr "Contact me"
 
-#: footer.php:9
+#: footer.php:26
 msgid "Mon profil vous intéresse ?"
 msgstr "Are you interested in my profile?"
 
-#: footer.php:11 template-about.php:125
+#: footer.php:29 template-about.php:125
 msgid "/me-contacter"
 msgstr "/contact-me"
 
-#: footer.php:12 footer.php:13
+#: footer.php:30 footer.php:31
 msgid "Aller à la page de contact"
 msgstr "Go to contact page"
 
-#: footer.php:14
+#: footer.php:32
 msgid "Me Contacter"
 msgstr "Contact me"
 
-#: footer.php:20
+#: footer.php:38
 msgid "Navigation"
 msgstr "Navigation"
 
-#: footer.php:32
+#: footer.php:50
 msgid "Ressources utilisées"
 msgstr "Resources used"
 
-#: footer.php:44
+#: footer.php:62
 msgid "Réseaux"
 msgstr "Social networks"
 
-#: footer.php:57 footer.php:69 template-legales.php:15
+#: footer.php:75 footer.php:88 template-legales.php:15
 msgid "Mentions légales"
 msgstr "Legal information"
 
-#: footer.php:60
+#: footer.php:78
 #, php-format
 msgid "Copyright © %1$s %2$s. Tous droits réservés."
 msgstr "Copyright © %1$s %2$s. All rights reserved."
 
-#: footer.php:66
+#: footer.php:84
 msgid "/mentions-legales"
 msgstr "/legal-information"
 
-#: footer.php:67
+#: footer.php:86
 msgid "Aller à la page des mentions légales"
 msgstr "Go to the legal information page"
 
-#: footer.php:68
+#: footer.php:87
 msgid "Aller aux mentions légales"
 msgstr "Go to legal information"
 
-#: forms/contact.php:13
+#: forms/contact.php:16
 msgid "Veuillez entrer votre nom complet"
 msgstr "Please enter your full name"
 
-#: forms/contact.php:17
+#: forms/contact.php:20
 msgid "Veuillez entrer votre email"
 msgstr "Veuillez entrer votre email"
 
-#: forms/contact.php:19
+#: forms/contact.php:22
 msgid "Adresse email invalide"
 msgstr "Invalid email address"
 
-#: forms/contact.php:24
+#: forms/contact.php:27
 msgid "Veuillez sélectionner un sujet valide"
 msgstr "Please select a valid subject"
 
-#: forms/contact.php:28
+#: forms/contact.php:31
 msgid "Veuillez entrer votre message"
 msgstr "Please enter your message"
 
-#: forms/contact.php:55
+#: forms/contact.php:58
 #, php-format
 msgid "Nouveau message de contact: %s"
 msgstr "New contact message: %s"
 
-#: forms/contact.php:59
+#: forms/contact.php:62
 #, php-format
 msgid ""
 "Nom: %s\n"
@@ -162,7 +163,7 @@ msgstr ""
 "Message:\n"
 "%s"
 
-#: forms/contact.php:69
+#: forms/contact.php:72
 msgid "Merci pour votre message! Nous vous répondrons dès que possible."
 msgstr ""
 "Thank you for your message! We will get back to you as soon as possible."
@@ -175,7 +176,7 @@ msgstr "Featured projects"
 msgid "Voir plus de projets"
 msgstr "View more projects"
 
-#: front-page.php:38
+#: front-page.php:41
 msgid "Aucun projet pour le moment."
 msgstr "No projects available yet."
 
@@ -195,50 +196,46 @@ msgstr ""
 msgid "Accueil"
 msgstr "Home"
 
-#: header.php:46
+#: header.php:50
 msgid ""
 "Pour accéder à toutes les fonctionnalités de ce site, vous devez activer "
 "JavaScript."
 msgstr ""
 "To access all the features of this site, you need to activate JavaScript."
 
-#: header.php:48
+#: header.php:52
 msgid "Voici les"
 msgstr "Here are the"
 
-#: header.php:50
+#: header.php:54
 msgid "vers le site enable-javascript"
 msgstr "to the enable-javascript site"
 
-#: header.php:51
+#: header.php:55
 msgid "instructions pour activer JavaScript dans votre navigateur Web"
 msgstr "instructions for enabling JavaScript in your web browser"
 
-#: header.php:57
+#: header.php:61
 msgid "Aller au contenu principal"
 msgstr "Skip to main content"
 
-#: header.php:62 header.php:65
+#: header.php:66 header.php:68
 msgid "Navigation principale"
 msgstr "Main navigation"
 
-#: header.php:67
-msgid "Aller à la page d'accueil"
-msgstr "Go to home page"
-
-#: header.php:79
+#: header.php:101
 msgid "Aller à ma page : "
 msgstr "Go to my page: "
 
-#: header.php:81
+#: header.php:103
 msgid "Aller à ma page :"
 msgstr "Go to my page:"
 
-#: header.php:93
+#: header.php:115
 msgid "Changer en "
 msgstr "Switch to "
 
-#: header.php:94
+#: header.php:116
 msgid "Changer la langue en "
 msgstr "Change language to "
 
@@ -302,15 +299,15 @@ msgstr "My methodology"
 msgid "Travaillons ensemble"
 msgstr "Working together"
 
-#: template-about.php:126
+#: template-about.php:127
 msgid "Aller sur la page de contact"
 msgstr "Go to contact page"
 
-#: template-about.php:128 template-contact.php:14
+#: template-about.php:129 template-contact.php:14
 msgid "Me contacter"
 msgstr "Contact me"
 
-#: template-about.php:131
+#: template-about.php:132
 msgid "Aller sur la page de mes projets"
 msgstr "Go to my projects page"
 
@@ -403,25 +400,25 @@ msgstr "Message"
 msgid "Envoyer"
 msgstr "Send"
 
-#: template-projects.php:16
-msgid "Mes projets"
-msgstr "My projects"
-
-#: template-projects.php:21
+#: template-projects.php:15
 msgid "Les filtres"
 msgstr "Filters"
 
-#: template-projects.php:35
+#: template-projects.php:29
 msgid "Voir tous les projets"
 msgstr "See all projects"
 
-#: template-projects.php:36
+#: template-projects.php:30
 msgid "Tous"
 msgstr "All"
 
-#: template-projects.php:44
+#: template-projects.php:39
 msgid "Voir les"
 msgstr "See the"
+
+#: template-projects.php:51
+msgid "Mes projets"
+msgstr "My projects"
 
 #: template-projects.php:56
 msgid "Les projets"
@@ -431,17 +428,17 @@ msgstr "The projects"
 msgid "D'autres projets arrivent"
 msgstr "More projects arrived"
 
-#: template-projects.php:95
+#: template-projects.php:94
+msgid "Aucun projet trouvé."
+msgstr "No projects found."
+
+#: template-projects.php:103
 msgid "Précédent"
 msgstr "Previous"
 
-#: template-projects.php:97
+#: template-projects.php:105
 msgid "Suivant"
 msgstr "Next"
-
-#: template-projects.php:103
-msgid "Aucun projet trouvé."
-msgstr "No projects found."
 
 #: templates/partials/projects-card.php:3
 msgid "Voir le projet :"
@@ -455,13 +452,16 @@ msgstr "See"
 msgid "Projets similaires"
 msgstr "Related projects"
 
-#: templates/partials/section-hero.php:28
+#: templates/partials/section-hero.php:30
 msgid "Aller à la page"
 msgstr "Go to page of"
 
-#: templates/partials/section-hero.php:30
+#: templates/partials/section-hero.php:32
 msgid "Aller à :"
 msgstr "Go to :"
+
+#~ msgid "/"
+#~ msgstr "/"
 
 #~ msgid "/mes-projets/"
 #~ msgstr "/my-projects/"
