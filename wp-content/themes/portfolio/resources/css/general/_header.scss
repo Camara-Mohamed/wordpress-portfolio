@@ -2,17 +2,11 @@
   background-color: var(--c-brown);
   color: var(--c-beige-light);
   display: flex;
-  height: auto;
-  width: 100vw;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  flex-shrink: 0;
+  justify-content: center;
 
   &__container {
     width: 100%;
-    height: auto;
   }
 }

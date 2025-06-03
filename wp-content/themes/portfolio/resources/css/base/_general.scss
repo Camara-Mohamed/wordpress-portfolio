@@ -8,6 +8,7 @@
   box-sizing: border-box;
 }
 
+/* Réglages de base */
 body {
   max-width: 1920px;
   margin: 0 auto;
@@ -16,38 +17,33 @@ body {
   background-color: var(--c-beige-light);
   color: var(--c-brown);
   min-height: 100vh;
-  line-height: 1;
+  line-height: 1.4;
   overflow-x: hidden;
 }
 
 h1, h2, h3, h4 {
   font-family: var(--ff-secondary), system-ui;
   text-transform: capitalize;
+  line-height: 1.2;
 }
 
-header, footer.footer {
-  padding: 0 1.5rem;
+p {
+  line-height: 1.6;
+}
 
-  @media (min-width: 768px) {
-    padding: 0 1.5rem;
-  }
-
-  @media (min-width: 1200px) {
-    padding: 0 2rem;
-  }
-
-  @media (min-width: 1600px) {
-    padding: 0 8.5rem;
-  }
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
 img {
   height: auto;
-  object-fit: cover;
   max-width: 100%;
   display: block;
+  object-fit: cover;
 }
 
+/* Lecteur */
 .sro {
   position: absolute;
   width: 1px;
@@ -60,6 +56,7 @@ img {
   border: 0;
 }
 
+/* Javascript désactivé */
 .no-js__message {
   background-color: var(--c-red);
   color: var(--c-beige-light);
@@ -73,6 +70,7 @@ img {
   }
 }
 
+/* Lien de saut de navigation */
 .skip__link {
   position: absolute;
   top: -9999px;
@@ -85,5 +83,58 @@ img {
 
   &:focus {
     top: 0;
+  }
+}
+
+/* Padding pour header et footer */
+header.header{
+  padding: 1.5rem 1.5rem;
+  width: 100vw;
+  max-width: 1920px;
+
+  @include breakpoints.mobile {
+    padding: 1.5rem 1.5rem;
+  }
+
+  @include breakpoints.tablet {
+    padding: 1.5rem 2rem;
+  }
+
+  @include breakpoints.desktop {
+    padding: 1.5rem 8.5rem;
+  }
+}
+
+main.main-content {
+  padding: 6.5rem 1.5rem 1.5rem;
+  width: 100vw;
+  max-width: 1920px;
+
+  @include breakpoints.mobile {
+    padding: 6.5rem 1.5rem 1.5rem;
+  }
+
+  @include breakpoints.tablet {
+    padding: 7rem 2rem 1.5rem;
+  }
+
+  @include breakpoints.desktop {
+    padding: 8.5rem 8.5rem 1.5rem;
+  }
+}
+
+footer .footer__container, footer .footer__legal {
+  padding: 1rem 1.5rem;
+  width: 100vw;
+  max-width: 1920px;
+
+  @include breakpoints.mobile {
+    padding: 1rem 1.5rem;
+  }
+  @include breakpoints.tablet {
+    padding: 1rem 2rem;
+  }
+  @include breakpoints.desktop {
+    padding: 1rem 8.5rem;
   }
 }

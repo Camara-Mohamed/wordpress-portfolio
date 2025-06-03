@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Portfolio Detective\n"
-"POT-Creation-Date: 2025-06-03 11:17+0200\n"
-"PO-Revision-Date: 2025-06-03 11:19+0200\n"
+"POT-Creation-Date: 2025-06-03 19:38+0200\n"
+"PO-Revision-Date: 2025-06-03 19:38+0200\n"
 "Last-Translator: \n"
 "Language-Team: Mohamed Camara camara.mohmd@gmail.com\n"
 "Language: fr_BE\n"
@@ -27,10 +27,6 @@ msgstr ""
 "La page que vous recherchez n'a pas pu être trouvée. Elle a peut-être été "
 "déplacée ou supprimée."
 
-#: 404.php:13
-msgid "/"
-msgstr "/"
-
 #: 404.php:14
 msgid "Revenir à la page d'accueil"
 msgstr "Revenir à la page d'accueil"
@@ -43,19 +39,20 @@ msgstr "Revenir à l'accueil"
 msgid "Retour à l'accueil"
 msgstr "Retour à l'accueil"
 
-#: 404.php:18 front-page.php:30 single-project.php:8 template-about.php:130
+#: 404.php:18 front-page.php:30 single-project.php:8 template-about.php:131
+#: template-projects.php:28
 msgid "/mes-projets"
 msgstr "/mes-projets"
 
-#: 404.php:20 front-page.php:31
+#: 404.php:20 front-page.php:32
 msgid "Voir la liste de mes projets"
 msgstr "Voir la liste de mes projets"
 
-#: 404.php:21 front-page.php:32 front-page.php:33
+#: 404.php:21 front-page.php:33 front-page.php:34
 msgid "Voir tous mes projets"
 msgstr "Voir tous mes projets"
 
-#: 404.php:22 template-about.php:133
+#: 404.php:22 template-about.php:134
 msgid "Voir mes projets"
 msgstr "Voir mes projets"
 
@@ -79,6 +76,10 @@ msgstr "Contactez-moi"
 msgid "Mon profil vous intéresse ?"
 msgstr "Mon profil vous intéresse ?"
 
+#: footer.php:29 template-about.php:125
+msgid "/me-contacter"
+msgstr "/me-contacter"
+
 #: footer.php:30 footer.php:31
 msgid "Aller à la page de contact"
 msgstr "Aller à la page de contact"
@@ -99,7 +100,7 @@ msgstr "Ressources utilisées"
 msgid "Réseaux"
 msgstr "Réseaux"
 
-#: footer.php:75 footer.php:87 template-legales.php:15
+#: footer.php:75 footer.php:88 template-legales.php:15
 msgid "Mentions légales"
 msgstr "Mentions légales"
 
@@ -112,11 +113,11 @@ msgstr "Copyright © %1$s %2$s. Tous droits réservés."
 msgid "/mentions-legales"
 msgstr "/mentions-legales"
 
-#: footer.php:85
+#: footer.php:86
 msgid "Aller à la page des mentions légales"
 msgstr "Aller à la page des mentions légales"
 
-#: footer.php:86
+#: footer.php:87
 msgid "Aller aux mentions légales"
 msgstr "Aller aux mentions légales"
 
@@ -174,7 +175,7 @@ msgstr "Projets à la une"
 msgid "Voir plus de projets"
 msgstr "Voir plus de projets"
 
-#: front-page.php:40
+#: front-page.php:41
 msgid "Aucun projet pour le moment."
 msgstr "Aucun projet pour le moment."
 
@@ -222,19 +223,19 @@ msgstr "Aller au contenu principal"
 msgid "Navigation principale"
 msgstr "Navigation principale"
 
-#: header.php:98
+#: header.php:101
 msgid "Aller à ma page : "
 msgstr "Aller à ma page : "
 
-#: header.php:100
+#: header.php:103
 msgid "Aller à ma page :"
 msgstr "Aller à ma page :"
 
-#: header.php:112
+#: header.php:115
 msgid "Changer en "
 msgstr "Changer en "
 
-#: header.php:113
+#: header.php:116
 msgid "Changer la langue en "
 msgstr "Changer la langue en "
 
@@ -298,19 +299,15 @@ msgstr "Ma méthodologie"
 msgid "Travaillons ensemble"
 msgstr "Travaillons ensemble"
 
-#: template-about.php:125
-msgid "/me-contacter"
-msgstr "/me-contacter"
-
-#: template-about.php:126
+#: template-about.php:127
 msgid "Aller sur la page de contact"
 msgstr "Aller sur la page de contact"
 
-#: template-about.php:128 template-contact.php:14
+#: template-about.php:129 template-contact.php:14
 msgid "Me contacter"
 msgstr "Me contacter"
 
-#: template-about.php:131
+#: template-about.php:132
 msgid "Aller sur la page de mes projets"
 msgstr "Aller sur la page de mes projets"
 
@@ -431,17 +428,17 @@ msgstr "Les projets"
 msgid "D'autres projets arrivent"
 msgstr "D'autres projets to come"
 
-#: template-projects.php:97
+#: template-projects.php:94
+msgid "Aucun projet trouvé."
+msgstr "Aucun projet trouvé."
+
+#: template-projects.php:103
 msgid "Précédent"
 msgstr "Précédent"
 
-#: template-projects.php:99
+#: template-projects.php:105
 msgid "Suivant"
 msgstr "Suivant"
-
-#: template-projects.php:105
-msgid "Aucun projet trouvé."
-msgstr "Aucun projet trouvé."
 
 #: templates/partials/projects-card.php:3
 msgid "Voir le projet :"
@@ -462,6 +459,9 @@ msgstr "Aller à la page"
 #: templates/partials/section-hero.php:32
 msgid "Aller à :"
 msgstr "Aller à :"
+
+#~ msgid "/"
+#~ msgstr "/"
 
 #~ msgid "/mes-projets/"
 #~ msgstr "/mes-projets/"
