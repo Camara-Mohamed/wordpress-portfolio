@@ -252,24 +252,42 @@ header.header {
   }
 }
 
-main.main-content {
-  padding: 6.5rem 1.5rem 1.5rem;
+.main-content > article, .main-content > section {
+  padding: 4.5rem 1.5rem 1.5rem;
   width: 100vw;
   max-width: 1920px;
 }
 @media only screen and (max-width: 479px) {
-  main.main-content {
-    padding: 6.5rem 1.5rem 1.5rem;
+  .main-content > article, .main-content > section {
+    padding: 4.5rem 1.5rem 1.5rem;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
-  main.main-content {
-    padding: 7rem 2rem 1.5rem;
+  .main-content > article, .main-content > section {
+    padding: 5rem 2rem 1.5rem;
   }
 }
 @media only screen and (min-width: 1024px) {
-  main.main-content {
-    padding: 8.5rem 8.5rem 1.5rem;
+  .main-content > article, .main-content > section {
+    padding: 5.5rem 8.5rem 1.5rem;
+  }
+}
+.main-content .projects, .main-content .features, .main-content .projects__filters {
+  padding: 2rem 1.5rem 1rem;
+}
+@media only screen and (max-width: 479px) {
+  .main-content .projects, .main-content .features, .main-content .projects__filters {
+    padding: 2rem 1.5rem 1rem;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .main-content .projects, .main-content .features, .main-content .projects__filters {
+    padding: 2.5rem 2rem 1rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .main-content .projects, .main-content .features, .main-content .projects__filters {
+    padding: 3rem 8.5rem 1rem;
   }
 }
 
@@ -810,11 +828,8 @@ footer .footer__container, footer .footer__legal {
 
 .projects, .featured {
   display: flex;
-  padding: 4rem 2rem;
   flex-direction: column;
   align-items: center;
-  width: 100%;
-  background-color: var(--c-brown);
   position: relative;
 }
 .projects .projets__grid, .projects .featured__container, .featured .projets__grid, .featured .featured__container {
@@ -926,10 +941,12 @@ footer .footer__container, footer .footer__legal {
 
 .featured {
   margin-top: 4rem;
+  background-color: var(--c-brown);
 }
 
 .projects {
   margin-top: 2rem;
+  background-color: var(--c-brown);
 }
 
 .pagination {
@@ -950,7 +967,23 @@ footer .footer__container, footer .footer__legal {
 }
 
 .projects__filters {
-  margin-top: 4rem;
+  margin-top: 2.5rem;
+  padding: 0 1.5rem 0;
+}
+@media only screen and (max-width: 479px) {
+  .projects__filters {
+    padding: 0 1.5rem 0;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .projects__filters {
+    padding: 0 2rem 0;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .projects__filters {
+    padding: 0 8.5rem 0;
+  }
 }
 .projects__filters .filter__list {
   display: flex;
