@@ -12,10 +12,11 @@
 
 @use 'components/projects-grid';
 @use 'components/card';
+@use 'components/form';
 
 @use 'content/home/front';
 
 @use 'content/projects/projects';
 @use 'content/projects/filter';
 
-@use 'content/contact/form';
+@use 'content/contact/coordinates';

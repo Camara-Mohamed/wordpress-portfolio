@@ -67,66 +67,75 @@
                         <form method="POST" action="<?= admin_url('admin-post.php'); ?>" class="form">
                             <input type="hidden" name="action" value="submit_contact_form">
 
-                            <div class="contact__form--field">
-                                <label for="fullname" class="contact__form--label">
-                                    <?php _e('Nom Complet', 'portfolio-detective'); ?>
-                                    <abbr title="<?php _e('Champs Obligatoire', 'portfolio-detective'); ?>">*</abbr>
-                                </label>
-                                <input type="text" id="fullname" name="fullname" required class="contact__form--input"
-                                       value="<?= $_SESSION['contact_form_old']['fullname'] ?? ''; ?>">
-                                <?php if (isset($_SESSION['contact_form_errors']['fullname'])) : ?>
-                                    <span class="contact__form--error"><?= $_SESSION['contact_form_errors']['fullname']; ?></span>
-                                <?php endif; ?>
-                            </div>
+                            <fieldset>
+                                <div class="contact__form--field">
+                                    <label for="fullname" class="contact__form--label">
+                                        <?php _e('Nom Complet', 'portfolio-detective'); ?>
+                                        <abbr title="<?php _e('Champs Obligatoire', 'portfolio-detective'); ?>">*</abbr>
+                                    </label>
+                                    <input type="text" id="fullname" name="fullname" required
+                                           class="contact__form--input"
+                                           value="<?= $_SESSION['contact_form_old']['fullname'] ?? ''; ?>"
+                                           placeholder="<?= __('Alessio Adam', 'portfolio-detective') ?>">
+                                    <?php if (isset($_SESSION['contact_form_errors']['fullname'])) : ?>
+                                        <span class="contact__form--error"><?= $_SESSION['contact_form_errors']['fullname']; ?></span>
+                                    <?php endif; ?>
+                                </div>
 
-                            <div class="contact__form--field">
-                                <label for="email" class="contact__form--label">
-                                    <?php _e('Adresse Mail', 'portfolio-detective'); ?>
-                                    <abbr title="<?php _e('Champs Obligatoire', 'portfolio-detective'); ?>">*</abbr>
-                                </label>
-                                <input type="email" id="email" name="email" required class="contact__form--input"
-                                       value="<?= $_SESSION['contact_form_old']['email'] ?? ''; ?>">
-                                <?php if (isset($_SESSION['contact_form_errors']['email'])) : ?>
-                                    <span class="contact__form--error"><?= $_SESSION['contact_form_errors']['email']; ?></span>
-                                <?php endif; ?>
-                            </div>
+                                <div class="contact__form--field">
+                                    <label for="email" class="contact__form--label">
+                                        <?php _e('Adresse Mail', 'portfolio-detective'); ?>
+                                        <abbr title="<?php _e('Champs Obligatoire', 'portfolio-detective'); ?>">*</abbr>
+                                    </label>
+                                    <input type="email" id="email" name="email" required class="contact__form--input"
+                                           value="<?= $_SESSION['contact_form_old']['email'] ?? ''; ?>" placeholder="<?=
+                                    __('alessio.adam@gmail.com', 'portfolio-detective')
+                                    ?>">
+                                    <?php if (isset($_SESSION['contact_form_errors']['email'])) : ?>
+                                        <span class="contact__form--error"><?= $_SESSION['contact_form_errors']['email']; ?></span>
+                                    <?php endif; ?>
+                                </div>
 
-                            <div class="contact__form--field">
-                                <label for="subject" class="contact__form--label">
-                                    <?php _e('Sujet', 'portfolio-detective'); ?>
-                                    <abbr title="<?php _e('Champs Obligatoire', 'portfolio-detective'); ?>">*</abbr>
-                                </label>
-                                <select id="subject" name="subject" required class="contact__form--select">
-                                    <option value=""><?php _e('Sélectionnez un sujet...',
-                                            'portfolio-detective'); ?></option>
-                                    <option value="Collaboration" <?= isset($_SESSION['contact_form_old']['subject']) && $_SESSION['contact_form_old']['subject'] === 'Collaboration' ? 'selected' : ''; ?>>
-                                        <?php _e('Collaboration', 'portfolio-detective'); ?>
-                                    </option>
-                                    <option value="Question" <?= isset($_SESSION['contact_form_old']['subject']) && $_SESSION['contact_form_old']['subject'] === 'Question' ? 'selected' : ''; ?>>
-                                        <?php _e('Question', 'portfolio-detective'); ?>
-                                    </option>
-                                    <option value="Recrutement" <?= isset($_SESSION['contact_form_old']['subject']) && $_SESSION['contact_form_old']['subject'] === 'Recrutement' ? 'selected' : ''; ?>>
-                                        <?php _e('Recrutement', 'portfolio-detective'); ?>
-                                    </option>
-                                    <option value="Autre" <?= isset($_SESSION['contact_form_old']['subject']) && $_SESSION['contact_form_old']['subject'] === 'Autre' ? 'selected' : ''; ?>>
-                                        <?php _e('Autre', 'portfolio-detective'); ?>
-                                    </option>
-                                </select>
-                                <?php if (isset($_SESSION['contact_form_errors']['subject'])) : ?>
-                                    <span class="contact__form--error"><?= $_SESSION['contact_form_errors']['subject']; ?></span>
-                                <?php endif; ?>
-                            </div>
+                                <div class="contact__form--field">
+                                    <label for="subject" class="contact__form--label">
+                                        <?php _e('Sujet', 'portfolio-detective'); ?>
+                                        <abbr title="<?php _e('Champs Obligatoire', 'portfolio-detective'); ?>">*</abbr>
+                                    </label>
+                                    <select id="subject" name="subject" required class="contact__form--select">
+                                        <option value=""><?php _e('Sélectionnez un sujet...',
+                                                'portfolio-detective'); ?></option>
+                                        <option value="Collaboration" <?= isset($_SESSION['contact_form_old']['subject']) && $_SESSION['contact_form_old']['subject'] === 'Collaboration' ? 'selected' : ''; ?>>
+                                            <?php _e('Collaboration', 'portfolio-detective'); ?>
+                                        </option>
+                                        <option value="Question" <?= isset($_SESSION['contact_form_old']['subject']) && $_SESSION['contact_form_old']['subject'] === 'Question' ? 'selected' : ''; ?>>
+                                            <?php _e('Question', 'portfolio-detective'); ?>
+                                        </option>
+                                        <option value="Recrutement" <?= isset($_SESSION['contact_form_old']['subject']) && $_SESSION['contact_form_old']['subject'] === 'Recrutement' ? 'selected' : ''; ?>>
+                                            <?php _e('Recrutement', 'portfolio-detective'); ?>
+                                        </option>
+                                        <option value="Autre" <?= isset($_SESSION['contact_form_old']['subject']) && $_SESSION['contact_form_old']['subject'] === 'Autre' ? 'selected' : ''; ?>>
+                                            <?php _e('Autre', 'portfolio-detective'); ?>
+                                        </option>
+                                    </select>
+                                    <?php if (isset($_SESSION['contact_form_errors']['subject'])) : ?>
+                                        <span class="contact__form--error"><?= $_SESSION['contact_form_errors']['subject']; ?></span>
+                                    <?php endif; ?>
+                                </div>
 
-                            <div class="contact__form--field">
-                                <label for="message" class="contact__form--label">
-                                    <?php _e('Message', 'portfolio-detective'); ?>
-                                    <abbr title="<?php _e('Champs Obligatoire', 'portfolio-detective'); ?>">*</abbr>
-                                </label>
-                                <textarea id="message" name="message" rows="5" required class="contact__form--textarea"><?= $_SESSION['contact_form_old']['message'] ?? ''; ?></textarea>
-                                <?php if (isset($_SESSION['contact_form_errors']['message'])) : ?>
-                                    <span class="contact__form--error"><?= $_SESSION['contact_form_errors']['message']; ?></span>
-                                <?php endif; ?>
-                            </div>
+                                <div class="contact__form--field">
+                                    <label for="message" class="contact__form--label">
+                                        <?php _e('Message', 'portfolio-detective'); ?>
+                                        <abbr title="<?php _e('Champs Obligatoire', 'portfolio-detective'); ?>">*</abbr>
+                                    </label>
+                                    <textarea id="message" name="message" rows="8" required
+                                              class="contact__form--textarea" placeholder="<?= __('Écrivez-moi un message ici…', 'portfolio-detective')
+                                    ?>"><?=
+                                            $_SESSION['contact_form_old']['message'] ?? ''; ?></textarea>
+                                    <?php if (isset($_SESSION['contact_form_errors']['message'])) : ?>
+                                        <span class="contact__form--error"><?= $_SESSION['contact_form_errors']['message']; ?></span>
+                                    <?php endif; ?>
+                                </div>
+                            </fieldset>
 
                             <button type="submit" class="contact__form--submit button">
                                 <?php _e('Envoyer', 'portfolio-detective'); ?>
