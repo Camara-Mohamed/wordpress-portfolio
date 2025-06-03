@@ -3,7 +3,23 @@
 .projects__filters {
   display: flex;
   justify-content: start;
-  margin-bottom: 2rem;
+  margin-top: 4rem;
+
+  & {
+    padding: 0 1.5rem;
+
+    @media (min-width: 768px) {
+      padding: 0 1.5rem;
+    }
+
+    @media (min-width: 1200px) {
+      padding: 0 2rem;
+    }
+
+    @media (min-width: 1600px) {
+      padding: 0 8.5rem;
+    }
+  }
 
   .filter__list {
     display: flex;
