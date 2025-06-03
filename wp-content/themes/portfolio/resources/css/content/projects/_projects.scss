@@ -3,3 +3,23 @@
 .projects {
   margin-top: 2rem;
 }
+
+.pagination {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  color: var(--c-beige-light);
+
+  span, a {
+    font-size: 1.25rem;
+    transition: all 0.2s ease;
+
+    &:hover,
+    &:focus {
+      color: var(--c-red);
+      text-decoration: underline;
+      font-weight: 500;
+      transform: scale(1.1);
+    }
+  }
+}
