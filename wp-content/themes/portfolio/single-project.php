@@ -5,7 +5,7 @@
 
             <section class="single__hero">
                 <div class="single__hero--container">
-                    <a href="<?= dw_translated_url('/mes-projets') ?>" class="single__back"
+                    <a href="<?= home_url(__('/mes-projets', 'portfolio-detective')); ?>" class="single__back"
                        title="<?php _e('Retourner à la liste de mes projets', 'portfolio-detective'); ?>">
                         <?php _e('Retour aux projets', 'portfolio-detective'); ?>
                     </a>

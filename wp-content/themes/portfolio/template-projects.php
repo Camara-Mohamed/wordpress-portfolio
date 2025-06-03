@@ -25,7 +25,7 @@ $current_page = max(1, get_query_var('paged') ?: get_query_var('page'));
             if ($terms) : ?>
                 <ul class="filter__list">
                     <li class="filter__list--item <?= !isset($_GET['filter']) ? 'active' : '' ?>">
-                        <a class="filter__list--link" href="<?= get_post_type_archive_link('project') ?>" role="button"
+                        <a class="filter__list--link" href="<?= home_url(__('/mes-projets', 'portfolio-detective')); ?>"
                            title="<?php _e('Voir tous les projets', 'portfolio-detective'); ?>">
                             <?php _e('Tous', 'portfolio-detective'); ?>
                         </a>
@@ -60,7 +60,7 @@ $current_page = max(1, get_query_var('paged') ?: get_query_var('page'));
                 $paged = max(1, get_query_var('paged'));
                 $args = [
                     'post_type' => 'project',
-                    'posts_per_page' => 6,
+                    'posts_per_page' => 2,
                     'paged' => $paged,
                     'lang' => pll_current_language(),
                     'post_status' => 'publish'
@@ -89,23 +89,23 @@ $current_page = max(1, get_query_var('paged') ?: get_query_var('page'));
                             <p class="projets__coming--text">?</p>
                         </div>
                     </article>
-
-                    <?php echo '<div class="pagination">';
-                    echo paginate_links([
-                        'total' => $projects->max_num_pages,
-                        'current' => $current_page,
-                        'prev_text' => '<span class="pagination__arrow--left">«</span> '.__('Précédent',
-                                'portfolio-detective'),
-                        'next_text' => __('Suivant',
-                                'portfolio-detective').' <span class="pagination__arrow--right">»</span>',
-                    ]);
-                    echo '</div>';
-                else : ?>
+                <?php else : ?>
                     <div class="no-projects">
                         <p><?php _e('Aucun projet trouvé.', 'portfolio-detective'); ?></p>
                     </div>
                 <?php endif; ?>
             </section>
+
+            <div class="pagination">
+                <?php echo paginate_links([
+                    'total' => $projects->max_num_pages,
+                    'current' => $current_page,
+                    'prev_text' => '<span class="pagination__arrow--left">«</span> '.__('Précédent',
+                            'portfolio-detective'),
+                    'next_text' => __('Suivant',
+                            'portfolio-detective').' <span class="pagination__arrow--right">»</span>',
+                ]); ?>
+            </div>
         </section>
     </main>
 

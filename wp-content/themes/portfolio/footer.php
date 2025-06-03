@@ -26,7 +26,7 @@
                     <p><?php _e('Mon profil vous intéresse ?',
                         'portfolio-detective'); ?></p>
                 </div>
-                <a href="<?= dw_translated_url('/me-contacter'); ?>" class="footer__contact--button"
+                <a href="<?= home_url(__('/me-contacter', 'portfolio-detective')); ?>" class="footer__contact--button"
                    aria-label="<?php _e('Aller à la page de contact', 'portfolio-detective'); ?>"
                    title="<?php _e('Aller à la page de contact', 'portfolio-detective'); ?>">
                     <?php _e('Me Contacter', 'portfolio-detective'); ?>
@@ -81,7 +81,8 @@
             );
             ?>
         </p>
-        <a href="<?= dw_translated_url('/mentions-legales'); ?>" class="footer__legal--link" itemprop="usageInfo"
+        <a href="<?= home_url(__('/mentions-legales', 'portfolio-detective')); ?>" class="footer__legal--link"
+           itemprop="usageInfo"
            aria-label="<?php _e('Aller à la page des mentions légales', 'portfolio-detective'); ?>"
            title="<?php _e('Aller aux mentions légales', 'portfolio-detective'); ?>">
             <?php _e('Mentions légales', 'portfolio-detective'); ?>

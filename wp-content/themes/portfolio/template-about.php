@@ -122,12 +122,13 @@
                 <?php endif; ?>
 
                 <div class="cta__buttons">
-                    <a href="<?= dw_translated_url('/me-contacter'); ?>" class="button button__primary" title="<?php
+                    <a href="<?= home_url(__('/me-contacter', 'portfolio-detective')); ?>" class="button
+                    button__primary" title="<?php
                     _e('Aller sur la page de contact', 'portfolio-detective');
                     ?>">
                         <?php _e('Me contacter', 'portfolio-detective'); ?>
                     </a>
-                    <a href="<?= dw_translated_url('/mes-projets'); ?>" class="button button__secondary" title="<?php
+                    <a href="<?= home_url(__('/mes-projets', 'portfolio-detective')); ?>" class="button button__secondary" title="<?php
                     _e('Aller sur la page de mes projets', 'portfolio-detective');
                     ?>">
                         <?php _e('Voir mes projets', 'portfolio-detective'); ?>
