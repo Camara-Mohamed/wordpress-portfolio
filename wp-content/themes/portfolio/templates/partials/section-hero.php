@@ -37,8 +37,8 @@
         <?php endif; ?>
     </div>
 
-    <div class="hero__images">
-        <?php if (!empty($images)) : ?>
+    <?php if (!empty($images)) : ?>
+        <div class="hero__images">
             <figure class="hero__figure">
                 <div class="hero__figure--container">
                 <?php foreach ($images as $image_id) :
@@ -66,6 +66,6 @@
                 <?php endforeach; ?>
                 </div>
             </figure>
-        <?php endif; ?>
-    </div>
+        </div>
+    <?php endif; ?>
 </section>

@@ -233,7 +233,7 @@ img {
 /* Padding pour header et footer */
 header.header {
   padding: 1.5rem 1.5rem;
-  width: 100vw;
+  width: auto;
   max-width: 1920px;
 }
 @media only screen and (max-width: 479px) {
@@ -253,32 +253,21 @@ header.header {
 }
 
 .main-content > article, .main-content > section {
-  padding: 4.5rem 1.5rem 1.5rem;
-  width: 100vw;
+  padding: 1.5rem 1.5rem;
   max-width: 1920px;
-}
-@media only screen and (max-width: 479px) {
-  .main-content > article, .main-content > section {
-    padding: 4.5rem 1.5rem 1.5rem;
-  }
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   .main-content > article, .main-content > section {
-    padding: 5rem 2rem 1.5rem;
+    padding: 1.5rem 2rem;
   }
 }
 @media only screen and (min-width: 1024px) {
   .main-content > article, .main-content > section {
-    padding: 5.5rem 8.5rem 1.5rem;
+    padding: 1.5rem 8.5rem;
   }
 }
 .main-content .projects, .main-content .features, .main-content .projects__filters {
   padding: 2rem 1.5rem 1rem;
-}
-@media only screen and (max-width: 479px) {
-  .main-content .projects, .main-content .features, .main-content .projects__filters {
-    padding: 2rem 1.5rem 1rem;
-  }
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   .main-content .projects, .main-content .features, .main-content .projects__filters {
@@ -292,23 +281,18 @@ header.header {
 }
 
 footer .footer__container, footer .footer__legal {
-  padding: 1rem 1.5rem;
-  width: 100vw;
+  padding: 1.5rem 1.5rem;
   max-width: 1920px;
-}
-@media only screen and (max-width: 479px) {
-  footer .footer__container, footer .footer__legal {
-    padding: 1rem 1.5rem;
-  }
+  width: 100%;
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   footer .footer__container, footer .footer__legal {
-    padding: 1rem 2rem;
+    padding: 1.5rem 2rem;
   }
 }
 @media only screen and (min-width: 1024px) {
   footer .footer__container, footer .footer__legal {
-    padding: 1rem 8.5rem;
+    padding: 1.5rem 8.5rem;
   }
 }
 
@@ -436,7 +420,6 @@ footer .footer__container, footer .footer__legal {
   background-color: var(--c-brown);
   display: flex;
   justify-content: space-between;
-  align-items: center;
   gap: 0.75rem;
   color: var(--c-beige-light);
   padding-top: 1.5rem;
@@ -622,6 +605,7 @@ footer .footer__container, footer .footer__legal {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  margin: 4rem 0 2rem;
 }
 @media only screen and (min-width: 1024px) {
   .hero, .error-404 {
