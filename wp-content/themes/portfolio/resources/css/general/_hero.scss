@@ -3,13 +3,10 @@
 .hero, .error-404 {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  align-items: center;
+  align-items: flex-start;
 
   @include breakpoints.desktop {
     flex-direction: row;
-    gap: 4rem;
-    align-items: flex-start;
   }
 
   &__container {
@@ -24,10 +21,11 @@
 
   &__images {
     width: 100%;
-    margin-top: 2rem;
+    margin-top: 4rem;
 
     @include breakpoints.desktop {
       width: 40%;
+      margin-left: 4rem;
     }
   }
 
@@ -136,27 +134,26 @@
       &--container {
         display: flex;
         justify-content: center;
-        position: relative;
         gap: 1rem;
-        padding: 2rem 0;
-        min-height: 300px;
+        min-height: 200px;
+        flex-wrap: wrap;
 
         @include breakpoints.tablet {
-          min-height: 400px;
+          min-height: 300px;
         }
 
-        @include breakpoints.tablet {
-          min-height: 600px;
+        @include breakpoints.desktop {
+          min-height: 400px;
         }
       }
 
       .hero__figure--box {
-        display: inline-flex;
+        display: flex;
         padding: 0.25rem;
         align-items: center;
         border: 0.0625rem dashed var(--g-brown-02);
-        position: relative;
         max-width: 100%;
+        height: 100%;
 
         &:first-child {
           width: 60%;
@@ -164,7 +161,12 @@
           z-index: 1;
           margin-right: -3rem;
 
+          @include breakpoints.desktop {
+            margin-bottom: -6rem;
+          }
+
           @include breakpoints.tablet {
+            margin-bottom: -6rem;
             width: 55%;
             transform: rotate(-8deg);
           }
@@ -181,7 +183,12 @@
           z-index: 2;
           margin-left: -3rem;
 
+          @include breakpoints.desktop {
+            margin-top: -4rem;
+          }
+
           @include breakpoints.tablet {
+            margin-top: -4rem;
             width: 70%;
             transform: rotate(11deg);
           }
@@ -202,16 +209,17 @@
         box-shadow: 0.25rem 0.25rem 0 0 var(--g-beige-01);
         padding: 10%;
         width: 100%;
-        transition: all 0.3s ease-in-out;
-
-        &:hover {
-          transform: scale(1.05);
-        }
 
         .hero__figure--img {
           width: 100%;
           height: auto;
           object-fit: contain;
+          transition: all 0.3s ease-in-out;
+
+          &:hover,
+          &:focus {
+            transform: scale(1.05);
+          }
         }
       }
     }

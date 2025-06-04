@@ -4,7 +4,8 @@
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
-  width: 40%;
+  width: 100%;
+  min-width: 380px;
 
   .contact__form--title {
     color: var(--c-brown);
