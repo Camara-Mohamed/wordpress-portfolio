@@ -30,14 +30,15 @@
 .header__nav--container {
   @include breakpoints.mobile {
     position: fixed;
-    top: 4rem;
+    top: 5.25rem;
     left: 0;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     background: var(--c-brown);
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     padding: 2rem;
     transition: all 0.3s ease;
     overflow: hidden;
@@ -50,8 +51,6 @@
 /* Menu Ouvert */
 .burger-checkbox:checked ~ .header__nav--container {
   transform: translateX(0);
-  height: 100vh;
-  overflow: hidden;
 }
 
 .burger-checkbox:checked ~ .header__nav--burger {
@@ -66,7 +65,11 @@
 
 /* Checkbox */
 .burger-checkbox {
+  overflow-y: hidden;
   position: absolute;
   opacity: 0;
 }
 
+body:has(#burger-menu:checked) {
+  overflow-y: hidden;
+}

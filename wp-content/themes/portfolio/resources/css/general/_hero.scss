@@ -92,17 +92,21 @@
     flex-wrap: wrap;
     margin-top: 1.5rem;
 
-    .hero__action, .error-404__action, .error-404__button, .single__link, .single__link--disabled {
+    .hero__action, .error-404__action, .error-404__button, .single__link {
       font-family: var(--ff-secondary), system-ui;
       font-size: 1rem;
       text-align: center;
       transition: all 0.3s ease;
-      border: .0625rem solid var(--c-brown);
+      border: .0625rem solid transparent;
       padding: 1rem;
 
       @include breakpoints.mobile {
         padding: 0.875rem 1.25rem;
       }
+    }
+
+    .single__link--disabled {
+      border: .0625rem solid var(--c-brown);
     }
 
     .hero__action--primary, .button__primary, .single__link--github {
