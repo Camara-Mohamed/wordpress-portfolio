@@ -13,8 +13,8 @@
 
   .contact__grid {
     display: grid;
-    grid-template-columns: 40% 60%;
-    gap: 0.5rem;
+    grid-template-columns: 1fr auto;
+    gap: 2rem;
 
     @include breakpoints.tablet {
       grid-template-columns: 1fr;
