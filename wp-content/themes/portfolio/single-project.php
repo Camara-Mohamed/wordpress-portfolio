@@ -11,16 +11,6 @@
                     </a>
                     <h2 class="single__title" itemprop="name" aria-level="2"><?= get_the_title() ?></h2>
 
-                    <?php
-                    $terms = get_the_terms($post->ID, 'type-project');
-                    if ($terms && !is_wp_error($terms)) : ?>
-                        <div class="single__types" aria-label="<?php _e('Types de projet', 'portfolio-detective'); ?>">
-                            <?php foreach ($terms as $term) : ?>
-                                <span class="single__type" itemprop="keywords"><?= $term->name ?></span>
-                            <?php endforeach; ?>
-                        </div>
-                    <?php endif; ?>
-
                     <div class="single__links">
                         <?php if ($github = get_field('github')) : ?>
                             <a href="<?= $github ?>" class="single__link single__link--github"

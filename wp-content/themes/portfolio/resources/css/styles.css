@@ -601,62 +601,62 @@ footer .footer__container, footer .footer__legal {
   opacity: 0;
 }
 
-.hero, .error-404 {
+.hero, .error-404, .single__hero {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   margin: 4rem 0 2rem;
 }
 @media only screen and (min-width: 1024px) {
-  .hero, .error-404 {
+  .hero, .error-404, .single__hero {
     flex-direction: row;
   }
 }
-.hero__container, .error-404__container {
+.hero__container, .error-404__container, .single__hero__container {
   width: 100%;
   display: flex;
   flex-direction: column;
 }
 @media only screen and (min-width: 1024px) {
-  .hero__container, .error-404__container {
+  .hero__container, .error-404__container, .single__hero__container {
     width: 60%;
   }
 }
-.hero__images, .error-404__images {
+.hero__images, .error-404__images, .single__hero__images {
   width: 100%;
   margin-top: 4rem;
 }
 @media only screen and (min-width: 1024px) {
-  .hero__images, .error-404__images {
+  .hero__images, .error-404__images, .single__hero__images {
     width: 40%;
     margin-left: 4rem;
   }
 }
-.hero__container, .hero .error-404__container, .error-404__container, .error-404 .error-404__container {
+.hero__container, .hero .error-404__container, .hero .single__hero--container, .error-404__container, .error-404 .error-404__container, .error-404 .single__hero--container, .single__hero__container, .single__hero .error-404__container, .single__hero .single__hero--container {
   display: flex;
   flex-direction: column;
   overflow: hidden;
 }
-.hero__text, .hero .error-404__content, .error-404__text, .error-404 .error-404__content {
+.hero__text, .hero .error-404__content, .error-404__text, .error-404 .error-404__content, .single__hero__text, .single__hero .error-404__content {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
-.hero__title, .hero .error-404__title, .error-404__title, .error-404 .error-404__title {
+.hero__title, .hero .error-404__title, .hero .single__title, .error-404__title, .error-404 .error-404__title, .error-404 .single__title, .single__hero__title, .single__hero .error-404__title, .single__hero .single__title {
   color: var(--c-red);
   font-size: 2.5rem;
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
-  .hero__title, .hero .error-404__title, .error-404__title, .error-404 .error-404__title {
+  .hero__title, .hero .error-404__title, .hero .single__title, .error-404__title, .error-404 .error-404__title, .error-404 .single__title, .single__hero__title, .single__hero .error-404__title, .single__hero .single__title {
     font-size: 3.5rem;
   }
 }
 @media only screen and (min-width: 1024px) {
-  .hero__title, .hero .error-404__title, .error-404__title, .error-404 .error-404__title {
+  .hero__title, .hero .error-404__title, .hero .single__title, .error-404__title, .error-404 .error-404__title, .error-404 .single__title, .single__hero__title, .single__hero .error-404__title, .single__hero .single__title {
     font-size: 4rem;
   }
 }
-.hero__subtitle, .error-404__subtitle {
+.hero__subtitle, .error-404__subtitle, .single__hero__subtitle {
   color: var(--c-brown);
   font-size: 1.5rem;
   font-weight: 500;
@@ -664,69 +664,69 @@ footer .footer__container, footer .footer__legal {
   font-family: var(--ff-primary), serif;
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
-  .hero__subtitle, .error-404__subtitle {
+  .hero__subtitle, .error-404__subtitle, .single__hero__subtitle {
     font-size: 1.75rem;
   }
 }
 @media only screen and (min-width: 1024px) {
-  .hero__subtitle, .error-404__subtitle {
+  .hero__subtitle, .error-404__subtitle, .single__hero__subtitle {
     font-size: 2rem;
   }
 }
-.hero p, .hero .error-404__text, .error-404 p, .error-404 .error-404__text {
+.hero p, .hero .error-404__text, .error-404 p, .error-404 .error-404__text, .single__hero p, .single__hero .error-404__text {
   color: var(--c-brown);
   font-size: 1.125rem;
   width: 100%;
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
-  .hero p, .hero .error-404__text, .error-404 p, .error-404 .error-404__text {
+  .hero p, .hero .error-404__text, .error-404 p, .error-404 .error-404__text, .single__hero p, .single__hero .error-404__text {
     width: 70%;
   }
 }
 @media only screen and (min-width: 1024px) {
-  .hero p, .hero .error-404__text, .error-404 p, .error-404 .error-404__text {
+  .hero p, .hero .error-404__text, .error-404 p, .error-404 .error-404__text, .single__hero p, .single__hero .error-404__text {
     width: 90%;
   }
 }
-.hero__actions, .hero .error-404__actions, .error-404__actions, .error-404 .error-404__actions {
+.hero__actions, .hero .error-404__actions, .hero .single__links, .error-404__actions, .error-404 .error-404__actions, .error-404 .single__links, .single__hero__actions, .single__hero .error-404__actions, .single__hero .single__links {
   display: flex;
   align-items: flex-start;
   gap: 0.75rem;
   flex-wrap: wrap;
   margin-top: 1.5rem;
 }
-.hero__actions .hero__action, .hero__actions .error-404__action, .hero__actions .error-404__button, .hero .error-404__actions .hero__action, .hero .error-404__actions .error-404__action, .hero .error-404__actions .error-404__button, .error-404__actions .hero__action, .error-404__actions .error-404__action, .error-404__actions .error-404__button, .error-404 .error-404__actions .hero__action, .error-404 .error-404__actions .error-404__action, .error-404 .error-404__actions .error-404__button {
+.hero__actions .hero__action, .hero__actions .error-404__action, .hero__actions .error-404__button, .hero__actions .single__link, .hero__actions .single__link--disabled, .hero .error-404__actions .hero__action, .hero .error-404__actions .error-404__action, .hero .error-404__actions .error-404__button, .hero .error-404__actions .single__link, .hero .error-404__actions .single__link--disabled, .hero .single__links .hero__action, .hero .single__links .error-404__action, .hero .single__links .error-404__button, .hero .single__links .single__link, .hero .single__links .single__link--disabled, .error-404__actions .hero__action, .error-404__actions .error-404__action, .error-404__actions .error-404__button, .error-404__actions .single__link, .error-404__actions .single__link--disabled, .error-404 .error-404__actions .hero__action, .error-404 .error-404__actions .error-404__action, .error-404 .error-404__actions .error-404__button, .error-404 .error-404__actions .single__link, .error-404 .error-404__actions .single__link--disabled, .error-404 .single__links .hero__action, .error-404 .single__links .error-404__action, .error-404 .single__links .error-404__button, .error-404 .single__links .single__link, .error-404 .single__links .single__link--disabled, .single__hero__actions .hero__action, .single__hero__actions .error-404__action, .single__hero__actions .error-404__button, .single__hero__actions .single__link, .single__hero__actions .single__link--disabled, .single__hero .error-404__actions .hero__action, .single__hero .error-404__actions .error-404__action, .single__hero .error-404__actions .error-404__button, .single__hero .error-404__actions .single__link, .single__hero .error-404__actions .single__link--disabled, .single__hero .single__links .hero__action, .single__hero .single__links .error-404__action, .single__hero .single__links .error-404__button, .single__hero .single__links .single__link, .single__hero .single__links .single__link--disabled {
   font-family: var(--ff-secondary), system-ui;
   font-size: 1rem;
   text-align: center;
   transition: all 0.3s ease;
-  border: 0.0625rem solid transparent;
+  border: 0.0625rem solid var(--c-brown);
   padding: 1rem;
 }
 @media only screen and (max-width: 479px) {
-  .hero__actions .hero__action, .hero__actions .error-404__action, .hero__actions .error-404__button, .hero .error-404__actions .hero__action, .hero .error-404__actions .error-404__action, .hero .error-404__actions .error-404__button, .error-404__actions .hero__action, .error-404__actions .error-404__action, .error-404__actions .error-404__button, .error-404 .error-404__actions .hero__action, .error-404 .error-404__actions .error-404__action, .error-404 .error-404__actions .error-404__button {
+  .hero__actions .hero__action, .hero__actions .error-404__action, .hero__actions .error-404__button, .hero__actions .single__link, .hero__actions .single__link--disabled, .hero .error-404__actions .hero__action, .hero .error-404__actions .error-404__action, .hero .error-404__actions .error-404__button, .hero .error-404__actions .single__link, .hero .error-404__actions .single__link--disabled, .hero .single__links .hero__action, .hero .single__links .error-404__action, .hero .single__links .error-404__button, .hero .single__links .single__link, .hero .single__links .single__link--disabled, .error-404__actions .hero__action, .error-404__actions .error-404__action, .error-404__actions .error-404__button, .error-404__actions .single__link, .error-404__actions .single__link--disabled, .error-404 .error-404__actions .hero__action, .error-404 .error-404__actions .error-404__action, .error-404 .error-404__actions .error-404__button, .error-404 .error-404__actions .single__link, .error-404 .error-404__actions .single__link--disabled, .error-404 .single__links .hero__action, .error-404 .single__links .error-404__action, .error-404 .single__links .error-404__button, .error-404 .single__links .single__link, .error-404 .single__links .single__link--disabled, .single__hero__actions .hero__action, .single__hero__actions .error-404__action, .single__hero__actions .error-404__button, .single__hero__actions .single__link, .single__hero__actions .single__link--disabled, .single__hero .error-404__actions .hero__action, .single__hero .error-404__actions .error-404__action, .single__hero .error-404__actions .error-404__button, .single__hero .error-404__actions .single__link, .single__hero .error-404__actions .single__link--disabled, .single__hero .single__links .hero__action, .single__hero .single__links .error-404__action, .single__hero .single__links .error-404__button, .single__hero .single__links .single__link, .single__hero .single__links .single__link--disabled {
     padding: 0.875rem 1.25rem;
   }
 }
-.hero__actions .hero__action--primary, .hero__actions .button__primary, .hero .error-404__actions .hero__action--primary, .hero .error-404__actions .button__primary, .error-404__actions .hero__action--primary, .error-404__actions .button__primary, .error-404 .error-404__actions .hero__action--primary, .error-404 .error-404__actions .button__primary {
+.hero__actions .hero__action--primary, .hero__actions .button__primary, .hero__actions .single__link--github, .hero .error-404__actions .hero__action--primary, .hero .error-404__actions .button__primary, .hero .error-404__actions .single__link--github, .hero .single__links .hero__action--primary, .hero .single__links .button__primary, .hero .single__links .single__link--github, .error-404__actions .hero__action--primary, .error-404__actions .button__primary, .error-404__actions .single__link--github, .error-404 .error-404__actions .hero__action--primary, .error-404 .error-404__actions .button__primary, .error-404 .error-404__actions .single__link--github, .error-404 .single__links .hero__action--primary, .error-404 .single__links .button__primary, .error-404 .single__links .single__link--github, .single__hero__actions .hero__action--primary, .single__hero__actions .button__primary, .single__hero__actions .single__link--github, .single__hero .error-404__actions .hero__action--primary, .single__hero .error-404__actions .button__primary, .single__hero .error-404__actions .single__link--github, .single__hero .single__links .hero__action--primary, .single__hero .single__links .button__primary, .single__hero .single__links .single__link--github {
   background-color: var(--c-brown);
   color: var(--c-beige-light);
 }
-.hero__actions .hero__action--primary:hover, .hero__actions .hero__action--primary:focus, .hero__actions .button__primary:hover, .hero__actions .button__primary:focus, .hero .error-404__actions .hero__action--primary:hover, .hero .error-404__actions .hero__action--primary:focus, .hero .error-404__actions .button__primary:hover, .hero .error-404__actions .button__primary:focus, .error-404__actions .hero__action--primary:hover, .error-404__actions .hero__action--primary:focus, .error-404__actions .button__primary:hover, .error-404__actions .button__primary:focus, .error-404 .error-404__actions .hero__action--primary:hover, .error-404 .error-404__actions .hero__action--primary:focus, .error-404 .error-404__actions .button__primary:hover, .error-404 .error-404__actions .button__primary:focus {
+.hero__actions .hero__action--primary:hover, .hero__actions .hero__action--primary:focus, .hero__actions .button__primary:hover, .hero__actions .button__primary:focus, .hero__actions .single__link--github:hover, .hero__actions .single__link--github:focus, .hero .error-404__actions .hero__action--primary:hover, .hero .error-404__actions .hero__action--primary:focus, .hero .error-404__actions .button__primary:hover, .hero .error-404__actions .button__primary:focus, .hero .error-404__actions .single__link--github:hover, .hero .error-404__actions .single__link--github:focus, .hero .single__links .hero__action--primary:hover, .hero .single__links .hero__action--primary:focus, .hero .single__links .button__primary:hover, .hero .single__links .button__primary:focus, .hero .single__links .single__link--github:hover, .hero .single__links .single__link--github:focus, .error-404__actions .hero__action--primary:hover, .error-404__actions .hero__action--primary:focus, .error-404__actions .button__primary:hover, .error-404__actions .button__primary:focus, .error-404__actions .single__link--github:hover, .error-404__actions .single__link--github:focus, .error-404 .error-404__actions .hero__action--primary:hover, .error-404 .error-404__actions .hero__action--primary:focus, .error-404 .error-404__actions .button__primary:hover, .error-404 .error-404__actions .button__primary:focus, .error-404 .error-404__actions .single__link--github:hover, .error-404 .error-404__actions .single__link--github:focus, .error-404 .single__links .hero__action--primary:hover, .error-404 .single__links .hero__action--primary:focus, .error-404 .single__links .button__primary:hover, .error-404 .single__links .button__primary:focus, .error-404 .single__links .single__link--github:hover, .error-404 .single__links .single__link--github:focus, .single__hero__actions .hero__action--primary:hover, .single__hero__actions .hero__action--primary:focus, .single__hero__actions .button__primary:hover, .single__hero__actions .button__primary:focus, .single__hero__actions .single__link--github:hover, .single__hero__actions .single__link--github:focus, .single__hero .error-404__actions .hero__action--primary:hover, .single__hero .error-404__actions .hero__action--primary:focus, .single__hero .error-404__actions .button__primary:hover, .single__hero .error-404__actions .button__primary:focus, .single__hero .error-404__actions .single__link--github:hover, .single__hero .error-404__actions .single__link--github:focus, .single__hero .single__links .hero__action--primary:hover, .single__hero .single__links .hero__action--primary:focus, .single__hero .single__links .button__primary:hover, .single__hero .single__links .button__primary:focus, .single__hero .single__links .single__link--github:hover, .single__hero .single__links .single__link--github:focus {
   background-color: var(--c-beige-light);
   color: var(--c-brown);
   border: 0.0625rem solid var(--c-brown);
 }
-.hero__actions .hero__action--secondary, .hero__actions .button__secondary, .hero .error-404__actions .hero__action--secondary, .hero .error-404__actions .button__secondary, .error-404__actions .hero__action--secondary, .error-404__actions .button__secondary, .error-404 .error-404__actions .hero__action--secondary, .error-404 .error-404__actions .button__secondary {
+.hero__actions .hero__action--secondary, .hero__actions .button__secondary, .hero__actions .single__link--live, .hero .error-404__actions .hero__action--secondary, .hero .error-404__actions .button__secondary, .hero .error-404__actions .single__link--live, .hero .single__links .hero__action--secondary, .hero .single__links .button__secondary, .hero .single__links .single__link--live, .error-404__actions .hero__action--secondary, .error-404__actions .button__secondary, .error-404__actions .single__link--live, .error-404 .error-404__actions .hero__action--secondary, .error-404 .error-404__actions .button__secondary, .error-404 .error-404__actions .single__link--live, .error-404 .single__links .hero__action--secondary, .error-404 .single__links .button__secondary, .error-404 .single__links .single__link--live, .single__hero__actions .hero__action--secondary, .single__hero__actions .button__secondary, .single__hero__actions .single__link--live, .single__hero .error-404__actions .hero__action--secondary, .single__hero .error-404__actions .button__secondary, .single__hero .error-404__actions .single__link--live, .single__hero .single__links .hero__action--secondary, .single__hero .single__links .button__secondary, .single__hero .single__links .single__link--live {
   background-color: var(--c-red);
   color: var(--c-beige-light);
 }
-.hero__actions .hero__action--secondary:hover, .hero__actions .hero__action--secondary:focus, .hero__actions .button__secondary:hover, .hero__actions .button__secondary:focus, .hero .error-404__actions .hero__action--secondary:hover, .hero .error-404__actions .hero__action--secondary:focus, .hero .error-404__actions .button__secondary:hover, .hero .error-404__actions .button__secondary:focus, .error-404__actions .hero__action--secondary:hover, .error-404__actions .hero__action--secondary:focus, .error-404__actions .button__secondary:hover, .error-404__actions .button__secondary:focus, .error-404 .error-404__actions .hero__action--secondary:hover, .error-404 .error-404__actions .hero__action--secondary:focus, .error-404 .error-404__actions .button__secondary:hover, .error-404 .error-404__actions .button__secondary:focus {
+.hero__actions .hero__action--secondary:hover, .hero__actions .hero__action--secondary:focus, .hero__actions .button__secondary:hover, .hero__actions .button__secondary:focus, .hero__actions .single__link--live:hover, .hero__actions .single__link--live:focus, .hero .error-404__actions .hero__action--secondary:hover, .hero .error-404__actions .hero__action--secondary:focus, .hero .error-404__actions .button__secondary:hover, .hero .error-404__actions .button__secondary:focus, .hero .error-404__actions .single__link--live:hover, .hero .error-404__actions .single__link--live:focus, .hero .single__links .hero__action--secondary:hover, .hero .single__links .hero__action--secondary:focus, .hero .single__links .button__secondary:hover, .hero .single__links .button__secondary:focus, .hero .single__links .single__link--live:hover, .hero .single__links .single__link--live:focus, .error-404__actions .hero__action--secondary:hover, .error-404__actions .hero__action--secondary:focus, .error-404__actions .button__secondary:hover, .error-404__actions .button__secondary:focus, .error-404__actions .single__link--live:hover, .error-404__actions .single__link--live:focus, .error-404 .error-404__actions .hero__action--secondary:hover, .error-404 .error-404__actions .hero__action--secondary:focus, .error-404 .error-404__actions .button__secondary:hover, .error-404 .error-404__actions .button__secondary:focus, .error-404 .error-404__actions .single__link--live:hover, .error-404 .error-404__actions .single__link--live:focus, .error-404 .single__links .hero__action--secondary:hover, .error-404 .single__links .hero__action--secondary:focus, .error-404 .single__links .button__secondary:hover, .error-404 .single__links .button__secondary:focus, .error-404 .single__links .single__link--live:hover, .error-404 .single__links .single__link--live:focus, .single__hero__actions .hero__action--secondary:hover, .single__hero__actions .hero__action--secondary:focus, .single__hero__actions .button__secondary:hover, .single__hero__actions .button__secondary:focus, .single__hero__actions .single__link--live:hover, .single__hero__actions .single__link--live:focus, .single__hero .error-404__actions .hero__action--secondary:hover, .single__hero .error-404__actions .hero__action--secondary:focus, .single__hero .error-404__actions .button__secondary:hover, .single__hero .error-404__actions .button__secondary:focus, .single__hero .error-404__actions .single__link--live:hover, .single__hero .error-404__actions .single__link--live:focus, .single__hero .single__links .hero__action--secondary:hover, .single__hero .single__links .hero__action--secondary:focus, .single__hero .single__links .button__secondary:hover, .single__hero .single__links .button__secondary:focus, .single__hero .single__links .single__link--live:hover, .single__hero .single__links .single__link--live:focus {
   background-color: var(--c-beige-light);
   color: var(--c-red);
   border: 0.0625rem solid var(--c-red);
 }
-.hero__images .hero__figure--container, .error-404__images .hero__figure--container {
+.hero__images .hero__figure--container, .error-404__images .hero__figure--container, .single__hero__images .hero__figure--container {
   display: flex;
   justify-content: center;
   gap: 1rem;
@@ -734,16 +734,16 @@ footer .footer__container, footer .footer__legal {
   flex-wrap: wrap;
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
-  .hero__images .hero__figure--container, .error-404__images .hero__figure--container {
+  .hero__images .hero__figure--container, .error-404__images .hero__figure--container, .single__hero__images .hero__figure--container {
     min-height: 300px;
   }
 }
 @media only screen and (min-width: 1024px) {
-  .hero__images .hero__figure--container, .error-404__images .hero__figure--container {
+  .hero__images .hero__figure--container, .error-404__images .hero__figure--container, .single__hero__images .hero__figure--container {
     min-height: 400px;
   }
 }
-.hero__images .hero__figure .hero__figure--box, .error-404__images .hero__figure .hero__figure--box {
+.hero__images .hero__figure .hero__figure--box, .error-404__images .hero__figure .hero__figure--box, .single__hero__images .hero__figure .hero__figure--box {
   display: flex;
   padding: 0.25rem;
   align-items: center;
@@ -751,55 +751,55 @@ footer .footer__container, footer .footer__legal {
   max-width: 100%;
   height: 100%;
 }
-.hero__images .hero__figure .hero__figure--box:first-child, .error-404__images .hero__figure .hero__figure--box:first-child {
+.hero__images .hero__figure .hero__figure--box:first-child, .error-404__images .hero__figure .hero__figure--box:first-child, .single__hero__images .hero__figure .hero__figure--box:first-child {
   width: 60%;
   transform: rotate(-10deg);
   z-index: 1;
   margin-right: -3rem;
 }
 @media only screen and (min-width: 1024px) {
-  .hero__images .hero__figure .hero__figure--box:first-child, .error-404__images .hero__figure .hero__figure--box:first-child {
+  .hero__images .hero__figure .hero__figure--box:first-child, .error-404__images .hero__figure .hero__figure--box:first-child, .single__hero__images .hero__figure .hero__figure--box:first-child {
     margin-bottom: -6rem;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
-  .hero__images .hero__figure .hero__figure--box:first-child, .error-404__images .hero__figure .hero__figure--box:first-child {
+  .hero__images .hero__figure .hero__figure--box:first-child, .error-404__images .hero__figure .hero__figure--box:first-child, .single__hero__images .hero__figure .hero__figure--box:first-child {
     margin-bottom: -6rem;
     width: 55%;
     transform: rotate(-8deg);
   }
 }
 @media only screen and (max-width: 479px) {
-  .hero__images .hero__figure .hero__figure--box:first-child, .error-404__images .hero__figure .hero__figure--box:first-child {
+  .hero__images .hero__figure .hero__figure--box:first-child, .error-404__images .hero__figure .hero__figure--box:first-child, .single__hero__images .hero__figure .hero__figure--box:first-child {
     width: 50%;
     transform: rotate(-7deg);
   }
 }
-.hero__images .hero__figure .hero__figure--box:last-child, .error-404__images .hero__figure .hero__figure--box:last-child {
+.hero__images .hero__figure .hero__figure--box:last-child, .error-404__images .hero__figure .hero__figure--box:last-child, .single__hero__images .hero__figure .hero__figure--box:last-child {
   width: 80%;
   transform: rotate(13deg);
   z-index: 2;
   margin-left: -3rem;
 }
 @media only screen and (min-width: 1024px) {
-  .hero__images .hero__figure .hero__figure--box:last-child, .error-404__images .hero__figure .hero__figure--box:last-child {
+  .hero__images .hero__figure .hero__figure--box:last-child, .error-404__images .hero__figure .hero__figure--box:last-child, .single__hero__images .hero__figure .hero__figure--box:last-child {
     margin-top: -4rem;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
-  .hero__images .hero__figure .hero__figure--box:last-child, .error-404__images .hero__figure .hero__figure--box:last-child {
+  .hero__images .hero__figure .hero__figure--box:last-child, .error-404__images .hero__figure .hero__figure--box:last-child, .single__hero__images .hero__figure .hero__figure--box:last-child {
     margin-top: -4rem;
     width: 70%;
     transform: rotate(11deg);
   }
 }
 @media only screen and (max-width: 479px) {
-  .hero__images .hero__figure .hero__figure--box:last-child, .error-404__images .hero__figure .hero__figure--box:last-child {
+  .hero__images .hero__figure .hero__figure--box:last-child, .error-404__images .hero__figure .hero__figure--box:last-child, .single__hero__images .hero__figure .hero__figure--box:last-child {
     width: 60%;
     transform: rotate(9deg);
   }
 }
-.hero__images .hero__figure .hero__figure--box-int, .error-404__images .hero__figure .hero__figure--box-int {
+.hero__images .hero__figure .hero__figure--box-int, .error-404__images .hero__figure .hero__figure--box-int, .single__hero__images .hero__figure .hero__figure--box-int {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -809,13 +809,13 @@ footer .footer__container, footer .footer__legal {
   padding: 10%;
   width: 100%;
 }
-.hero__images .hero__figure .hero__figure--box-int .hero__figure--img, .error-404__images .hero__figure .hero__figure--box-int .hero__figure--img {
+.hero__images .hero__figure .hero__figure--box-int .hero__figure--img, .error-404__images .hero__figure .hero__figure--box-int .hero__figure--img, .single__hero__images .hero__figure .hero__figure--box-int .hero__figure--img {
   width: 100%;
   height: auto;
   object-fit: contain;
   transition: all 0.3s ease-in-out;
 }
-.hero__images .hero__figure .hero__figure--box-int .hero__figure--img:hover, .hero__images .hero__figure .hero__figure--box-int .hero__figure--img:focus, .error-404__images .hero__figure .hero__figure--box-int .hero__figure--img:hover, .error-404__images .hero__figure .hero__figure--box-int .hero__figure--img:focus {
+.hero__images .hero__figure .hero__figure--box-int .hero__figure--img:hover, .hero__images .hero__figure .hero__figure--box-int .hero__figure--img:focus, .error-404__images .hero__figure .hero__figure--box-int .hero__figure--img:hover, .error-404__images .hero__figure .hero__figure--box-int .hero__figure--img:focus, .single__hero__images .hero__figure .hero__figure--box-int .hero__figure--img:hover, .single__hero__images .hero__figure .hero__figure--box-int .hero__figure--img:focus {
   transform: scale(1.05);
 }
 
@@ -1201,6 +1201,18 @@ footer .footer__container, footer .footer__legal {
 }
 .legals__content--paragraph .legals__paragraph--content a:hover, .legals__content--paragraph .legals__paragraph--content a:focus {
   color: var(--c-brown);
+}
+
+.single__back {
+  font-size: 1.25rem;
+  text-decoration: underline;
+  margin-bottom: 1rem;
+}
+.single__back:before {
+  content: "←";
+}
+.single__back:hover, .single__back:focus {
+  color: var(--c-red);
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,14 @@
+.single__back {
+  font-size: 1.25rem;
+  text-decoration: underline;
+  margin-bottom: 1rem;
+
+  &:before {
+    content: "\2190";
+  }
+
+  &:hover,
+  &:focus {
+    color: var(--c-red);
+  }
+}
