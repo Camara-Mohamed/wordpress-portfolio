@@ -89,7 +89,7 @@ img {
 /* Padding pour header et footer */
 header.header{
   padding: 1.5rem 1.5rem;
-  width: 100vw;
+  width: auto;
   max-width: 1920px;
 
   @include breakpoints.mobile {
@@ -107,29 +107,20 @@ header.header{
 
 .main-content {
   & > article, & > section {
-    padding: 4.5rem 1.5rem 1.5rem;
-    width: 100vw;
+    padding: 1.5rem 1.5rem;
     max-width: 1920px;
 
-    @include breakpoints.mobile {
-      padding: 4.5rem 1.5rem 1.5rem;
-    }
-
     @include breakpoints.tablet {
-      padding: 5rem 2rem 1.5rem;
+      padding: 1.5rem 2rem;
     }
 
     @include breakpoints.desktop {
-      padding: 5.5rem 8.5rem 1.5rem;
+      padding: 1.5rem 8.5rem;
     }
   }
 
   .projects, .features, .projects__filters {
     padding: 2rem 1.5rem 1rem;
-
-    @include breakpoints.mobile {
-      padding: 2rem 1.5rem 1rem;
-    }
 
     @include breakpoints.tablet {
       padding: 2.5rem 2rem 1rem;
@@ -142,17 +133,15 @@ header.header{
 }
 
 footer .footer__container, footer .footer__legal {
-  padding: 1rem 1.5rem;
-  width: 100vw;
+  padding: 1.5rem 1.5rem;
   max-width: 1920px;
+  width: 100%;
 
-  @include breakpoints.mobile {
-    padding: 1rem 1.5rem;
-  }
   @include breakpoints.tablet {
-    padding: 1rem 2rem;
+    padding: 1.5rem 2rem;
   }
+  
   @include breakpoints.desktop {
-    padding: 1rem 8.5rem;
+    padding: 1.5rem 8.5rem;
   }
 }
