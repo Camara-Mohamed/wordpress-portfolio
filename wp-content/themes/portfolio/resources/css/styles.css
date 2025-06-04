@@ -535,14 +535,20 @@ footer .footer__container, footer .footer__legal {
     width: calc(50% - 0.5rem);
   }
 }
+.header {
+  position: relative;
+  z-index: 1000;
+}
+
 .header__nav--burger {
   display: none;
   cursor: pointer;
   width: 2rem;
   height: 2rem;
   position: relative;
+  z-index: 1001;
 }
-@media only screen and (max-width: 479px) {
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
   .header__nav--burger {
     display: block;
   }
@@ -561,31 +567,30 @@ footer .footer__container, footer .footer__legal {
   opacity: 0;
 }
 
-@media only screen and (max-width: 479px) {
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
   .header__nav--container {
     position: fixed;
-    top: 4rem;
+    top: 0;
     left: 0;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     background: var(--c-brown);
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     padding: 2rem;
     transition: all 0.3s ease;
     overflow: hidden;
     gap: 2rem;
     transform: translateX(100%);
-    z-index: 9999;
+    z-index: 1000;
   }
 }
 
 /* Menu Ouvert */
 .burger-checkbox:checked ~ .header__nav--container {
   transform: translateX(0);
-  height: 100vh;
-  overflow: hidden;
 }
 
 .burger-checkbox:checked ~ .header__nav--burger .burger-icon {
@@ -597,8 +602,13 @@ footer .footer__container, footer .footer__legal {
 
 /* Checkbox */
 .burger-checkbox {
+  overflow-y: hidden;
   position: absolute;
   opacity: 0;
+}
+
+body:has(#burger-menu:checked) {
+  overflow-y: hidden;
 }
 
 .hero, .error-404, .single__hero {
@@ -688,60 +698,11 @@ footer .footer__container, footer .footer__legal {
     width: 90%;
   }
 }
-.hero__actions, .hero .error-404__actions, .hero .single__links, .error-404__actions, .error-404 .error-404__actions, .error-404 .single__links, .single__hero__actions, .single__hero .error-404__actions, .single__hero .single__links {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.75rem;
-  flex-wrap: wrap;
-  margin-top: 1.5rem;
-}
-.hero__actions .hero__action, .hero__actions .error-404__action, .hero__actions .error-404__button, .hero__actions .single__link, .hero__actions .single__link--disabled, .hero .error-404__actions .hero__action, .hero .error-404__actions .error-404__action, .hero .error-404__actions .error-404__button, .hero .error-404__actions .single__link, .hero .error-404__actions .single__link--disabled, .hero .single__links .hero__action, .hero .single__links .error-404__action, .hero .single__links .error-404__button, .hero .single__links .single__link, .hero .single__links .single__link--disabled, .error-404__actions .hero__action, .error-404__actions .error-404__action, .error-404__actions .error-404__button, .error-404__actions .single__link, .error-404__actions .single__link--disabled, .error-404 .error-404__actions .hero__action, .error-404 .error-404__actions .error-404__action, .error-404 .error-404__actions .error-404__button, .error-404 .error-404__actions .single__link, .error-404 .error-404__actions .single__link--disabled, .error-404 .single__links .hero__action, .error-404 .single__links .error-404__action, .error-404 .single__links .error-404__button, .error-404 .single__links .single__link, .error-404 .single__links .single__link--disabled, .single__hero__actions .hero__action, .single__hero__actions .error-404__action, .single__hero__actions .error-404__button, .single__hero__actions .single__link, .single__hero__actions .single__link--disabled, .single__hero .error-404__actions .hero__action, .single__hero .error-404__actions .error-404__action, .single__hero .error-404__actions .error-404__button, .single__hero .error-404__actions .single__link, .single__hero .error-404__actions .single__link--disabled, .single__hero .single__links .hero__action, .single__hero .single__links .error-404__action, .single__hero .single__links .error-404__button, .single__hero .single__links .single__link, .single__hero .single__links .single__link--disabled {
-  font-family: var(--ff-secondary), system-ui;
-  font-size: 1rem;
-  text-align: center;
-  transition: all 0.3s ease;
-  border: 0.0625rem solid var(--c-brown);
-  padding: 1rem;
-}
-@media only screen and (max-width: 479px) {
-  .hero__actions .hero__action, .hero__actions .error-404__action, .hero__actions .error-404__button, .hero__actions .single__link, .hero__actions .single__link--disabled, .hero .error-404__actions .hero__action, .hero .error-404__actions .error-404__action, .hero .error-404__actions .error-404__button, .hero .error-404__actions .single__link, .hero .error-404__actions .single__link--disabled, .hero .single__links .hero__action, .hero .single__links .error-404__action, .hero .single__links .error-404__button, .hero .single__links .single__link, .hero .single__links .single__link--disabled, .error-404__actions .hero__action, .error-404__actions .error-404__action, .error-404__actions .error-404__button, .error-404__actions .single__link, .error-404__actions .single__link--disabled, .error-404 .error-404__actions .hero__action, .error-404 .error-404__actions .error-404__action, .error-404 .error-404__actions .error-404__button, .error-404 .error-404__actions .single__link, .error-404 .error-404__actions .single__link--disabled, .error-404 .single__links .hero__action, .error-404 .single__links .error-404__action, .error-404 .single__links .error-404__button, .error-404 .single__links .single__link, .error-404 .single__links .single__link--disabled, .single__hero__actions .hero__action, .single__hero__actions .error-404__action, .single__hero__actions .error-404__button, .single__hero__actions .single__link, .single__hero__actions .single__link--disabled, .single__hero .error-404__actions .hero__action, .single__hero .error-404__actions .error-404__action, .single__hero .error-404__actions .error-404__button, .single__hero .error-404__actions .single__link, .single__hero .error-404__actions .single__link--disabled, .single__hero .single__links .hero__action, .single__hero .single__links .error-404__action, .single__hero .single__links .error-404__button, .single__hero .single__links .single__link, .single__hero .single__links .single__link--disabled {
-    padding: 0.875rem 1.25rem;
-  }
-}
-.hero__actions .hero__action--primary, .hero__actions .button__primary, .hero__actions .single__link--github, .hero .error-404__actions .hero__action--primary, .hero .error-404__actions .button__primary, .hero .error-404__actions .single__link--github, .hero .single__links .hero__action--primary, .hero .single__links .button__primary, .hero .single__links .single__link--github, .error-404__actions .hero__action--primary, .error-404__actions .button__primary, .error-404__actions .single__link--github, .error-404 .error-404__actions .hero__action--primary, .error-404 .error-404__actions .button__primary, .error-404 .error-404__actions .single__link--github, .error-404 .single__links .hero__action--primary, .error-404 .single__links .button__primary, .error-404 .single__links .single__link--github, .single__hero__actions .hero__action--primary, .single__hero__actions .button__primary, .single__hero__actions .single__link--github, .single__hero .error-404__actions .hero__action--primary, .single__hero .error-404__actions .button__primary, .single__hero .error-404__actions .single__link--github, .single__hero .single__links .hero__action--primary, .single__hero .single__links .button__primary, .single__hero .single__links .single__link--github {
-  background-color: var(--c-brown);
-  color: var(--c-beige-light);
-}
-.hero__actions .hero__action--primary:hover, .hero__actions .hero__action--primary:focus, .hero__actions .button__primary:hover, .hero__actions .button__primary:focus, .hero__actions .single__link--github:hover, .hero__actions .single__link--github:focus, .hero .error-404__actions .hero__action--primary:hover, .hero .error-404__actions .hero__action--primary:focus, .hero .error-404__actions .button__primary:hover, .hero .error-404__actions .button__primary:focus, .hero .error-404__actions .single__link--github:hover, .hero .error-404__actions .single__link--github:focus, .hero .single__links .hero__action--primary:hover, .hero .single__links .hero__action--primary:focus, .hero .single__links .button__primary:hover, .hero .single__links .button__primary:focus, .hero .single__links .single__link--github:hover, .hero .single__links .single__link--github:focus, .error-404__actions .hero__action--primary:hover, .error-404__actions .hero__action--primary:focus, .error-404__actions .button__primary:hover, .error-404__actions .button__primary:focus, .error-404__actions .single__link--github:hover, .error-404__actions .single__link--github:focus, .error-404 .error-404__actions .hero__action--primary:hover, .error-404 .error-404__actions .hero__action--primary:focus, .error-404 .error-404__actions .button__primary:hover, .error-404 .error-404__actions .button__primary:focus, .error-404 .error-404__actions .single__link--github:hover, .error-404 .error-404__actions .single__link--github:focus, .error-404 .single__links .hero__action--primary:hover, .error-404 .single__links .hero__action--primary:focus, .error-404 .single__links .button__primary:hover, .error-404 .single__links .button__primary:focus, .error-404 .single__links .single__link--github:hover, .error-404 .single__links .single__link--github:focus, .single__hero__actions .hero__action--primary:hover, .single__hero__actions .hero__action--primary:focus, .single__hero__actions .button__primary:hover, .single__hero__actions .button__primary:focus, .single__hero__actions .single__link--github:hover, .single__hero__actions .single__link--github:focus, .single__hero .error-404__actions .hero__action--primary:hover, .single__hero .error-404__actions .hero__action--primary:focus, .single__hero .error-404__actions .button__primary:hover, .single__hero .error-404__actions .button__primary:focus, .single__hero .error-404__actions .single__link--github:hover, .single__hero .error-404__actions .single__link--github:focus, .single__hero .single__links .hero__action--primary:hover, .single__hero .single__links .hero__action--primary:focus, .single__hero .single__links .button__primary:hover, .single__hero .single__links .button__primary:focus, .single__hero .single__links .single__link--github:hover, .single__hero .single__links .single__link--github:focus {
-  background-color: var(--c-beige-light);
-  color: var(--c-brown);
-  border: 0.0625rem solid var(--c-brown);
-}
-.hero__actions .hero__action--secondary, .hero__actions .button__secondary, .hero__actions .single__link--live, .hero .error-404__actions .hero__action--secondary, .hero .error-404__actions .button__secondary, .hero .error-404__actions .single__link--live, .hero .single__links .hero__action--secondary, .hero .single__links .button__secondary, .hero .single__links .single__link--live, .error-404__actions .hero__action--secondary, .error-404__actions .button__secondary, .error-404__actions .single__link--live, .error-404 .error-404__actions .hero__action--secondary, .error-404 .error-404__actions .button__secondary, .error-404 .error-404__actions .single__link--live, .error-404 .single__links .hero__action--secondary, .error-404 .single__links .button__secondary, .error-404 .single__links .single__link--live, .single__hero__actions .hero__action--secondary, .single__hero__actions .button__secondary, .single__hero__actions .single__link--live, .single__hero .error-404__actions .hero__action--secondary, .single__hero .error-404__actions .button__secondary, .single__hero .error-404__actions .single__link--live, .single__hero .single__links .hero__action--secondary, .single__hero .single__links .button__secondary, .single__hero .single__links .single__link--live {
-  background-color: var(--c-red);
-  color: var(--c-beige-light);
-}
-.hero__actions .hero__action--secondary:hover, .hero__actions .hero__action--secondary:focus, .hero__actions .button__secondary:hover, .hero__actions .button__secondary:focus, .hero__actions .single__link--live:hover, .hero__actions .single__link--live:focus, .hero .error-404__actions .hero__action--secondary:hover, .hero .error-404__actions .hero__action--secondary:focus, .hero .error-404__actions .button__secondary:hover, .hero .error-404__actions .button__secondary:focus, .hero .error-404__actions .single__link--live:hover, .hero .error-404__actions .single__link--live:focus, .hero .single__links .hero__action--secondary:hover, .hero .single__links .hero__action--secondary:focus, .hero .single__links .button__secondary:hover, .hero .single__links .button__secondary:focus, .hero .single__links .single__link--live:hover, .hero .single__links .single__link--live:focus, .error-404__actions .hero__action--secondary:hover, .error-404__actions .hero__action--secondary:focus, .error-404__actions .button__secondary:hover, .error-404__actions .button__secondary:focus, .error-404__actions .single__link--live:hover, .error-404__actions .single__link--live:focus, .error-404 .error-404__actions .hero__action--secondary:hover, .error-404 .error-404__actions .hero__action--secondary:focus, .error-404 .error-404__actions .button__secondary:hover, .error-404 .error-404__actions .button__secondary:focus, .error-404 .error-404__actions .single__link--live:hover, .error-404 .error-404__actions .single__link--live:focus, .error-404 .single__links .hero__action--secondary:hover, .error-404 .single__links .hero__action--secondary:focus, .error-404 .single__links .button__secondary:hover, .error-404 .single__links .button__secondary:focus, .error-404 .single__links .single__link--live:hover, .error-404 .single__links .single__link--live:focus, .single__hero__actions .hero__action--secondary:hover, .single__hero__actions .hero__action--secondary:focus, .single__hero__actions .button__secondary:hover, .single__hero__actions .button__secondary:focus, .single__hero__actions .single__link--live:hover, .single__hero__actions .single__link--live:focus, .single__hero .error-404__actions .hero__action--secondary:hover, .single__hero .error-404__actions .hero__action--secondary:focus, .single__hero .error-404__actions .button__secondary:hover, .single__hero .error-404__actions .button__secondary:focus, .single__hero .error-404__actions .single__link--live:hover, .single__hero .error-404__actions .single__link--live:focus, .single__hero .single__links .hero__action--secondary:hover, .single__hero .single__links .hero__action--secondary:focus, .single__hero .single__links .button__secondary:hover, .single__hero .single__links .button__secondary:focus, .single__hero .single__links .single__link--live:hover, .single__hero .single__links .single__link--live:focus {
-  background-color: var(--c-beige-light);
-  color: var(--c-red);
-  border: 0.0625rem solid var(--c-red);
-}
 .hero__images .hero__figure--container, .error-404__images .hero__figure--container, .single__hero__images .hero__figure--container {
   display: flex;
   justify-content: center;
   gap: 1rem;
-  min-height: 200px;
   flex-wrap: wrap;
-}
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
-  .hero__images .hero__figure--container, .error-404__images .hero__figure--container, .single__hero__images .hero__figure--container {
-    min-height: 300px;
-  }
-}
-@media only screen and (min-width: 1024px) {
-  .hero__images .hero__figure--container, .error-404__images .hero__figure--container, .single__hero__images .hero__figure--container {
-    min-height: 400px;
-  }
 }
 .hero__images .hero__figure .hero__figure--box, .error-404__images .hero__figure .hero__figure--box, .single__hero__images .hero__figure .hero__figure--box {
   display: flex;
@@ -752,52 +713,16 @@ footer .footer__container, footer .footer__legal {
   height: 100%;
 }
 .hero__images .hero__figure .hero__figure--box:first-child, .error-404__images .hero__figure .hero__figure--box:first-child, .single__hero__images .hero__figure .hero__figure--box:first-child {
-  width: 60%;
-  transform: rotate(-10deg);
+  width: 50%;
+  transform: rotate(-8deg);
   z-index: 1;
-  margin-right: -3rem;
-}
-@media only screen and (min-width: 1024px) {
-  .hero__images .hero__figure .hero__figure--box:first-child, .error-404__images .hero__figure .hero__figure--box:first-child, .single__hero__images .hero__figure .hero__figure--box:first-child {
-    margin-bottom: -6rem;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
-  .hero__images .hero__figure .hero__figure--box:first-child, .error-404__images .hero__figure .hero__figure--box:first-child, .single__hero__images .hero__figure .hero__figure--box:first-child {
-    margin-bottom: -6rem;
-    width: 55%;
-    transform: rotate(-8deg);
-  }
-}
-@media only screen and (max-width: 479px) {
-  .hero__images .hero__figure .hero__figure--box:first-child, .error-404__images .hero__figure .hero__figure--box:first-child, .single__hero__images .hero__figure .hero__figure--box:first-child {
-    width: 50%;
-    transform: rotate(-7deg);
-  }
+  margin-right: -6rem;
 }
 .hero__images .hero__figure .hero__figure--box:last-child, .error-404__images .hero__figure .hero__figure--box:last-child, .single__hero__images .hero__figure .hero__figure--box:last-child {
-  width: 80%;
-  transform: rotate(13deg);
+  width: 60%;
+  transform: rotate(10deg);
   z-index: 2;
-  margin-left: -3rem;
-}
-@media only screen and (min-width: 1024px) {
-  .hero__images .hero__figure .hero__figure--box:last-child, .error-404__images .hero__figure .hero__figure--box:last-child, .single__hero__images .hero__figure .hero__figure--box:last-child {
-    margin-top: -4rem;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
-  .hero__images .hero__figure .hero__figure--box:last-child, .error-404__images .hero__figure .hero__figure--box:last-child, .single__hero__images .hero__figure .hero__figure--box:last-child {
-    margin-top: -4rem;
-    width: 70%;
-    transform: rotate(11deg);
-  }
-}
-@media only screen and (max-width: 479px) {
-  .hero__images .hero__figure .hero__figure--box:last-child, .error-404__images .hero__figure .hero__figure--box:last-child, .single__hero__images .hero__figure .hero__figure--box:last-child {
-    width: 60%;
-    transform: rotate(9deg);
-  }
+  margin-left: -4rem;
 }
 .hero__images .hero__figure .hero__figure--box-int, .error-404__images .hero__figure .hero__figure--box-int, .single__hero__images .hero__figure .hero__figure--box-int {
   display: flex;
@@ -817,255 +742,6 @@ footer .footer__container, footer .footer__legal {
 }
 .hero__images .hero__figure .hero__figure--box-int .hero__figure--img:hover, .hero__images .hero__figure .hero__figure--box-int .hero__figure--img:focus, .error-404__images .hero__figure .hero__figure--box-int .hero__figure--img:hover, .error-404__images .hero__figure .hero__figure--box-int .hero__figure--img:focus, .single__hero__images .hero__figure .hero__figure--box-int .hero__figure--img:hover, .single__hero__images .hero__figure .hero__figure--box-int .hero__figure--img:focus {
   transform: scale(1.05);
-}
-
-.projects, .featured {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-}
-.projects .projets__grid, .projects .featured__container, .featured .projets__grid, .featured .featured__container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 2rem;
-  max-width: 1400px;
-  min-height: 600px;
-  padding: 5.5rem 4rem;
-  background: url("../../svg/tableau.svg");
-}
-
-.project__card {
-  display: inline-flex;
-  padding: 0.75rem;
-  flex-direction: column;
-  align-items: flex-start;
-  background: var(--c-beige-mid);
-  box-shadow: 0.25rem 0.5rem 0.25rem 0 var(--g-beige-01);
-  transition: all 0.5s ease-in-out;
-}
-.project__card:hover, .project__card:focus {
-  transform: rotate(3deg);
-}
-.project__card--link {
-  text-decoration: none;
-  min-width: 16.25rem;
-  height: 100%;
-  width: 100%;
-  padding: 1.5rem;
-  border: 0.0625rem dashed var(--g-brown-02);
-}
-.project__card--link .project__card--content {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-.project__card--link .project__card--content .card__title {
-  color: var(--c-brown);
-  padding: 0.5rem 0;
-  font-size: 1.25rem;
-  border-bottom: 0.0625rem dashed var(--c-brown);
-  text-decoration: none;
-  text-transform: capitalize;
-}
-.project__card--link .project__card--content .card__subtitle {
-  color: var(--c-brown);
-  font-size: 1rem;
-  font-family: var(--ff-primary), Georgia, serif;
-  font-weight: 300;
-  line-height: 1.4;
-  text-decoration: none;
-}
-.project__card--link .project__card--content .card__data {
-  display: inline-flex;
-  flex-wrap: wrap;
-}
-.project__card--link .project__card--content .card__data .card__tools {
-  align-self: stretch;
-  color: var(--b-red, #C1272D);
-  font-family: var(--ff-secondary), system-ui;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-}
-.project__card--link .project__card--content .card__type {
-  position: absolute;
-  display: inline-flex;
-  transform: rotate(25deg);
-  padding: 0.5rem 1rem;
-  justify-content: center;
-  align-items: center;
-  background: var(--c-red);
-  width: auto;
-}
-.project__card--link .project__card--content .card__type .project-card__type {
-  color: var(--c-beige-light);
-  text-align: center;
-  font-family: var(--ff-secondary), system-ui;
-  font-size: 1rem;
-  text-decoration: none;
-  text-transform: capitalize;
-  white-space: nowrap;
-}
-
-.projets__coming, .featured__more {
-  display: inline-flex;
-  padding: 1rem;
-  flex-direction: column;
-  transform: rotate(6deg);
-  background: var(--c-beige-mid);
-  box-shadow: 0.25rem 0.5rem 0.25rem 0 var(--g-beige-01);
-}
-.projets__coming--content, .featured__more--content {
-  display: flex;
-  height: 100%;
-  padding: 1.5rem;
-  justify-content: center;
-  align-items: center;
-  border: 0.125rem dashed var(--c-red);
-}
-.projets__coming--content .projets__coming--text, .projets__coming--content .featured__more--link, .featured__more--content .projets__coming--text, .featured__more--content .featured__more--link {
-  color: var(--c-red);
-  text-align: center;
-  font-family: var(--ff-secondary), system-ui;
-  font-size: 1.25rem;
-  line-height: 1.4;
-  text-decoration: none;
-}
-
-.contact__form {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  width: 100%;
-  min-width: 380px;
-}
-.contact__form .contact__form--title {
-  color: var(--c-brown);
-  font-size: 1.5rem;
-  font-weight: 600;
-  font-family: var(--ff-primary), Georgia, serif;
-}
-.contact__form abbr {
-  color: var(--c-red);
-  font-size: 0.875rem;
-}
-.contact__form--note {
-  font-size: 0.875rem;
-  color: var(--c-brown);
-}
-.contact__form--note abbr {
-  text-decoration: none;
-}
-.contact__form--feedback {
-  font-size: 1.25rem;
-  font-weight: 600;
-}
-.contact__form--feedback:before {
-  content: "|";
-  color: var(--c-red);
-  margin-right: 1rem;
-}
-.contact__form .form {
-  display: flex;
-  flex-direction: column;
-  padding: 1.5rem;
-  gap: 2rem;
-  border: 0.0625 solid var(--c-brown);
-  background: var(--g-brown-02);
-}
-.contact__form .form .contact__form--field {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-.contact__form .form .contact__form--field .contact__form--label {
-  font-size: 1.125rem;
-  font-family: var(--ff-secondary), system-ui;
-}
-.contact__form .form .contact__form--field .contact__form--textarea {
-  min-height: 8rem;
-  resize: vertical;
-  padding: 1rem;
-  line-height: 1.5;
-}
-.contact__form .form .contact__form--field .contact__form--input, .contact__form .form .contact__form--field .contact__form--textarea, .contact__form .form .contact__form--field .contact__form--select {
-  display: flex;
-  height: 2rem;
-  padding: 0.375rem 1rem;
-  border: none;
-  background: var(--c-beige-light);
-  width: 100%;
-  color: var(--c-brown);
-  margin-bottom: 1.5rem;
-  font-family: var(--ff-primary), Georgia, serif;
-}
-.contact__form .form .contact__form--field .contact__form--input::placeholder, .contact__form .form .contact__form--field .contact__form--input .contact__form--select, .contact__form .form .contact__form--field .contact__form--textarea::placeholder, .contact__form .form .contact__form--field .contact__form--textarea .contact__form--select, .contact__form .form .contact__form--field .contact__form--select::placeholder, .contact__form .form .contact__form--field .contact__form--select .contact__form--select {
-  font-size: 0.875rem;
-}
-.contact__form .form .contact__form--field .contact__form--input option, .contact__form .form .contact__form--field .contact__form--textarea option, .contact__form .form .contact__form--field .contact__form--select option {
-  background: var(--c-beige-light);
-  padding: 0.5rem;
-}
-.contact__form .form .contact__form--field .contact__form--input option[value=""], .contact__form .form .contact__form--field .contact__form--textarea option[value=""], .contact__form .form .contact__form--field .contact__form--select option[value=""] {
-  opacity: 0.7;
-}
-.contact__form .form .contact__form--field .contact__form--input:focus, .contact__form .form .contact__form--field .contact__form--textarea:focus, .contact__form .form .contact__form--field .contact__form--select:focus {
-  outline: none;
-}
-.contact__form .form .contact__form--field .contact__form--error {
-  display: block;
-}
-.contact__form .form .contact__form--submit {
-  display: flex;
-  height: 2.25rem;
-  padding: 0.375rem 1rem;
-  color: var(--c-beige-light);
-  background-color: var(--c-brown);
-  border: 0.0625rem solid var(--c-brown);
-  align-items: center;
-  justify-content: center;
-  font-family: var(--ff-secondary), system-ui;
-}
-.contact__form .form .contact__form--submit:hover {
-  color: var(--c-brown);
-  border: 0.0625rem solid var(--c-brown);
-  background-color: var(--c-beige-light);
-}
-
-.related__projects {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  gap: 2rem;
-}
-.related__projects--title {
-  color: var(--c-brown);
-  font-size: 1.5rem;
-  font-weight: 500;
-  margin-bottom: 1rem;
-  font-family: var(--ff-primary), Georgia, serif;
-}
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
-  .related__projects--title {
-    font-size: 1.75rem;
-  }
-}
-@media only screen and (min-width: 1024px) {
-  .related__projects--title {
-    font-size: 2rem;
-  }
-}
-.related__projects .projects__grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  width: 100%;
-}
-@media only screen and (max-width: 479px) {
-  .related__projects .projects__grid {
-    grid-template-columns: 1fr;
-  }
 }
 
 .featured {
@@ -1249,6 +925,292 @@ footer .footer__container, footer .footer__legal {
 }
 .single__back:hover, .single__back:focus {
   color: var(--c-red);
+}
+
+.projects,
+.featured__container {
+  display: flex;
+  padding: 2rem;
+}
+.projects .projects__grid,
+.featured__container .projects__grid {
+  display: grid;
+  gap: 2rem;
+  width: 100%;
+}
+@media only screen and (max-width: 479px) {
+  .projects .projects__grid,
+  .featured__container .projects__grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .projects .projects__grid,
+  .featured__container .projects__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .projects .projects__grid,
+  .featured__container .projects__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.project__card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  max-width: 400px;
+  min-height: 300px;
+  background-color: var(--c-beige-light);
+  overflow: hidden;
+  transition: transform 0.5s ease-in-out;
+}
+.project__card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1683 1116.25"><defs><style>.cls-1{opacity:.11;}.cls-2{fill:%23c8d4e4;}.cls-3{fill:none;stroke:%23c8d4e4;stroke-linecap:round;stroke-miterlimit:10;stroke-width:2px;}.cls-4{fill:%238a6646;}.cls-5{opacity:.65;}.cls-6{fill:%23f6e1ce;}.cls-7{fill:%23383447;}.cls-8{opacity:.99;}</style></defs><path class="cls-5" d="..."/></svg>');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+.project__card:hover, .project__card:focus {
+  transform: rotate(2deg);
+}
+.project__card a {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  position: relative;
+  text-decoration: none;
+}
+.project__card .project__card--content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  position: relative;
+  z-index: 2;
+}
+.project__card .project__card--content .card__title {
+  color: var(--c-brown);
+  font-size: 1.25rem;
+  font-weight: bold;
+  border-bottom: 1px dashed var(--c-brown);
+  padding-bottom: 0.25rem;
+}
+.project__card .project__card--content .card__subtitle {
+  color: var(--c-brown);
+  font-size: 1rem;
+  font-family: var(--ff-primary), Georgia, serif;
+  font-weight: 300;
+  line-height: 1.4;
+}
+.project__card .project__card--content .card__data {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.project__card .project__card--content .card__data .card__tools {
+  color: var(--b-red, #C1272D);
+  font-size: 0.875rem;
+  font-family: var(--ff-secondary), system-ui;
+}
+.project__card .project__card--content .card__data .card__type {
+  position: absolute;
+  top: 0.75rem;
+  right: -1rem;
+  transform: rotate(25deg);
+  background: var(--c-red);
+  color: var(--c-beige-light);
+  padding: 0.5rem 1rem;
+  font-family: var(--ff-secondary), system-ui;
+  font-size: 0.875rem;
+  text-transform: capitalize;
+  white-space: nowrap;
+}
+
+.hero__actions, .error-404__actions, .single__links {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+.hero__actions .hero__action, .hero__actions .error-404__action, .hero__actions .error-404__button, .hero__actions .single__link, .error-404__actions .hero__action, .error-404__actions .error-404__action, .error-404__actions .error-404__button, .error-404__actions .single__link, .single__links .hero__action, .single__links .error-404__action, .single__links .error-404__button, .single__links .single__link {
+  font-family: var(--ff-secondary), system-ui;
+  font-size: 1rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 0.0625rem solid transparent;
+  padding: 1rem;
+}
+@media only screen and (max-width: 479px) {
+  .hero__actions .hero__action, .hero__actions .error-404__action, .hero__actions .error-404__button, .hero__actions .single__link, .error-404__actions .hero__action, .error-404__actions .error-404__action, .error-404__actions .error-404__button, .error-404__actions .single__link, .single__links .hero__action, .single__links .error-404__action, .single__links .error-404__button, .single__links .single__link {
+    padding: 0.875rem 1.25rem;
+  }
+}
+.hero__actions .single__link--disabled, .error-404__actions .single__link--disabled, .single__links .single__link--disabled {
+  border: 0.0625rem solid var(--c-brown);
+}
+.hero__actions .hero__action--primary, .hero__actions .button__primary, .hero__actions .single__link--github, .error-404__actions .hero__action--primary, .error-404__actions .button__primary, .error-404__actions .single__link--github, .single__links .hero__action--primary, .single__links .button__primary, .single__links .single__link--github {
+  background-color: var(--c-brown);
+  color: var(--c-beige-light);
+}
+.hero__actions .hero__action--primary:hover, .hero__actions .hero__action--primary:focus, .hero__actions .button__primary:hover, .hero__actions .button__primary:focus, .hero__actions .single__link--github:hover, .hero__actions .single__link--github:focus, .error-404__actions .hero__action--primary:hover, .error-404__actions .hero__action--primary:focus, .error-404__actions .button__primary:hover, .error-404__actions .button__primary:focus, .error-404__actions .single__link--github:hover, .error-404__actions .single__link--github:focus, .single__links .hero__action--primary:hover, .single__links .hero__action--primary:focus, .single__links .button__primary:hover, .single__links .button__primary:focus, .single__links .single__link--github:hover, .single__links .single__link--github:focus {
+  background-color: var(--c-beige-light);
+  color: var(--c-brown);
+  border: 0.0625rem solid var(--c-brown);
+}
+.hero__actions .hero__action--secondary, .hero__actions .button__secondary, .hero__actions .single__link--live, .error-404__actions .hero__action--secondary, .error-404__actions .button__secondary, .error-404__actions .single__link--live, .single__links .hero__action--secondary, .single__links .button__secondary, .single__links .single__link--live {
+  background-color: var(--c-red);
+  color: var(--c-beige-light);
+}
+.hero__actions .hero__action--secondary:hover, .hero__actions .hero__action--secondary:focus, .hero__actions .button__secondary:hover, .hero__actions .button__secondary:focus, .hero__actions .single__link--live:hover, .hero__actions .single__link--live:focus, .error-404__actions .hero__action--secondary:hover, .error-404__actions .hero__action--secondary:focus, .error-404__actions .button__secondary:hover, .error-404__actions .button__secondary:focus, .error-404__actions .single__link--live:hover, .error-404__actions .single__link--live:focus, .single__links .hero__action--secondary:hover, .single__links .hero__action--secondary:focus, .single__links .button__secondary:hover, .single__links .button__secondary:focus, .single__links .single__link--live:hover, .single__links .single__link--live:focus {
+  background-color: var(--c-beige-light);
+  color: var(--c-red);
+  border: 0.0625rem solid var(--c-red);
+}
+
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  width: 100%;
+  min-width: 380px;
+}
+.contact__form .contact__form--title {
+  color: var(--c-brown);
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-family: var(--ff-primary), Georgia, serif;
+}
+.contact__form abbr {
+  color: var(--c-red);
+  font-size: 0.875rem;
+}
+.contact__form--note {
+  font-size: 0.875rem;
+  color: var(--c-brown);
+}
+.contact__form--note abbr {
+  text-decoration: none;
+}
+.contact__form--feedback {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+.contact__form--feedback:before {
+  content: "|";
+  color: var(--c-red);
+  margin-right: 1rem;
+}
+.contact__form .form {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  gap: 2rem;
+  border: 0.0625 solid var(--c-brown);
+  background: var(--g-brown-02);
+}
+.contact__form .form .contact__form--field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.contact__form .form .contact__form--field .contact__form--label {
+  font-size: 1.125rem;
+  font-family: var(--ff-secondary), system-ui;
+}
+.contact__form .form .contact__form--field .contact__form--textarea {
+  min-height: 8rem;
+  resize: vertical;
+  padding: 1rem;
+  line-height: 1.5;
+}
+.contact__form .form .contact__form--field .contact__form--input, .contact__form .form .contact__form--field .contact__form--textarea, .contact__form .form .contact__form--field .contact__form--select {
+  display: flex;
+  height: 2rem;
+  padding: 0.375rem 1rem;
+  border: none;
+  background: var(--c-beige-light);
+  width: 100%;
+  color: var(--c-brown);
+  margin-bottom: 1.5rem;
+  font-family: var(--ff-primary), Georgia, serif;
+}
+.contact__form .form .contact__form--field .contact__form--input::placeholder, .contact__form .form .contact__form--field .contact__form--input .contact__form--select, .contact__form .form .contact__form--field .contact__form--textarea::placeholder, .contact__form .form .contact__form--field .contact__form--textarea .contact__form--select, .contact__form .form .contact__form--field .contact__form--select::placeholder, .contact__form .form .contact__form--field .contact__form--select .contact__form--select {
+  font-size: 0.875rem;
+}
+.contact__form .form .contact__form--field .contact__form--input option, .contact__form .form .contact__form--field .contact__form--textarea option, .contact__form .form .contact__form--field .contact__form--select option {
+  background: var(--c-beige-light);
+  padding: 0.5rem;
+}
+.contact__form .form .contact__form--field .contact__form--input option[value=""], .contact__form .form .contact__form--field .contact__form--textarea option[value=""], .contact__form .form .contact__form--field .contact__form--select option[value=""] {
+  opacity: 0.7;
+}
+.contact__form .form .contact__form--field .contact__form--input:focus, .contact__form .form .contact__form--field .contact__form--textarea:focus, .contact__form .form .contact__form--field .contact__form--select:focus {
+  outline: none;
+}
+.contact__form .form .contact__form--field .contact__form--error {
+  display: block;
+}
+.contact__form .form .contact__form--submit {
+  display: flex;
+  height: 2.25rem;
+  padding: 0.375rem 1rem;
+  color: var(--c-beige-light);
+  background-color: var(--c-brown);
+  border: 0.0625rem solid var(--c-brown);
+  align-items: center;
+  justify-content: center;
+  font-family: var(--ff-secondary), system-ui;
+}
+.contact__form .form .contact__form--submit:hover {
+  color: var(--c-brown);
+  border: 0.0625rem solid var(--c-brown);
+  background-color: var(--c-beige-light);
+}
+
+.related__projects {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.related__projects--title {
+  color: var(--c-brown);
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  font-family: var(--ff-primary), Georgia, serif;
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .related__projects--title {
+    font-size: 1.75rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .related__projects--title {
+    font-size: 2rem;
+  }
+}
+.related__projects .projects__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  width: 100%;
+}
+@media only screen and (max-width: 479px) {
+  .related__projects .projects__grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

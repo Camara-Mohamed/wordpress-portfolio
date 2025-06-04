@@ -85,71 +85,13 @@
     }
   }
 
-  &__actions, .error-404__actions, .single__links {
-    display: flex;
-    align-items: flex-start;
-    gap: 0.75rem;
-    flex-wrap: wrap;
-    margin-top: 1.5rem;
-
-    .hero__action, .error-404__action, .error-404__button, .single__link {
-      font-family: var(--ff-secondary), system-ui;
-      font-size: 1rem;
-      text-align: center;
-      transition: all 0.3s ease;
-      border: .0625rem solid transparent;
-      padding: 1rem;
-
-      @include breakpoints.mobile {
-        padding: 0.875rem 1.25rem;
-      }
-    }
-
-    .single__link--disabled {
-      border: .0625rem solid var(--c-brown);
-    }
-
-    .hero__action--primary, .button__primary, .single__link--github {
-      background-color: var(--c-brown);
-      color: var(--c-beige-light);
-
-      &:hover,
-      &:focus {
-        background-color: var(--c-beige-light);
-        color: var(--c-brown);
-        border: 0.0625rem solid var(--c-brown);
-      }
-    }
-
-    .hero__action--secondary, .button__secondary, .single__link--live {
-      background-color: var(--c-red);
-      color: var(--c-beige-light);
-
-      &:hover,
-      &:focus {
-        background-color: var(--c-beige-light);
-        color: var(--c-red);
-        border: 0.0625rem solid var(--c-red);
-      }
-    }
-  }
-
   &__images {
     .hero__figure {
       &--container {
         display: flex;
         justify-content: center;
         gap: 1rem;
-        min-height: 200px;
         flex-wrap: wrap;
-
-        @include breakpoints.tablet {
-          min-height: 300px;
-        }
-
-        @include breakpoints.desktop {
-          min-height: 400px;
-        }
       }
 
       .hero__figure--box {
@@ -161,47 +103,17 @@
         height: 100%;
 
         &:first-child {
-          width: 60%;
-          transform: rotate(-10deg);
+          width: 50%;
+          transform: rotate(-8deg);
           z-index: 1;
-          margin-right: -3rem;
-
-          @include breakpoints.desktop {
-            margin-bottom: -6rem;
-          }
-
-          @include breakpoints.tablet {
-            margin-bottom: -6rem;
-            width: 55%;
-            transform: rotate(-8deg);
-          }
-
-          @include breakpoints.mobile {
-            width: 50%;
-            transform: rotate(-7deg);
-          }
+          margin-right: -6rem;
         }
 
         &:last-child {
-          width: 80%;
-          transform: rotate(13deg);
+          width: 60%;
+          transform: rotate(10deg);
           z-index: 2;
-          margin-left: -3rem;
-
-          @include breakpoints.desktop {
-            margin-top: -4rem;
-          }
-
-          @include breakpoints.tablet {
-            margin-top: -4rem;
-            width: 70%;
-            transform: rotate(11deg);
-          }
-
-          @include breakpoints.mobile {
-            width: 60%;
-            transform: rotate(9deg);
-          }
+          margin-left: -4rem;
         }
       }
 

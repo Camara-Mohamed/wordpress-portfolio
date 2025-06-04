@@ -113,29 +113,6 @@
                 <?php endif; ?>
             </div>
         </section>
-
-        <section class="cta" aria-labelledby="cta-title">
-            <div class="container">
-                <h2 id="cta__title" aria-level="2"><?php _e('Travaillons ensemble', 'portfolio-detective'); ?></h2>
-                <?php if ($subtitle = get_field('cta_subtitle')) : ?>
-                    <p class="cta__subtitle"><?= $subtitle ?></p>
-                <?php endif; ?>
-
-                <div class="cta__buttons">
-                    <a href="<?= home_url(__('/me-contacter', 'portfolio-detective')); ?>" class="button
-                    button__primary" title="<?php
-                    _e('Aller sur la page de contact', 'portfolio-detective');
-                    ?>">
-                        <?php _e('Me contacter', 'portfolio-detective'); ?>
-                    </a>
-                    <a href="<?= home_url(__('/mes-projets', 'portfolio-detective')); ?>" class="button button__secondary" title="<?php
-                    _e('Aller sur la page de mes projets', 'portfolio-detective');
-                    ?>">
-                        <?php _e('Voir mes projets', 'portfolio-detective'); ?>
-                    </a>
-                </div>
-            </div>
-        </section>
     </main>
 
 <?php get_footer(); ?>

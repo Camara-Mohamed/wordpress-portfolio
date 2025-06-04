@@ -13,7 +13,7 @@
                 $featured = new WP_Query([
                     'post_type' => 'project',
                     'post_status' => 'publish',
-                    'posts_per_page' => 5,
+                    'posts_per_page' => 3,
                     'orderby' => 'date',
                     'order' => 'DESC',
                 ]);
