@@ -60,7 +60,7 @@
     font-size: 1.5rem;
     font-weight: 500;
     margin-bottom: 1rem;
-    font-family: var(--ff-primary), serif;
+    font-family: var(--ff-primary), Georgia, serif;
 
     @include breakpoints.tablet {
       font-size: 1.75rem;
