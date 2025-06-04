@@ -1,18 +1,25 @@
 @use '../base/breakpoints';
 
-.projects, .featured {
+.projects,
+.featured__container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
+  padding: 2rem;
 
-  .projets__grid, .featured__container {
+  .projects__grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 2rem;
-    max-width: 1400px;
-    min-height: 600px;
-    padding: 5.5rem 4rem;
-    background: url("../../svg/tableau.svg");
+    width: 100%;
+
+    @include breakpoints.mobile {
+      grid-template-columns: 1fr;
+    }
+
+    @include breakpoints.tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include breakpoints.desktop {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 }

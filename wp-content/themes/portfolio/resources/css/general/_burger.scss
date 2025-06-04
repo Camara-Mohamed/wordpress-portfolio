@@ -1,13 +1,19 @@
 @use '../base/breakpoints';
 
+.header {
+  position: relative;
+  z-index: 1000;
+}
+
 .header__nav--burger {
   display: none;
   cursor: pointer;
   width: 2rem;
   height: 2rem;
   position: relative;
+  z-index: 1001;
 
-  @include breakpoints.mobile {
+  @include breakpoints.tablet {
     display: block;
   }
 
@@ -28,12 +34,12 @@
 }
 
 .header__nav--container {
-  @include breakpoints.mobile {
+  @include breakpoints.tablet {
     position: fixed;
-    top: 5.25rem;
+    top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background: var(--c-brown);
     display: flex;
     flex-direction: column;
@@ -44,7 +50,7 @@
     overflow: hidden;
     gap: 2rem;
     transform: translateX(100%);
-    z-index : 9999;
+    z-index : 1000;
   }
 }
 
