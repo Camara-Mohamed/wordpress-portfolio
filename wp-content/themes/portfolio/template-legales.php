@@ -11,7 +11,7 @@
 
         <section class="legals" aria-labelledby="legal-title" itemscope itemtype="https://schema.org/WebPage">
             <div class="legals__container" itemprop="mainContentOfPage">
-                <h2 id="legal-title" class="legal__title hidden" itemprop="headline">
+                <h2 id="legal-title" class="legal__title sro" itemprop="headline">
                     <?php _e('Mentions légales', 'portfolio-detective'); ?>
                 </h2>
 

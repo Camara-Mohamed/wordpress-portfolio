@@ -1184,4 +1184,39 @@ footer .footer__container, footer .footer__legal {
   color: var(--c-brown);
 }
 
+.legals__content {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  gap: 2rem;
+}
+@media only screen and (max-width: 479px) {
+  .legals__content {
+    width: 100%;
+  }
+}
+.legals__content--paragraph {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1rem;
+}
+.legals__content--paragraph .legals__paragraph--title {
+  font-family: var(--ff-primary), Georgia, serif;
+  font-size: 2rem;
+}
+.legals__content--paragraph .legals__paragraph--content {
+  font-size: 1.25rem;
+}
+.legals__content--paragraph .legals__paragraph--content strong {
+  font-weight: 600;
+}
+.legals__content--paragraph .legals__paragraph--content a {
+  color: var(--c-red);
+  text-decoration: underline;
+}
+.legals__content--paragraph .legals__paragraph--content a:hover, .legals__content--paragraph .legals__paragraph--content a:focus {
+  color: var(--c-brown);
+}
+
 /*# sourceMappingURL=styles.css.map */
