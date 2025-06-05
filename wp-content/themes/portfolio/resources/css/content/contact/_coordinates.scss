@@ -1,19 +1,11 @@
 @use "../../base/breakpoints";
 
 .contact__section {
-  width: 80%;
-
-  @include breakpoints.tablet {
-    width: 90%;
-  }
-
-  @include breakpoints.mobile {
-    width: 100%;
-  }
+  width: 100%;
 
   .contact__grid {
     display: grid;
-    grid-template-columns: 1fr auto;
+    grid-template-columns: auto minmax(auto, 800px);
     gap: 2rem;
 
     @include breakpoints.tablet {
