@@ -828,7 +828,7 @@ body:has(#burger-menu:checked) {
 }
 .contact__section .contact__grid {
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: auto 1fr;
   gap: 2rem;
 }
 @media only screen and (min-width: 600px) and (max-width: 1019px) {
@@ -924,11 +924,22 @@ body:has(#burger-menu:checked) {
   color: var(--c-red);
 }
 
-.projects__container,
-.featured__container {
-  display: flex;
-  flex-direction: column;
-  padding: 4rem;
+.projects,
+.featured {
+  position: relative;
+}
+.projects::after,
+.featured::after {
+  content: "";
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 6rem;
+  height: 6rem;
+  background-image: url("/wp-content/themes/portfolio/resources/svg/empreinte.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 0;
 }
 
 .projects__grid, .projects > .projects__grid {
@@ -937,6 +948,8 @@ body:has(#burger-menu:checked) {
   width: 100%;
   grid-auto-rows: 1fr;
   grid-template-columns: 1fr;
+  position: relative;
+  z-index: 1;
 }
 @media (min-width: 650px) {
   .projects__grid, .projects > .projects__grid {

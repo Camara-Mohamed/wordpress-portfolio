@@ -1,6 +1,6 @@
 {
   "wp-content/themes/portfolio/resources/css/styles.scss": {
-    "file": "assets/css-D4PMfzcZ.css",
+    "file": "assets/css-BQuY_OR_.css",
     "src": "wp-content/themes/portfolio/resources/css/styles.scss",
     "isEntry": true
   },
@@ -41,5 +41,9 @@
     "name": "js",
     "src": "wp-content/themes/portfolio/resources/js/main.js",
     "isEntry": true
+  },
+  "wp-content/themes/portfolio/resources/svg/empreinte.svg": {
+    "file": "assets/empreinte-Cdtj7qGM.svg",
+    "src": "wp-content/themes/portfolio/resources/svg/empreinte.svg"
   }
 }
