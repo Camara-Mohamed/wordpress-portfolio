@@ -86,7 +86,7 @@ img {
   }
 }
 
-/* Padding pour header et footer */
+/* Padding pour header et footer + main sections */
 header.header{
   padding: 1.5rem 1.5rem;
   width: auto;
@@ -105,7 +105,7 @@ header.header{
   }
 }
 
-.main-content {
+header.header, .main-content {
   & > article, & > section {
     padding: 1.5rem 1.5rem;
     max-width: 1920px;
@@ -119,15 +119,15 @@ header.header{
     }
   }
 
-  .projects, .features, .projects__filters {
-    padding: 2rem 1.5rem 1rem;
+  .projects, .features {
+    padding: 2rem 1.5rem;
 
     @include breakpoints.tablet {
-      padding: 2.5rem 2rem 1rem;
+      padding: 2.5rem 2rem;
     }
 
     @include breakpoints.desktop {
-      padding: 3rem 8.5rem 1rem;
+      padding: 3rem 8.5rem;
     }
   }
 }
@@ -140,7 +140,7 @@ footer .footer__container, footer .footer__legal {
   @include breakpoints.tablet {
     padding: 1.5rem 2rem;
   }
-  
+
   @include breakpoints.desktop {
     padding: 1.5rem 8.5rem;
   }
