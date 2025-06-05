@@ -35,14 +35,6 @@
             </section>
 
             <article class="single__content">
-                <?php if ($subtitle = get_field('subtitle')) : ?>
-                    <section class="single__content--subtitle">
-                        <div class="single__content--container">
-                            <h2 itemprop="headline" aria-level="2"><?= $subtitle ?></h2>
-                        </div>
-                    </section>
-                <?php endif; ?>
-
                 <?php if (have_rows('sections')) : ?>
                     <?php while (have_rows('sections')) : the_row(); ?>
 
@@ -50,7 +42,7 @@
                             <section class="single__section" itemprop="description">
                                 <div class="single__section--container">
                                     <?php if ($title = get_sub_field('title')) : ?>
-                                        <h3><?= $title ?></h3>
+                                        <h3 class="single__section--title"><?= $title ?></h3>
                                     <?php endif; ?>
                                     <div class="single__section--content">
                                         <?= get_sub_field('content') ?>
@@ -61,17 +53,18 @@
                         <?php elseif (get_row_layout() == 'galery') : ?>
                             <section class="single__gallery">
                                 <div class="single__gallery--container">
-                                    <h3><?php the_sub_field('title') ?></h3>
+                                    <h3 class="single__gallery--title"><?php the_sub_field('title') ?></h3>
                                     <figure class="single__gallery--item" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
                                         <?php
                                         $images = get_sub_field('images');
                                         if ($images) :
                                             foreach ($images as $image) : ?>
-                                                <img src="<?= $image['url'] ?>"
+                                                <img class="image" src="<?= $image['url'] ?>"
                                                      alt="<?= $image['alt'] ?>"
                                                      itemprop="contentUrl">
                                             <?php endforeach; endif; ?>
-                                        <figcaption itemprop="caption"><?php the_sub_field('title') ?></figcaption>
+                                        <figcaption class="sro" itemprop="caption"><?php the_sub_field('title')
+                                            ?></figcaption>
                                     </figure>
                                 </div>
                             </section>

@@ -1,10 +1,20 @@
 @use '../base/breakpoints';
 
-.projects__container,
-.featured__container {
-  display: flex;
-  flex-direction: column;
-  padding: 4rem;
+.projects,
+.featured {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 200px;
+    height: 200px;
+    background-image: url('/wp-content/themes/portfolio/resources/svg/empreinte.svg');
+    background-repeat: no-repeat;
+    z-index: 0;
+  }
 }
 
 .projects__grid, .projects > .projects__grid {
@@ -13,6 +23,8 @@
   width: 100%;
   grid-auto-rows: 1fr;
   grid-template-columns: 1fr;
+  position: relative;
+  z-index: 1;
 
   @media (min-width: 650px) {
     justify-content: space-between;
