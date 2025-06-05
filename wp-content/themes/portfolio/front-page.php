@@ -4,7 +4,6 @@
         <?php get_template_part('templates/partials/section-hero'); ?>
 
         <section class="featured" aria-labelledby="featured__title">
-            <div class="featured__container">
                 <h2 id="featured__title" class="featured__container--title sro" aria-level="2">
                     <?php _e('Projets à la une', 'portfolio-detective'); ?>
                 </h2>
@@ -13,7 +12,7 @@
                 $featured = new WP_Query([
                     'post_type' => 'project',
                     'post_status' => 'publish',
-                    'posts_per_page' => 3,
+                    'posts_per_page' => 5,
                     'orderby' => 'date',
                     'order' => 'DESC',
                 ]);
@@ -41,7 +40,6 @@
                         <?php _e('Aucun projet pour le moment.', 'portfolio-detective'); ?>
                     </p>
                 <?php endif; ?>
-            </div>
         </section>
     </main>
 

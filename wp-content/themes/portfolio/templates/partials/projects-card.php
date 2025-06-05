@@ -23,7 +23,7 @@
                 $project_types = get_the_terms($post->ID, 'type-project');
                 if ($project_types) :
                     foreach ($project_types as $type) : ?>
-                            <p class="project-card__type">
+                            <p class="card__type--item">
                                     <?= $type->name ?>
                             </p>
                     <?php endforeach;

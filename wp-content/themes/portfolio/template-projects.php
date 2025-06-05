@@ -51,7 +51,7 @@ $current_page = max(1, get_query_var('paged') ?: get_query_var('page'));
                 <?php _e('Mes projets', 'portfolio-detective'); ?>
             </h2>
 
-            <section class="projets__grid">
+                <section class="projects__grid">
                 <h3 class="projects__grid--title sro">
                     <?php _e('Les projets', 'portfolio-detective'); ?>
                 </h3>
@@ -60,7 +60,7 @@ $current_page = max(1, get_query_var('paged') ?: get_query_var('page'));
                 $paged = max(1, get_query_var('paged'));
                 $args = [
                     'post_type' => 'project',
-                    'posts_per_page' => 3,
+                    'posts_per_page' => 5,
                     'paged' => $paged,
                     'lang' => pll_current_language(),
                     'post_status' => 'publish'

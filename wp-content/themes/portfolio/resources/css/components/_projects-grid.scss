@@ -1,25 +1,27 @@
 @use '../base/breakpoints';
 
-.projects,
+.projects__container,
 .featured__container {
   display: flex;
-  padding: 2rem;
+  flex-direction: column;
+  padding: 4rem;
+}
 
-  .projects__grid {
-    display: grid;
-    gap: 2rem;
-    width: 100%;
+.projects__grid, .projects > .projects__grid {
+  display: grid;
+  gap: 2.5rem;
+  width: 100%;
+  grid-auto-rows: 1fr;
 
-    @include breakpoints.mobile {
-      grid-template-columns: 1fr;
-    }
+  @include breakpoints.mobile {
+    grid-template-columns: 1fr;
+  }
 
-    @include breakpoints.tablet {
-      grid-template-columns: repeat(2, 1fr);
-    }
+  @include breakpoints.tablet {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-    @include breakpoints.desktop {
-      grid-template-columns: repeat(2, 1fr);
-    }
+  @include breakpoints.desktop {
+    grid-template-columns: repeat(3, 1fr);
   }
 }

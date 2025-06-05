@@ -18,7 +18,7 @@ if ($terms) :
             <h2 id="related-projects-title" class="related__projects--title" aria-level="2">
                 <?php _e('Projets similaires', 'portfolio-detective'); ?>
             </h2>
-            <div class="projects__grid">
+            <div class="projects__related--grid">
                 <?php while ($related->have_posts()) : $related->the_post(); ?>
                     <?php get_template_part('templates/partials/projects-card'); ?>
                 <?php endwhile; ?>
