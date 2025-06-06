@@ -119,7 +119,7 @@ header.header, .main-content {
     }
   }
 
-  .projects, .featured {
+  .projects, .featured, .hero {
     padding: 2rem 1.5rem;
 
     @include breakpoints.tablet {
@@ -143,5 +143,31 @@ footer .footer__container, footer .footer__legal {
 
   @include breakpoints.desktop {
     padding: 1.5rem 8.5rem;
+  }
+}
+
+#scroll {
+  display: flex;
+  width: 4rem;
+  height: 4rem;
+  padding: 1.25rem 0.25rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--c-red);
+
+  position: fixed;
+  top: 80vh;
+  left: 90vw;
+  z-index: 1000;
+
+  .scroll__content {
+    color: var(--c-beige-light);
+    font-family: var(--ff-primary), Georgia, serif;
+    font-size: 1.25rem;
+
+    abbr {
+      text-decoration: none;
+    }
   }
 }
