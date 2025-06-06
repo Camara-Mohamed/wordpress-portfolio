@@ -266,16 +266,16 @@ header.header > article, header.header > section, .main-content > article, .main
     padding: 1.5rem 8.5rem;
   }
 }
-header.header .projects, header.header .featured, .main-content .projects, .main-content .featured {
+header.header .projects, header.header .featured, header.header .hero, .main-content .projects, .main-content .featured, .main-content .hero {
   padding: 2rem 1.5rem;
 }
 @media only screen and (min-width: 600px) and (max-width: 1019px) {
-  header.header .projects, header.header .featured, .main-content .projects, .main-content .featured {
+  header.header .projects, header.header .featured, header.header .hero, .main-content .projects, .main-content .featured, .main-content .hero {
     padding: 2.5rem 2rem;
   }
 }
 @media only screen and (min-width: 1020px) {
-  header.header .projects, header.header .featured, .main-content .projects, .main-content .featured {
+  header.header .projects, header.header .featured, header.header .hero, .main-content .projects, .main-content .featured, .main-content .hero {
     padding: 3rem 8.5rem;
   }
 }
@@ -296,6 +296,29 @@ footer .footer__container, footer .footer__legal {
   }
 }
 
+#scroll {
+  display: flex;
+  width: 4rem;
+  height: 4rem;
+  padding: 1.25rem 0.25rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--c-red);
+  position: fixed;
+  top: 80vh;
+  left: 90vw;
+  z-index: 1000;
+}
+#scroll .scroll__content {
+  color: var(--c-beige-light);
+  font-family: var(--ff-primary), Georgia, serif;
+  font-size: 1.25rem;
+}
+#scroll .scroll__content abbr {
+  text-decoration: none;
+}
+
 .header {
   background-color: var(--c-brown);
   color: var(--c-beige-light);
@@ -313,6 +336,7 @@ footer .footer__container, footer .footer__legal {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 1rem;
 }
 .footer__container {
   display: flex;
@@ -613,6 +637,7 @@ body:has(#burger-menu:checked) {
   flex-direction: column;
   align-items: flex-start;
   margin: 4rem 0 2rem;
+  position: relative;
 }
 @media only screen and (min-width: 1020px) {
   .hero, .error-404, .single__hero {
@@ -700,6 +725,19 @@ body:has(#burger-menu:checked) {
   justify-content: center;
   gap: 1rem;
   flex-wrap: wrap;
+  position: relative;
+}
+.hero__images .hero__figure--container:after, .error-404__images .hero__figure--container:after, .single__hero__images .hero__figure--container:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../svg/approved.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 10;
 }
 .hero__images .hero__figure .hero__figure--box, .error-404__images .hero__figure .hero__figure--box, .single__hero__images .hero__figure .hero__figure--box {
   display: flex;
@@ -819,18 +857,19 @@ body:has(#burger-menu:checked) {
 .contact__section .contact__grid {
   display: grid;
   grid-template-columns: auto minmax(auto, 800px);
-  gap: 2rem;
+  gap: 8rem;
+  justify-content: start;
 }
 @media only screen and (min-width: 600px) and (max-width: 1019px) {
   .contact__section .contact__grid {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 4rem;
   }
 }
 @media only screen and (max-width: 599px) {
   .contact__section .contact__grid {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 4rem;
   }
 }
 .contact__section .contact__grid .contact__info {
@@ -966,16 +1005,31 @@ body:has(#burger-menu:checked) {
 .featured {
   position: relative;
 }
+.projects::before,
+.featured::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 2rem;
+  width: 12rem;
+  height: 12rem;
+  background-image: url("../svg/empreinte.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 0;
+}
 .projects::after,
 .featured::after {
   content: "";
   position: absolute;
-  top: 10px;
-  left: 10px;
-  width: 200px;
-  height: 200px;
-  background-image: url("/wp-content/themes/portfolio/resources/svg/empreinte.svg");
+  bottom: -2rem;
+  right: -2rem;
+  width: 16rem;
+  height: 16rem;
+  rotate: -54deg;
+  background-image: url("../svg/empreinte.svg");
   background-repeat: no-repeat;
+  background-size: contain;
   z-index: 0;
 }
 
@@ -1145,7 +1199,6 @@ body:has(#burger-menu:checked) {
   flex-direction: column;
   gap: 0.75rem;
   width: 100%;
-  min-width: 380px;
 }
 .contact__form .contact__form--title {
   color: var(--c-brown);
