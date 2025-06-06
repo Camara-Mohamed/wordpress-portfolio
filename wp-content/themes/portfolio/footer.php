@@ -1,3 +1,7 @@
+<div id="scroll">
+    <p class="scroll__content"><abbr title="<?= __('Le pourcentage du scroll de la page', 'portfolio-detective') ?>">0%</abbr></p>
+</div>
+
 <footer class="footer">
     <div class="footer__container">
         <h2 class="sro" aria-level="2"><?php _e('Navigation de pied de page', 'portfolio-detective'); ?></h2>
