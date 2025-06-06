@@ -4,15 +4,30 @@
 .featured {
   position: relative;
 
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 2rem;
+    width: 12rem;
+    height: 12rem;
+    background-image: url('../svg/empreinte.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 0;
+  }
+
   &::after {
     content: "";
     position: absolute;
-    top: 10px;
-    left: 10px;
-    width: 200px;
-    height: 200px;
-    background-image: url('/wp-content/themes/portfolio/resources/svg/empreinte.svg');
+    bottom: -2rem;
+    right: -2rem;
+    width: 16rem;
+    height: 16rem;
+    rotate: -54deg;
+    background-image: url('../svg/empreinte.svg');
     background-repeat: no-repeat;
+    background-size: contain;
     z-index: 0;
   }
 }

@@ -6,16 +6,17 @@
   .contact__grid {
     display: grid;
     grid-template-columns: auto minmax(auto, 800px);
-    gap: 2rem;
+    gap: 8rem;
+    justify-content: start;
 
     @include breakpoints.tablet {
       grid-template-columns: 1fr;
-      gap: 2rem;
+      gap: 4rem;
     }
 
     @include breakpoints.mobile {
       grid-template-columns: 1fr;
-      gap: 2rem;
+      gap: 4rem;
     }
 
     .contact__info {
