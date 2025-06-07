@@ -50,22 +50,23 @@
                                 </div>
                             </section>
 
-                        <?php elseif (get_row_layout() == 'galery') : ?>
+                        <?php elseif (get_row_layout() == 'gallery') : ?>
                             <section class="single__gallery">
+                                <h3 class="single__gallery--title"><?php the_sub_field('title'); ?></h3>
                                 <div class="single__gallery--container">
-                                    <h3 class="single__gallery--title"><?php the_sub_field('title') ?></h3>
-                                    <figure class="single__gallery--item" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
-                                        <?php
-                                        $images = get_sub_field('images');
-                                        if ($images) :
-                                            foreach ($images as $image) : ?>
-                                                <img class="image" src="<?= $image['url'] ?>"
-                                                     alt="<?= $image['alt'] ?>"
-                                                     itemprop="contentUrl">
-                                            <?php endforeach; endif; ?>
-                                        <figcaption class="sro" itemprop="caption"><?php the_sub_field('title')
-                                            ?></figcaption>
-                                    </figure>
+                                    <?php
+                                    $images = get_sub_field('images');
+                                    if ($images) :
+                                        foreach ($images as $image) : ?>
+                                            <a href="<?= $image['url']; ?>" data-fancybox="gallery">
+                                                <figure class="single__gallery--item" itemprop="image" itemscope
+                                                        itemtype="https://schema.org/ImageObject">
+                                                    <img src="<?= $image['url']; ?>" alt="<?= $image['alt']; ?>"
+                                                         class="single__gallery--image">
+                                                </figure>
+                                            </a>
+                                        <?php endforeach;
+                                    endif; ?>
                                 </div>
                             </section>
                         <?php endif; ?>

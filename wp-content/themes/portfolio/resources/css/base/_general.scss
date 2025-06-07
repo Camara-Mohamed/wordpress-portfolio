@@ -37,10 +37,10 @@ a {
 }
 
 img {
-  height: auto;
+  height: 100%;
   max-width: 100%;
   display: block;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 /* Lecteur */
