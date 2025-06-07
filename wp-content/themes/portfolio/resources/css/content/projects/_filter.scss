@@ -1,7 +1,6 @@
 @use '../../base/breakpoints';
 
 .projects__filters {
-  margin-top: 2.5rem;
   padding: 0 1.5rem 0;
 
   @include breakpoints.mobile {
