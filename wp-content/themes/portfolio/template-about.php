@@ -18,9 +18,9 @@
         ?>
 
         <section class="timeline" aria-labelledby="timeline-title">
+            <h2 class="timeline__title" aria-level="2"><?php _e('Mon parcours', 'portfolio-detective');
+                ?></h2>
             <div class="timeline__container">
-                <h2 id="timeline__container--title" aria-level="2"><?php _e('Mon parcours', 'portfolio-detective');
-                    ?></h2>
                 <?php if ($subtitle = get_field('timeline_subtitle')) : ?>
                     <p class="timeline__container--subtitle"><?= $subtitle ?></p>
                 <?php endif; ?>
@@ -29,10 +29,10 @@
                     <div class="timeline__items">
                         <?php while (have_rows('timeline')) : the_row(); ?>
                             <div class="timeline__list">
-                                <p class="timeline__item--period"><?= get_sub_field('period') ?></p>
-                                <div class="timeline__item--content">
+                                <p class="timeline__list--period"><?= get_sub_field('period') ?></p>
+                                <div class="timeline__list--content">
                                     <h3><?= get_sub_field('activity') ?></h3>
-                                    <div><?= get_sub_field('description') ?></div>
+                                    <p><?= get_sub_field('description') ?></p>
                                 </div>
                             </div>
                         <?php endwhile; ?>
@@ -42,9 +42,9 @@
         </section>
 
         <section class="skills" aria-labelledby="skills-title">
+            <h2 class="skills__title" aria-level="2"><?php _e('Mes compétences', 'portfolio-detective');
+                ?></h2>
             <div class="skills__container">
-                <h2 id="skills__container--title" aria-level="2"><?php _e('Mes compétences', 'portfolio-detective');
-                    ?></h2>
                 <?php if ($subtitle = get_field('skills_subtitle')) : ?>
                     <p class="skills__container--subtitle"><?= $subtitle ?></p>
                 <?php endif; ?>
@@ -62,7 +62,8 @@
                                             false,
                                             ['alt' => get_sub_field('name')]
                                         ) ?>
-                                        <span><?= get_sub_field('name') ?></span>
+                                        <h4><?= get_sub_field('name') ?></h4>
+                                        <p><?= get_sub_field('description') ?></p>
                                     </div>
                                 <?php endwhile; ?>
                             <?php endif; ?>
@@ -81,7 +82,8 @@
                                             false,
                                             ['alt' => get_sub_field('name')]
                                         ) ?>
-                                        <span><?= get_sub_field('name') ?></span>
+                                        <h4><?= get_sub_field('name') ?></h4>
+                                        <p><?= get_sub_field('description') ?></p>
                                     </div>
                                 <?php endwhile; ?>
                             <?php endif; ?>
@@ -92,8 +94,8 @@
         </section>
 
         <section class="methodology" aria-labelledby="methodology-title">
+            <h2 class="methodology__title"><?php _e('Ma méthodologie', 'portfolio-detective'); ?></h2>
             <div class="methodology__container">
-                <h2 id="methodology__container--title"><?php _e('Ma méthodologie', 'portfolio-detective'); ?></h2>
                 <?php if ($subtitle = get_field('methodology_subtitle')) : ?>
                     <p class="methodology__container--subtitle"><?= $subtitle ?></p>
                 <?php endif; ?>
