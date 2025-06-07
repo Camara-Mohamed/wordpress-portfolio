@@ -56,13 +56,15 @@
                             <?php if (have_rows('dev_skills')) : ?>
                                 <?php while (have_rows('dev_skills')) : the_row(); ?>
                                     <div class="skill__item">
-                                        <?= wp_get_attachment_image(
-                                            get_sub_field('icon'),
-                                            'thumbnail',
-                                            false,
-                                            ['alt' => get_sub_field('name')]
-                                        ) ?>
-                                        <h4><?= get_sub_field('name') ?></h4>
+                                        <div class="skill__item--box">
+                                            <h4><?= get_sub_field('name') ?></h4>
+                                            <?= wp_get_attachment_image(
+                                                get_sub_field('icon'),
+                                                'thumbnail',
+                                                false,
+                                                ['alt' => get_sub_field('name')]
+                                            ) ?>
+                                        </div>
                                         <p><?= get_sub_field('description') ?></p>
                                     </div>
                                 <?php endwhile; ?>
@@ -76,13 +78,15 @@
                             <?php if (have_rows('design_skills')) : ?>
                                 <?php while (have_rows('design_skills')) : the_row(); ?>
                                     <div class="skill__item">
-                                        <?= wp_get_attachment_image(
-                                            get_sub_field('icon'),
-                                            'thumbnail',
-                                            false,
-                                            ['alt' => get_sub_field('name')]
-                                        ) ?>
-                                        <h4><?= get_sub_field('name') ?></h4>
+                                        <div class="skill__item--box">
+                                            <h4><?= get_sub_field('name') ?></h4>
+                                            <?= wp_get_attachment_image(
+                                                get_sub_field('icon'),
+                                                'thumbnail',
+                                                false,
+                                                ['alt' => get_sub_field('name')]
+                                            ) ?>
+                                        </div>
                                         <p><?= get_sub_field('description') ?></p>
                                     </div>
                                 <?php endwhile; ?>
@@ -104,9 +108,9 @@
                     <div class="methodology__steps">
                         <?php while (have_rows('methodology_steps')) : the_row(); ?>
                             <div class="step">
-                                <div class="step__number"><?= get_sub_field('number') ?></div>
+                                <h4 class="step__number"><?= get_sub_field('number') ?></h4>
                                 <div class="step__content">
-                                    <h3><?= get_sub_field('title') ?></h3>
+                                    <h4><?= get_sub_field('title') ?></h4>
                                     <p><?= get_sub_field('description') ?></p>
                                 </div>
                             </div>

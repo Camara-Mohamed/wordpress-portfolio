@@ -1,2 +1,20 @@
 @use '../../base/breakpoints';
 
+.timeline {
+  margin-bottom: 2rem;
+
+  &__container {
+
+    .timeline__items {
+      .timeline__list {
+        &--period {
+
+        }
+
+        &--content {
+
+        }
+      }
+    }
+  }
+}
