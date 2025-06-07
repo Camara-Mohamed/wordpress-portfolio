@@ -183,10 +183,10 @@ a {
 }
 
 img {
-  height: auto;
+  height: 100%;
   max-width: 100%;
   display: block;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 /* Lecteur */
@@ -790,8 +790,10 @@ body:has(#burger-menu:checked) {
 }
 
 .pagination {
+  margin-top: 2rem;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
   gap: 1rem;
   color: var(--c-beige-light);
 }
@@ -978,15 +980,26 @@ body:has(#burger-menu:checked) {
 .single__content .single__section {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   flex-wrap: wrap;
   gap: 1.5rem;
 }
 .single__content .single__section--container {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem;
+  grid-template-columns: minmax(12.5rem, 18.75rem) auto;
+  gap: 4rem;
   width: 100%;
+}
+@media only screen and (min-width: 600px) and (max-width: 1019px) {
+  .single__content .single__section--container {
+    grid-template-columns: minmax(8.5rem, 10.75rem) auto;
+    gap: 2rem;
+  }
+}
+@media only screen and (max-width: 599px) {
+  .single__content .single__section--container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
 }
 .single__content .single__section a {
   color: var(--c-red);
@@ -1001,6 +1014,40 @@ body:has(#burger-menu:checked) {
 .single__content .single__section--content strong {
   font-weight: 600;
 }
+.single__content .single__gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 4rem 0 0;
+}
+.single__content .single__gallery--container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 4rem;
+}
+@media only screen and (min-width: 600px) and (max-width: 1019px) {
+  .single__content .single__gallery--container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (max-width: 599px) {
+  .single__content .single__gallery--container {
+    grid-template-columns: 1fr;
+  }
+}
+.single__content .single__gallery--container .single__gallery--item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background-color: var(--c-beige-dark);
+}
+.single__content .single__gallery--container .single__gallery--item .single__gallery--image {
+  padding: 2rem;
+  border: 0.125rem dashed var(--c-brown);
+  aspect-ratio: 1/1;
+}
+
 .projects,
 .featured {
   position: relative;

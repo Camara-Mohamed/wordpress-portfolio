@@ -9,7 +9,7 @@
     <meta name="author" content="Mohamed Camara">
     <meta name="keywords"
           content="<?= __('Mohamed Camara, portfolio, développeur web, designer Graphique, développeur, front-end, 
-          back-end, full-stack, HEPL, technique graphique, étudiant, wordpress, html, css, javascript') ?>">
+          back-end, full-stack, HEPL, technique graphique, étudiant, wordpress, html, css, javascript', 'portfolio-detective') ?>">
     <meta name="description" content="<?php bloginfo('description'); ?>">
 
     <!-- Title -->
@@ -39,9 +39,15 @@
 
     <?php wp_head(); ?>
 
+    <!-- Font : Special Elite -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+
+    <!-- FancyBox : Pour que chaque image soit cliquable et qu'on puisse la voir en grand -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+
 </head>
 <body itemscope itemtype="https://schema.org/Person">
 
