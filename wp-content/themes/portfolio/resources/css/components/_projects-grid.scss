@@ -3,6 +3,7 @@
 .projects,
 .featured {
   position: relative;
+  background-image: url('../svg/tableau.svg');
 
   &::before {
     content: "";

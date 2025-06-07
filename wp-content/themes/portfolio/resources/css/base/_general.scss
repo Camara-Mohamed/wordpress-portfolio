@@ -87,7 +87,7 @@ img {
 }
 
 /* Padding pour header et footer + main sections */
-header.header{
+header.header {
   padding: 1.5rem 1.5rem;
   width: auto;
   max-width: 1920px;
@@ -159,6 +159,7 @@ footer .footer__container, footer .footer__legal {
   position: fixed;
   top: 80vh;
   left: 90vw;
+  transform: translate(-50%, -50%);
   z-index: 1000;
 
   .scroll__content {

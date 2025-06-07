@@ -127,4 +127,10 @@
             </ul>
         </nav>
     </div>
+    <div class="lampe">
+        <div class="lampe__image off"></div>
+
+        <p class="lampe__on lampe__button">Allumer</p>
+        <p class="lampe__off lampe__button sro">Éteindre</p>
+    </div>
 </header>
