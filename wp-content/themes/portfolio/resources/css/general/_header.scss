@@ -23,6 +23,7 @@
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
+  cursor: pointer;
 
   @include breakpoints.desktop{
     right: 10rem;

@@ -13,11 +13,14 @@ export const settings = {
     
     scroll: {
         scrollSelector: ".scroll__content--change",
+        scrollContainerSelector: "scroll",
+        hiddenSelector: "sro",
     }
 }
 const scrollApp = {
 
-    scrollContentSelector: document.querySelector(settings.scroll.scrollSelector),
+    scrollContentElement: document.querySelector(settings.scroll.scrollSelector),
+    scrollContainerElement: document.getElementById(settings.scroll.scrollContainerSelector),
 
     init() {
         window.addEventListener("scroll", () => {
@@ -27,7 +30,13 @@ const scrollApp = {
 
             const scrollCalcul = (scrollY / (bodyHeight - windowHeight)) * 100;
 
-            this.scrollContentSelector.textContent = `${scrollCalcul.toFixed(0)}%`;
+            this.scrollContentElement.textContent = `${scrollCalcul.toFixed(0)}%`;
+
+            if (scrollCalcul >= 100) {
+                this.scrollContainerElement.classList.add(settings.scroll.hiddenSelector);
+            } else {
+                this.scrollContainerElement.classList.remove(settings.scroll.hiddenSelector);
+            }
         });
     }
 }

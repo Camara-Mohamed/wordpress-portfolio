@@ -15,6 +15,14 @@
       grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
       gap: 2.5rem;
 
+      @include breakpoints.mobile {
+        grid-template-columns: 1fr;
+      }
+
+      @include breakpoints.mobile {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
       .skill__item {
         display: flex;
         align-items: flex-start;

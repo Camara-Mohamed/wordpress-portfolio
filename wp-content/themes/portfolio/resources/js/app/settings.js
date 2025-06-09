@@ -13,5 +13,7 @@ export const settings = {
     
     scroll: {
         scrollSelector: ".scroll__content--change",
+        scrollContainerSelector: "scroll",
+        hiddenSelector: "sro",
     }
 }
