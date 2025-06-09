@@ -306,6 +306,7 @@ footer .footer__container, footer .footer__legal {
   justify-content: center;
   border-radius: 50%;
   background: var(--c-red);
+  transition: opacity 1.5s ease-in-out;
   position: fixed;
   top: 80vh;
   left: 90vw;
@@ -316,9 +317,13 @@ footer .footer__container, footer .footer__legal {
   color: var(--c-beige-light);
   font-family: var(--ff-primary), Georgia, serif;
   font-size: 1.25rem;
+  opacity: 1;
 }
 #scroll .scroll__content abbr {
   text-decoration: none;
+}
+#scroll .scroll__hidden {
+  opacity: 0;
 }
 
 .header {
@@ -343,6 +348,7 @@ footer .footer__container, footer .footer__legal {
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
+  cursor: pointer;
 }
 @media only screen and (min-width: 1020px) {
   .header .lampe {
@@ -1108,6 +1114,16 @@ body:has(#burger-menu:checked) {
   grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
   gap: 2.5rem;
 }
+@media only screen and (max-width: 599px) {
+  .skills__grid .skill__category .skills__list {
+    grid-template-columns: 1fr;
+  }
+}
+@media only screen and (max-width: 599px) {
+  .skills__grid .skill__category .skills__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 .skills__grid .skill__category .skills__list .skill__item {
   display: flex;
   align-items: flex-start;
@@ -1597,6 +1613,7 @@ body:has(#burger-menu:checked) {
   align-items: center;
   justify-content: center;
   font-family: var(--ff-secondary), system-ui;
+  cursor: pointer;
 }
 .contact__form .form .contact__form--submit:hover, .contact__form .form .contact__form--submit:focus {
   color: var(--c-brown);

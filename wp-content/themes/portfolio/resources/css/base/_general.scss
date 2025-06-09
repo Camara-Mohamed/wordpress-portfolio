@@ -156,6 +156,7 @@ footer .footer__container, footer .footer__legal {
   justify-content: center;
   border-radius: 50%;
   background: var(--c-red);
+  transition: opacity 1.5s ease-in-out;
 
   position: fixed;
   top: 80vh;
@@ -167,9 +168,14 @@ footer .footer__container, footer .footer__legal {
     color: var(--c-beige-light);
     font-family: var(--ff-primary), Georgia, serif;
     font-size: 1.25rem;
+    opacity: 1;
 
     abbr {
       text-decoration: none;
     }
+  }
+
+  .scroll__hidden {
+    opacity: 0;
   }
 }
