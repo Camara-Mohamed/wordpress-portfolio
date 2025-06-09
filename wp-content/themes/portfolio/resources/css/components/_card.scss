@@ -22,7 +22,7 @@
 
   &:hover,
   &:focus {
-    transform: translateY(-0.5rem) scale(1.05) rotate(0deg);
+    transform: translateY(-0.5rem) scale(1.02) rotate(0deg);
   }
 }
 
@@ -71,7 +71,7 @@
 
   .card__type {
     display: inline-flex;
-    transform: rotate(25deg);
+    transform: rotate(5deg);
     padding: 0.5rem 1rem;
     justify-content: center;
     align-items: center;
@@ -91,7 +91,7 @@
 .projets__coming, .featured__more {
   &:hover,
   &:focus {
-    transform: rotate(-3deg) scale(1.05);
+    transform: rotate(-3deg) scale(1.02);
   }
 
   &--content {
