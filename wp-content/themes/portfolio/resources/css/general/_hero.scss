@@ -1,11 +1,12 @@
 @use '../base/breakpoints';
 
-.hero, .error-404, .single__hero {
+.hero, .error-404, .single__hero, .home-page {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   margin: 4rem 0 0;
   position: relative;
+  overflow: hidden;
 
   @include breakpoints.desktop {
     flex-direction: row;
@@ -75,7 +76,7 @@
   p, .error-404__text {
     color: var(--c-brown);
     font-size: 1.125rem;
-    width: 100%;
+    width: 80%;
 
     @include breakpoints.tablet {
       width: 70%;
@@ -146,14 +147,32 @@
           width: 100%;
           height: auto;
           object-fit: contain;
-          transition: all 0.3s ease-in-out;
-
-          &:hover,
-          &:focus {
-            transform: scale(1.05);
-          }
         }
       }
     }
   }
 }
+
+/*
+.home-page {
+  @include breakpoints.mobile {
+    &:after {
+      display: none;
+    }
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    right: -10rem;
+    top: 10rem;
+    rotate: -54deg;
+    width: 12rem;
+    height: 100%;
+    background-image: url('../svg/dossier.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 12;
+  }
+}
+*/

@@ -20,7 +20,8 @@
     transform: rotate(1deg);
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     transform: translateY(-0.5rem) scale(1.05) rotate(0deg);
   }
 }
@@ -88,7 +89,8 @@
 }
 
 .projets__coming, .featured__more {
-  &:hover {
+  &:hover,
+  &:focus {
     transform: rotate(-3deg) scale(1.05);
   }
 

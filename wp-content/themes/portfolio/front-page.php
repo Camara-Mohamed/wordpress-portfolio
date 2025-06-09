@@ -1,7 +1,43 @@
 <?php get_header(); ?>
 
     <main id="main-content" class="main-content" role="main">
-        <?php get_template_part('templates/partials/section-hero'); ?>
+        <section class="home-page" aria-labelledby="hero-title" itemscope itemtype="https://schema.org/WPHeader">
+            <div class="hero__container">
+                <div class="hero__text">
+                    <h2 id="hero-title" class="hero__title" itemprop="headline" aria-level="2">
+                        <?= get_field('hero_title') ?: get_the_title() ?>
+                    </h2>
+
+                    <?php if ($subtitle = get_field('hero_subtitle')) : ?>
+                        <h3 class="hero__subtitle" itemprop="alternativeHeadline"><?= $subtitle ?></h3>
+                    <?php endif; ?>
+
+                    <?php if ($description = get_field('hero_description')) : ?>
+                        <p class="hero__description" itemprop="description">
+                            <?= $description ?>
+                        </p>
+                    <?php endif; ?>
+                </div>
+
+                <?php if (have_rows('hero_buttons')) : ?>
+                    <div class="hero__actions">
+                        <?php while (have_rows('hero_buttons')) : the_row();
+                            $button = get_sub_field('link');
+                            $style = get_sub_field('style');
+                            ?>
+                            <a href="<?= $button['url'] ?>"
+                               class="hero__action hero__action--<?= $style ?>"
+                               itemprop="significantLink"
+                               aria-label="<?= __('Aller à la page', 'portfolio-detective').' '.$button['title'] ?>"
+                               title="<?=
+                               __('Aller à :', 'portfolio-detective').' '.$button['title'] ?>">
+                                <?= $button['title'] ?>
+                            </a>
+                        <?php endwhile; ?>
+                    </div>
+                <?php endif; ?>
+            </div>
+        </section>
 
         <section class="featured" aria-labelledby="featured__title">
                 <h2 id="featured__title" class="featured__container--title sro" aria-level="2">
