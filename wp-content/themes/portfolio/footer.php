@@ -1,5 +1,6 @@
 <div id="scroll">
-    <p class="scroll__content"><abbr title="<?= __('Le pourcentage du scroll de la page', 'portfolio-detective') ?>">0%</abbr></p>
+    <p class="scroll__content"><abbr class="scroll__content--change" title="<?= __('Le pourcentage du scroll de la page', 'portfolio-detective')
+        ?>">0%</abbr></p>
 </div>
 
 <footer class="footer">
