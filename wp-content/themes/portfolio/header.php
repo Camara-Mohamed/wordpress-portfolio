@@ -45,8 +45,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
 
     <!-- FancyBox : Pour que chaque image soit cliquable et qu'on puisse la voir en grand -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
-    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.js" defer></script>
+
+    <!-- JavaScript -->
+    <script src="/wp-content/themes/portfolio/resources/js/main.js" defer type="module"></script>
 
 </head>
 <body itemscope itemtype="https://schema.org/Person">
@@ -128,9 +131,10 @@
         </nav>
     </div>
     <div class="lampe">
-        <div class="lampe__image off"></div>
+        <img class="lampe__image lampe__on" alt="<?= __("Lampe éteinte", "portfolio-detective"); ?>"
+             src="/wp-content/themes/portfolio/resources/svg/lampe-on.svg">
 
-        <p class="lampe__on lampe__button">Allumer</p>
-        <p class="lampe__off lampe__button sro">Éteindre</p>
+        <p class="lampe__button--on lampe__button sro"><?= __("Allumer", "portfolio-detective"); ?></p>
+        <p class="lampe__button--off lampe__button"><?= __("Éteindre", "portfolio-detective"); ?></p>
     </div>
 </header>

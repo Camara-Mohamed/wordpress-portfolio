@@ -1,3 +1,5 @@
+@use '../base/breakpoints';
+
 .header {
   background-color: var(--c-brown);
   color: var(--c-beige-light);
@@ -11,12 +13,41 @@
   }
 
 .lampe {
-  &__button {
+  position: absolute;
+  top: 8rem;
+  right: 2rem;
+  max-width: 6rem;
+  max-height: 80%;
 
+  @include breakpoints.desktop{
+    right: 10rem;
+  }
+
+  @media (max-width: 700px){
+    max-height: 60%;
+  }
+
+  @media (max-width: 650px){
+    top: 4rem;
+    max-width: 4rem;
+    max-height: 40%;
+  }
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+
+  &__button {
+    color: var(--c-brown);
+    font-size: 0.875rem;
+    border: 0.0625rem solid var(--c-brown);
+    padding: 0.125rem;
   }
 
   &__image {
-
+    width: 100%;
   }
 }
 }

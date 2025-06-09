@@ -12,7 +12,6 @@
     .step {
       display: flex;
       gap: 2rem;
-      transition: all 3s ease-in-out;
 
       &:nth-child(even) {
         .step__number {
@@ -24,6 +23,14 @@
 
       &:hover,
       &:focus {
+        @include breakpoints.desktop {
+          margin-left: 4rem;
+        }
+
+        @include breakpoints.desktop {
+          margin-left: 2rem;
+        }
+
         .step__number {
           transform: scale(1.2);
           color: var(--c-beige-light);
@@ -41,11 +48,7 @@
         justify-content: center;
         align-items: center;
         rotate: -4deg;
-      }
-
-
-      &__content {
-
+        transition: all 0.3s ease-in-out;
       }
     }
   }

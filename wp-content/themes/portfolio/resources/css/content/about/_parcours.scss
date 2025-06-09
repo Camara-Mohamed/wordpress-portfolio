@@ -6,6 +6,10 @@
   &__container {
 
     .timeline__items {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+
       .timeline__list {
         &--period {
 
