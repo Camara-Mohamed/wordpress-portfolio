@@ -9,5 +9,9 @@ export const settings = {
         lampeOff: "/wp-content/themes/portfolio/resources/svg/lampe-off.svg",
         lampeOffClass: "lampe__off",
         lampeOnClass: "lampe__on"
+    },
+    
+    scroll: {
+        scrollSelector: ".scroll__content--change",
     }
 }

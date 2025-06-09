@@ -9,8 +9,30 @@ export const settings = {
         lampeOff: "/wp-content/themes/portfolio/resources/svg/lampe-off.svg",
         lampeOffClass: "lampe__off",
         lampeOnClass: "lampe__on"
+    },
+    
+    scroll: {
+        scrollSelector: ".scroll__content--change",
     }
 }
+const scrollApp = {
+
+    scrollContentSelector: document.querySelector(settings.scroll.scrollSelector),
+
+    init() {
+        window.addEventListener("scroll", () => {
+            const bodyHeight = document.body.clientHeight;
+            const scrollY = window.scrollY;
+            const windowHeight = window.innerHeight;
+
+            const scrollCalcul = (scrollY / (bodyHeight - windowHeight)) * 100;
+
+            this.scrollContentSelector.textContent = `${scrollCalcul.toFixed(0)}%`;
+        });
+    }
+}
+
+scrollApp.init();
 const lampeApp = {
     lampeContainerElement: document.querySelector(settings.lampe.lampeSelector),
     lampeElement: document.querySelector(settings.lampe.lampeImageSelector),
