@@ -28,13 +28,13 @@
   }
 
   &--feedback {
-    font-size: 1.25rem;
+    font-size: 1.125rem;
     font-weight: 600;
 
     &:before {
       content: '|';
       color: var(--c-red);
-      margin-right: 1rem;
+      margin-right: 0.5rem;
     }
   }
 

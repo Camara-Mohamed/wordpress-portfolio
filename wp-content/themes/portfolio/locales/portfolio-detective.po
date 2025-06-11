@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Portfolio Detective\n"
-"POT-Creation-Date: 2025-06-09 15:22+0200\n"
-"PO-Revision-Date: 2025-06-09 15:23+0200\n"
+"POT-Creation-Date: 2025-06-11 23:54+0200\n"
+"PO-Revision-Date: 2025-06-11 23:55+0200\n"
 "Last-Translator: \n"
 "Language-Team: Mohamed Camara camara.mohmd@gmail.com\n"
 "Language: fr_BE\n"
@@ -79,7 +79,7 @@ msgstr "Contactez-moi"
 msgid "Mon profil vous intéresse ?"
 msgstr "Mon profil vous intéresse ?"
 
-#: footer.php:34
+#: footer.php:34 forms/contact.php:37 forms/contact.php:76
 msgid "/me-contacter"
 msgstr "/me-contacter"
 
@@ -167,8 +167,8 @@ msgstr ""
 "%s"
 
 #: forms/contact.php:72
-msgid "Merci pour votre message! Nous vous répondrons dès que possible."
-msgstr "Merci pour votre message! Nous vous répondrons dès que possible."
+msgid "Merci pour votre message ! Nous vous répondrons dès que possible."
+msgstr "Merci pour votre message ! Nous vous répondrons dès que possible."
 
 #: front-page.php:31 templates/partials/section-hero.php:30
 msgid "Aller à la page"
@@ -474,6 +474,9 @@ msgstr "Voir"
 #: templates/partials/projects-related.php:19
 msgid "Projets similaires"
 msgstr "Projets similaires"
+
+#~ msgid "/me-contacter/"
+#~ msgstr "/me-contacter"
 
 #~ msgid "Travaillons ensemble"
 #~ msgstr "Travaillons ensemble"

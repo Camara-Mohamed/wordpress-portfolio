@@ -34,7 +34,7 @@ use JetBrains\PhpStorm\NoReturn;
     // Si erreurs, rediriger avec les messages
     if (!empty($errors)) {
         $_SESSION['contact_form_errors'] = $errors;
-        wp_safe_redirect(wp_get_referer());
+        wp_safe_redirect(home_url(__('/me-contacter', 'portfolio-detective')));
         exit;
     }
 
@@ -69,10 +69,10 @@ use JetBrains\PhpStorm\NoReturn;
     wp_mail($to, $email_subject, $email_message);
 
     // Message de succès
-    $_SESSION['contact_form_success'] = __('Merci pour votre message! Nous vous répondrons dès que possible.', 'portfolio-detective');
+    $_SESSION['contact_form_success'] = __('Merci pour votre message ! Nous vous répondrons dès que possible.', 'portfolio-detective');
     unset($_SESSION['contact_form_old']);
     unset($_SESSION['contact_form_errors']);
 
-    wp_safe_redirect(wp_get_referer());
+    wp_safe_redirect(home_url(__('/me-contacter', 'portfolio-detective')));
     exit;
 }
