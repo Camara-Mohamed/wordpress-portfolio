@@ -936,7 +936,7 @@ body:has(#burger-menu:checked) {
 @media only screen and (max-width: 599px) {
   .contact__section .contact__grid {
     grid-template-columns: 1fr;
-    gap: 4rem;
+    gap: 2rem;
   }
 }
 .contact__section .contact__grid .contact__info {
@@ -1119,7 +1119,7 @@ body:has(#burger-menu:checked) {
     grid-template-columns: 1fr;
   }
 }
-@media only screen and (max-width: 599px) {
+@media only screen and (min-width: 600px) and (max-width: 1019px) {
   .skills__grid .skill__category .skills__list {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1545,13 +1545,13 @@ body:has(#burger-menu:checked) {
   text-decoration: none;
 }
 .contact__form--feedback {
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   font-weight: 600;
 }
 .contact__form--feedback:before {
   content: "|";
   color: var(--c-red);
-  margin-right: 1rem;
+  margin-right: 0.5rem;
 }
 .contact__form .form {
   display: flex;

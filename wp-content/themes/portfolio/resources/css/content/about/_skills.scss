@@ -19,7 +19,7 @@
         grid-template-columns: 1fr;
       }
 
-      @include breakpoints.mobile {
+      @include breakpoints.tablet {
         grid-template-columns: repeat(2, 1fr);
       }
 

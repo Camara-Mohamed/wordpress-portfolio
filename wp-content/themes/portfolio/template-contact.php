@@ -62,10 +62,10 @@
                                 <?= $_SESSION['contact_form_success']; ?>
                             </div>
                             <?php unset($_SESSION['contact_form_success']); ?>
-                        <?php endif; ?>
+                        <?php else : ?>
 
-                        <form method="POST" action="<?= admin_url('admin-post.php'); ?>" class="form">
-                            <input type="hidden" name="action" value="submit_contact_form">
+                            <form method="POST" action="<?= admin_url('admin-post.php'); ?>" class="form">
+                                <input type="hidden" name="action" value="submit_contact_form">
 
                             <fieldset>
                                 <div class="contact__form--field">
@@ -141,6 +141,7 @@
                                 <?php _e('Envoyer', 'portfolio-detective'); ?>
                             </button>
                         </form>
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>

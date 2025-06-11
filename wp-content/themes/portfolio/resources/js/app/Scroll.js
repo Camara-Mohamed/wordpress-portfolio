@@ -13,7 +13,7 @@ const scrollApp = {
 
             this.scrollContentElement.textContent = `${scrollCalcul.toFixed(0)}%`;
 
-            if (scrollCalcul >= 100) {
+            if (scrollCalcul >= 95) {
                 this.scrollContainerElement.classList.add(settings.scroll.hiddenSelector);
             } else {
                 this.scrollContainerElement.classList.remove(settings.scroll.hiddenSelector);

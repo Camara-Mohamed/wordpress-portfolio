@@ -16,7 +16,7 @@
 
     @include breakpoints.mobile {
       grid-template-columns: 1fr;
-      gap: 4rem;
+      gap: 2rem;
     }
 
     .contact__info {
