@@ -36,8 +36,7 @@ $current_page = max(1, get_query_var('paged') ?: get_query_var('page'));
                         ?>">
                             <a href="<?= add_query_arg('filter', $term->slug,
                                 get_post_type_archive_link('project')) ?>" class="filter__list--link" role="button"
-                               title="<?php _e('Voir les', 'portfolio-detective').' '
-                               .$term->name; ?>">
+                               title="<?= _e('Voir les', 'portfolio-detective').' '.$term->name ?>">
                                 <?= $term->name ?>
                             </a>
                         </li>

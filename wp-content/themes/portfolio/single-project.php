@@ -58,7 +58,8 @@
                                     $images = get_sub_field('images');
                                     if ($images) :
                                         foreach ($images as $image) : ?>
-                                            <a href="<?= $image['url']; ?>" data-fancybox="gallery">
+                                            <a href="<?= $image['url']; ?>" data-fancybox="gallery" title="<?= __
+                                            ('Voir l\'image en plus grand','portfolio-detective'); ?>">
                                                 <figure class="single__gallery--item" itemprop="image" itemscope
                                                         itemtype="https://schema.org/ImageObject">
                                                     <img src="<?= $image['url']; ?>" alt="<?= $image['alt']; ?>"
