@@ -94,33 +94,3 @@
     }
   }
 }
-
-/* Media Queries */
-@include breakpoints.mobile {
-  .footer {
-    &__container {
-      flex-direction: column;
-      gap: 2rem;
-    }
-
-    &__section, &__nav, &__aside {
-      width: 100%;
-    }
-  }
-}
-
-@include breakpoints.tablet {
-  .footer {
-    &__container {
-      flex-wrap: wrap;
-    }
-
-    &__section {
-      width: 100%;
-    }
-
-    &__nav, &__aside {
-      width: calc(50% - 0.5rem);
-    }
-  }
-}

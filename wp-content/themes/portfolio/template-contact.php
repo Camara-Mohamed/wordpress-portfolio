@@ -64,7 +64,7 @@
                             <?php unset($_SESSION['contact_form_success']); ?>
                         <?php else : ?>
 
-                            <form method="POST" action="<?= admin_url('admin-post.php'); ?>" class="form">
+                            <form method="POST" action="<?= admin_url('admin-post.php'); ?>" class="form" novalidate>
                                 <input type="hidden" name="action" value="submit_contact_form">
 
                             <fieldset>

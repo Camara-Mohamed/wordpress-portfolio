@@ -1,7 +1,7 @@
 <article class="project__card" itemscope itemtype="https://schema.org/CreativeWork">
     <a href="<?php the_permalink(); ?>" class="project__card--link" itemprop="url"
        aria-label="<?php _e('Voir le projet :', 'portfolio-detective').' '.the_title(); ?>"
-       title="<?php _e('Voir', 'portfolio-detective').' '.the_title(); ?>">
+       title="<?php _e('Voir ', 'portfolio-detective').' '.the_title(); ?>">
         <div class="project__card--content" itemprop="description">
             <h3 class="card__title" itemprop="name"><?php the_title(); ?></h3>
 

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Portfolio Detective\n"
-"POT-Creation-Date: 2025-06-11 23:54+0200\n"
-"PO-Revision-Date: 2025-06-11 23:55+0200\n"
+"POT-Creation-Date: 2025-06-14 17:08+0200\n"
+"PO-Revision-Date: 2025-06-14 17:10+0200\n"
 "Last-Translator: \n"
 "Language-Team: Mohamed Camara camara.mohmd@gmail.com\n"
 "Language: fr_BE\n"
@@ -250,6 +250,10 @@ msgstr "Changer en "
 msgid "Changer la langue en "
 msgstr "Changer la langue en "
 
+#: header.php:133
+msgid "Cliquer pour allumer ou éteindre la lampe"
+msgstr "Cliquer pour allumer ou éteindre la lampe"
+
 #: header.php:134
 msgid "Lampe éteinte"
 msgstr "Lampe éteinte"
@@ -297,6 +301,10 @@ msgstr "Voir le projet"
 #: single-project.php:30
 msgid "Projet non disponible"
 msgstr "Projet non disponible"
+
+#: single-project.php:62
+msgid "Voir l'image en plus grand"
+msgstr "Voir l'image en plus grand"
 
 #: template-about.php:21
 msgid "Mon parcours"
@@ -439,27 +447,27 @@ msgstr "Tous"
 msgid "Voir les"
 msgstr "Voir les"
 
-#: template-projects.php:51
+#: template-projects.php:50
 msgid "Mes projets"
 msgstr "Mes projets"
 
-#: template-projects.php:56
+#: template-projects.php:55
 msgid "Les projets"
 msgstr "Les projets"
 
-#: template-projects.php:87
+#: template-projects.php:86
 msgid "D'autres projets arrivent"
 msgstr "D'autres projets to come"
 
-#: template-projects.php:94
+#: template-projects.php:93
 msgid "Aucun projet trouvé."
 msgstr "Aucun projet trouvé."
 
-#: template-projects.php:103
+#: template-projects.php:102
 msgid "Précédent"
 msgstr "Précédent"
 
-#: template-projects.php:105
+#: template-projects.php:104
 msgid "Suivant"
 msgstr "Suivant"
 
@@ -468,8 +476,9 @@ msgid "Voir le projet :"
 msgstr "Voir le projet :"
 
 #: templates/partials/projects-card.php:4
-msgid "Voir"
-msgstr "Voir"
+#| msgid "Voir"
+msgid "Voir "
+msgstr "Voir "
 
 #: templates/partials/projects-related.php:19
 msgid "Projets similaires"

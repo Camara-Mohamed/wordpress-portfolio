@@ -130,7 +130,7 @@
             </ul>
         </nav>
     </div>
-    <div class="lampe">
+    <div class="lampe" title="<?= __("Cliquer pour allumer ou éteindre la lampe", "portfolio-detective"); ?>">
         <img class="lampe__image lampe__on" alt="<?= __("Lampe éteinte", "portfolio-detective"); ?>"
              src="/wp-content/themes/portfolio/resources/svg/lampe-on.svg">
 
