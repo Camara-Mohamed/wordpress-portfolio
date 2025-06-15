@@ -6,12 +6,12 @@
 
 <?php get_header(); ?>
 
-    <main id="main-content" class="main-content" role="main">
+    <main id="main-content" class="main-content">
         <?php get_template_part('templates/partials/section-hero'); ?>
 
-        <section class="contact__section" aria-labelledby="contact-title">
+        <section class="contact__section">
             <div class="contact__container">
-                <h2 id="contact-title" class="contact__title sro" aria-level="2"><?php _e('Me contacter',
+                <h2 class="contact__title sro"><?php _e('Me contacter',
                         'portfolio-detective'); ?></h2>
 
                 <div class="contact__grid">

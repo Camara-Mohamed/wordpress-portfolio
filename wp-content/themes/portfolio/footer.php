@@ -5,7 +5,7 @@
 
 <footer class="footer">
     <div class="footer__container">
-        <h2 class="sro" aria-level="2"><?php _e('Navigation de pied de page', 'portfolio-detective'); ?></h2>
+        <h2 class="sro"><?php _e('Navigation de pied de page', 'portfolio-detective'); ?></h2>
         <section class="footer__section">
             <h3 class="sro"><?php _e('Mes informations', 'portfolio-detective'); ?></h3>
             <a class="footer__title" href="<?= home_url('/'); ?>" itemprop="url"

@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-    <main id="main-content" class="main-content" role="main" itemscope itemtype="https://schema.org/CreativeWork">
+    <main id="main-content" class="main-content" itemscope itemtype="https://schema.org/CreativeWork">
         <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
             <section class="single__hero">
@@ -9,7 +9,7 @@
                        title="<?php _e('Retourner à la liste de mes projets', 'portfolio-detective'); ?>">
                         <?php _e('Retour aux projets', 'portfolio-detective'); ?>
                     </a>
-                    <h2 class="single__title" itemprop="name" aria-level="2"><?= get_the_title() ?></h2>
+                    <h2 class="single__title" itemprop="name"><?= get_the_title() ?></h2>
 
                     <div class="single__links">
                         <?php if ($github = get_field('github')) : ?>
@@ -35,6 +35,7 @@
             </section>
 
             <article class="single__content">
+                <h2 class="sro"><?= __('Contenu', 'portfolio-detective'); ?></h2>
                 <?php if (have_rows('sections')) : ?>
                     <?php while (have_rows('sections')) : the_row(); ?>
 

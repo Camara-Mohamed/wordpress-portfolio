@@ -9,6 +9,7 @@ add_action('wp_enqueue_scripts', function() {
     wp_dequeue_style('wp-block-library');
     wp_dequeue_style('wp-block-library-theme');
     wp_dequeue_style('global-styles');
+    wp_dequeue_style('classic-theme-styles');
 }, 20);
 
 // Nettoyage des balises <head>
@@ -19,3 +20,8 @@ remove_action('wp_head', 'wp_oembed_add_discovery_links');
 remove_action('wp_head', 'wp_oembed_add_host_js');
 remove_action('wp_head', 'rest_output_link_wp_head');
 remove_action('wp_head', 'wp_generator');
+
+// Solution pour supprimer les attributs type inutiles
+add_filter('style_loader_tag', function($html) {
+    return preg_replace("/type=['\"]text\/(css)['\"]/", '', $html);
+}, 10, 1);
