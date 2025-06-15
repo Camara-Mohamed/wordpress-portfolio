@@ -1,6 +1,6 @@
 <?php $images = $args['images'] ?? []; ?>
 
-<section class="hero"itemscope itemtype="https://schema.org/WPHeader">
+<section class="hero" itemscope itemtype="https://schema.org/WPHeader">
     <div class="hero__container">
         <div class="hero__text">
             <h2 class="hero__title" itemprop="headline">
