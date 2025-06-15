@@ -7,6 +7,8 @@
 
 .pagination {
   margin-top: 2rem;
+  display: -webkit-box;
+  display: -webkit-flex;
   display: flex;
   align-items: center;
   justify-content: center;

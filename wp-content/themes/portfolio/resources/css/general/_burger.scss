@@ -5,6 +5,8 @@
   z-index: 1000;
 
   &__nav--container {
+    display: -webkit-box;
+    display: -webkit-flex;
     display: flex;
     gap: 2rem;
   }

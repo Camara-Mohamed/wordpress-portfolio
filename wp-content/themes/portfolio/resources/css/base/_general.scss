@@ -148,6 +148,8 @@ footer .footer__container, footer .footer__legal {
 }
 
 #scroll {
+  display: -webkit-box;
+  display: -webkit-flex;
   display: flex;
   width: 4rem;
   height: 4rem;

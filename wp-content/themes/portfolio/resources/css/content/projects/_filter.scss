@@ -16,6 +16,8 @@
   }
 
   .filter__list {
+    display: -webkit-box;
+    display: -webkit-flex;
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
