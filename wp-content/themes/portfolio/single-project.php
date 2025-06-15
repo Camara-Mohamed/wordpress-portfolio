@@ -14,7 +14,7 @@
                     <div class="single__links">
                         <?php if ($github = get_field('github')) : ?>
                             <a href="<?= $github ?>" class="single__link single__link--github"
-                               itemprop="codeRepository"
+                               itemprop="url"
                                title="<?php _e('Lien vers le dépôt du projet', 'portfolio-detective'); ?>">
                                 <?php _e('En savoir plus', 'portfolio-detective'); ?>
                             </a>
