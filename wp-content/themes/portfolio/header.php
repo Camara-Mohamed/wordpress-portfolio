@@ -54,9 +54,6 @@
     <!-- JavaScript -->
     <script src="/wp-content/themes/portfolio/resources/js/main.js" defer type="module"></script>
 
-    <!-- Style -->
-    <link rel="stylesheet" href="/wp-content/themes/portfolio/resources/css/styles.css">
-
 </head>
 <body itemscope itemtype="https://schema.org/Person">
 
@@ -100,6 +97,7 @@
 
             <input type="checkbox" id="burger-menu" class="sro burger-checkbox" aria-label="Menu principal"/>
             <label for="burger-menu" class="header__nav--burger">
+                <span class="sro"><?php _e('Menu principal', 'portfolio-detective'); ?></span>
                 <svg class="burger-icon" viewBox="0 0 448 512" width="35" height="35">
                     <path fill="currentColor" d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"/>
                 </svg>
