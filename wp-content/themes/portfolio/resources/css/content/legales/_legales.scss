@@ -6,6 +6,8 @@
   }
 
   &__content {
+    display: -webkit-box;
+    display: -webkit-flex;
     display: flex;
     flex-direction: column;
     width: 80%;
@@ -16,6 +18,8 @@
     }
 
     &--paragraph {
+      display: -webkit-box;
+      display: -webkit-flex;
       display: flex;
       flex-direction: column;
       width: 100%;

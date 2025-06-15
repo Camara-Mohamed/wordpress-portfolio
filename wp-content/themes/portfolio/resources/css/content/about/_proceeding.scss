@@ -8,6 +8,8 @@
     gap: 1.5rem;
 
     .step {
+      display: -webkit-box;
+      display: -webkit-flex;
       display: flex;
       gap: 2rem;
 
@@ -42,6 +44,8 @@
         background-color: var(--c-beige-mid);
         min-width: 4rem;
         max-height: 4rem;
+        display: -webkit-box;
+        display: -webkit-flex;
         display: flex;
         justify-content: center;
         align-items: center;

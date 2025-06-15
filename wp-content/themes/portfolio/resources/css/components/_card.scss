@@ -1,6 +1,8 @@
 @use '../base/breakpoints';
 
 .project__card, .projets__coming, .featured__more {
+  display: -webkit-box;
+  display: -webkit-flex;
   display: flex;
   flex-direction: column;
   background: var(--c-beige-dark);
@@ -32,6 +34,8 @@
   }
 
   &--content {
+    display: -webkit-box;
+    display: -webkit-flex;
     display: flex;
     flex-direction: column;
     padding: 1.5rem;
@@ -95,6 +99,8 @@
   }
 
   &--content {
+    display: -webkit-box;
+    display: -webkit-flex;
     display: flex;
     flex-direction: column;
     align-items: center;

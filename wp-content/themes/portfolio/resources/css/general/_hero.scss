@@ -1,6 +1,8 @@
 @use '../base/breakpoints';
 
 .hero, .error-404, .single__hero, .home-page {
+  display: -webkit-box;
+  display: -webkit-flex;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -14,6 +16,8 @@
 
   &__container {
     width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
     display: flex;
     flex-direction: column;
 
@@ -33,12 +37,16 @@
   }
 
   &__container, .error-404__container, .single__hero--container {
+    display: -webkit-box;
+    display: -webkit-flex;
     display: flex;
     flex-direction: column;
     overflow: hidden;
   }
 
   &__text, .error-404__content {
+    display: -webkit-box;
+    display: -webkit-flex;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -90,6 +98,8 @@
   &__images {
     .hero__figure {
       &--container {
+        display: -webkit-box;
+        display: -webkit-flex;
         display: flex;
         justify-content: center;
         gap: 1rem;
@@ -111,6 +121,8 @@
       }
 
       .hero__figure--box {
+        display: -webkit-box;
+        display: -webkit-flex;
         display: flex;
         padding: 0.25rem;
         align-items: center;
@@ -134,6 +146,8 @@
       }
 
       .hero__figure--box-int {
+        display: -webkit-box;
+        display: -webkit-flex;
         display: flex;
         align-items: center;
         justify-content: center;
