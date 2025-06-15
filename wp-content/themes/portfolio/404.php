@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
     <main id="main-content" class="main-content" role="main">
-        <section class="error-404" aria-labelledby="error-title">
+        <section class="error-404">
             <div class="error-404__container">
                 <div class="error-404__content">
             <h2 id="error-title" class="error-404__title"><?php _e('Erreur 404', 'portfolio-detective'); ?></h2>

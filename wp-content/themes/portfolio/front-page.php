@@ -1,10 +1,10 @@
 <?php get_header(); ?>
 
-    <main id="main-content" class="main-content" role="main">
-        <section class="home-page" aria-labelledby="hero-title" itemscope itemtype="https://schema.org/WPHeader">
+    <main id="main-content" class="main-content">
+        <section class="home-page" itemscope itemtype="https://schema.org/WPHeader">
             <div class="hero__container">
                 <div class="hero__text">
-                    <h2 id="hero-title" class="hero__title" itemprop="headline" aria-level="2">
+                    <h2 class="hero__title" itemprop="headline">
                         <?= get_field('hero_title') ?: get_the_title() ?>
                     </h2>
 
@@ -39,8 +39,8 @@
             </div>
         </section>
 
-        <section class="featured" aria-labelledby="featured__title">
-                <h2 id="featured__title" class="featured__container--title sro" aria-level="2">
+        <section class="featured">
+                <h2 class="featured__container--title sro">
                     <?php _e('Projets à la une', 'portfolio-detective'); ?>
                 </h2>
 

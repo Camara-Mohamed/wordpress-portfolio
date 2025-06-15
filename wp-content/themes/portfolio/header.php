@@ -25,17 +25,20 @@
 
     <!-- Open Graph -->
     <meta property="og:title" content="<?php
-    if (is_front_page()) {
-        echo _e('Accueil', 'portfolio-detective').' - '.get_bloginfo('name');
+    if (is_front_page() || is_home()) {
+        echo esc_attr(get_bloginfo('name').' - '.get_bloginfo('description'));
     } else {
-        echo wp_title('', false).' - '.get_bloginfo('name');
+        echo esc_attr(wp_title('', false).' - '.get_bloginfo('name'));
     }
     ?>">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="<?= home_url(); ?>">
+    <meta property="og:url" content="<?= home_url($_SERVER['REQUEST_URI']) ?>">
     <meta property="og:description" content="<?php bloginfo('description'); ?>">
     <meta property="og:image"
           content="<?= get_template_directory_uri().'/resources/svg/logo-simple.svg'; ?>">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <?php wp_head(); ?>
 
@@ -51,6 +54,9 @@
     <!-- JavaScript -->
     <script src="/wp-content/themes/portfolio/resources/js/main.js" defer type="module"></script>
 
+    <!-- Style -->
+    <link rel="stylesheet" href="/wp-content/themes/portfolio/resources/css/styles.css">
+
 </head>
 <body itemscope itemtype="https://schema.org/Person">
 
@@ -65,16 +71,15 @@
     </p>
 </noscript>
 
-<h1 class="sro" role="heading" aria-level="1"><?= get_the_title(); ?></h1>
+<h1 class="sro"><?= get_the_title(); ?></h1>
 
 <a class="skip__link" href="#main-content"><?php _e('Aller au contenu principal', 'portfolio-detective')
     ?></a>
 
 <header id="header" class="header">
     <div class="header__container">
-        <nav class="header__nav" aria-label="<?php _e('Navigation principale', 'portfolio-detective'); ?>"
-             role="navigation">
-            <h2 class="sro" aria-level="2"><?php _e('Navigation principale',
+        <nav class="header__nav" aria-label="<?php _e('Navigation principale', 'portfolio-detective'); ?>">
+            <h2 class="sro"><?php _e('Navigation principale',
                     'portfolio-detective'); ?></h2>
             <a class="header__nav--title" href="<?= home_url('/'); ?>" itemprop="url"
                title="<?php _e('Aller à la page d\'accueil');

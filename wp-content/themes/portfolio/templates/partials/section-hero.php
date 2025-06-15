@@ -1,9 +1,9 @@
 <?php $images = $args['images'] ?? []; ?>
 
-<section class="hero" aria-labelledby="hero-title" itemscope itemtype="https://schema.org/WPHeader">
+<section class="hero"itemscope itemtype="https://schema.org/WPHeader">
     <div class="hero__container">
         <div class="hero__text">
-            <h2 id="hero-title" class="hero__title" itemprop="headline" aria-level="2">
+            <h2 class="hero__title" itemprop="headline">
                 <?= get_field('hero_title') ?: get_the_title() ?>
             </h2>
 

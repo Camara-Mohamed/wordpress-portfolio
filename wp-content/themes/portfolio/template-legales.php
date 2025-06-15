@@ -9,9 +9,9 @@
     <main id="main-content" class="main-content" role="main">
         <?php get_template_part('templates/partials/section-hero'); ?>
 
-        <section class="legals" aria-labelledby="legal-title" itemscope itemtype="https://schema.org/WebPage">
+        <section class="legals" itemscope itemtype="https://schema.org/WebPage">
             <div class="legals__container" itemprop="mainContentOfPage">
-                <h2 id="legal-title" class="legal__title sro" itemprop="headline">
+                <h2 class="legal__title sro" itemprop="headline">
                     <?php _e('Mentions légales', 'portfolio-detective'); ?>
                 </h2>
 

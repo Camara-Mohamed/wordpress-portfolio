@@ -8,7 +8,7 @@ $current_page = max(1, get_query_var('paged') ?: get_query_var('page'));
 
 <?php get_header(); ?>
 
-    <main id="main-content" class="main-content" role="main">
+    <main id="main-content" class="main-content">
         <?php get_template_part('templates/partials/section-hero'); ?>
         <section class="projects__filters">
             <h3 class="projects__filters--title sro">
@@ -35,7 +35,7 @@ $current_page = max(1, get_query_var('paged') ?: get_query_var('page'));
                         $term->slug ? 'active' : ''
                         ?>">
                             <a href="<?= add_query_arg('filter', $term->slug,
-                                get_post_type_archive_link('project')) ?>" class="filter__list--link" role="button"
+                                get_post_type_archive_link('project')) ?>" class="filter__list--link"
                                title="<?= _e('Voir les', 'portfolio-detective').' '.$term->name ?>">
                                 <?= $term->name ?>
                             </a>
@@ -46,7 +46,7 @@ $current_page = max(1, get_query_var('paged') ?: get_query_var('page'));
         </section>
 
         <section class="projects">
-            <h2 id="projects__title" class="projects--title sro" aria-level="2">
+            <h2 class="projects--title sro">
                 <?php _e('Mes projets', 'portfolio-detective'); ?>
             </h2>
 

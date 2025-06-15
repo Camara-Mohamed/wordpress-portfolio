@@ -6,7 +6,7 @@
 
 <?php get_header(); ?>
 
-    <main id="main-content" class="main-content" role="main">
+    <main id="main-content" class="main-content">
         <?php
         $hero_args = [
             'images' => [
@@ -17,8 +17,8 @@
         get_template_part('templates/partials/section-hero', null, $hero_args);
         ?>
 
-        <section class="timeline" aria-labelledby="timeline-title">
-            <h2 class="timeline__title" aria-level="2"><?php _e('Mon parcours', 'portfolio-detective');
+        <section class="timeline">
+            <h2 class="timeline__title"><?php _e('Mon parcours', 'portfolio-detective');
                 ?></h2>
             <div class="timeline__container">
                 <?php if ($subtitle = get_field('timeline_subtitle')) : ?>
@@ -29,7 +29,7 @@
                     <div class="timeline__items">
                         <?php while (have_rows('timeline')) : the_row(); ?>
                             <div class="timeline__list">
-                                <time class="timeline__list--period"><?= get_sub_field('period') ?></time>
+                                <time datetime="<?= date('Y-m', strtotime(get_sub_field('period'))) ?>"> class="timeline__list--period"><?= get_sub_field('period') ?></time>
                                 <div class="timeline__list--content">
                                     <h3><?= get_sub_field('activity') ?></h3>
                                 </div>
@@ -40,8 +40,8 @@
             </div>
         </section>
 
-        <section class="skills" aria-labelledby="skills-title">
-            <h2 class="skills__title" aria-level="2"><?php _e('Mes compétences', 'portfolio-detective');
+        <section class="skills">
+            <h2 class="skills__title"><?php _e('Mes compétences', 'portfolio-detective');
                 ?></h2>
             <div class="skills__container">
                 <?php if ($subtitle = get_field('skills_subtitle')) : ?>
@@ -96,7 +96,7 @@
             </div>
         </section>
 
-        <section class="methodology" aria-labelledby="methodology-title">
+        <section class="methodology">
             <h2 class="methodology__title"><?php _e('Ma méthodologie', 'portfolio-detective'); ?></h2>
             <div class="methodology__container">
                 <?php if ($subtitle = get_field('methodology_subtitle')) : ?>
