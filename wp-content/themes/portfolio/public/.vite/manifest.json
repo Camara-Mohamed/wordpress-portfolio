@@ -1,13 +1,49 @@
 {
   "wp-content/themes/portfolio/resources/css/styles.scss": {
-    "file": "assets/css-BRalgV_1.css",
+    "file": "assets/css-Dz4lecwv.css",
     "src": "wp-content/themes/portfolio/resources/css/styles.scss",
     "isEntry": true
   },
+  "wp-content/themes/portfolio/resources/fonts/CrimsonPro-Bold.ttf": {
+    "file": "assets/CrimsonPro-Bold-DzjgCKSH.ttf",
+    "src": "wp-content/themes/portfolio/resources/fonts/CrimsonPro-Bold.ttf"
+  },
+  "wp-content/themes/portfolio/resources/fonts/CrimsonPro-ExtraBold.ttf": {
+    "file": "assets/CrimsonPro-ExtraBold-CI59QYVA.ttf",
+    "src": "wp-content/themes/portfolio/resources/fonts/CrimsonPro-ExtraBold.ttf"
+  },
+  "wp-content/themes/portfolio/resources/fonts/CrimsonPro-ExtraLight.ttf": {
+    "file": "assets/CrimsonPro-ExtraLight-D73yLFlQ.ttf",
+    "src": "wp-content/themes/portfolio/resources/fonts/CrimsonPro-ExtraLight.ttf"
+  },
+  "wp-content/themes/portfolio/resources/fonts/CrimsonPro-Light.ttf": {
+    "file": "assets/CrimsonPro-Light-H4hacKAA.ttf",
+    "src": "wp-content/themes/portfolio/resources/fonts/CrimsonPro-Light.ttf"
+  },
+  "wp-content/themes/portfolio/resources/fonts/CrimsonPro-Medium.ttf": {
+    "file": "assets/CrimsonPro-Medium-b4GPo3W7.ttf",
+    "src": "wp-content/themes/portfolio/resources/fonts/CrimsonPro-Medium.ttf"
+  },
+  "wp-content/themes/portfolio/resources/fonts/CrimsonPro-Regular.ttf": {
+    "file": "assets/CrimsonPro-Regular-BsyHc0zN.ttf",
+    "src": "wp-content/themes/portfolio/resources/fonts/CrimsonPro-Regular.ttf"
+  },
+  "wp-content/themes/portfolio/resources/fonts/CrimsonPro-SemiBold.ttf": {
+    "file": "assets/CrimsonPro-SemiBold-DmDD5b4W.ttf",
+    "src": "wp-content/themes/portfolio/resources/fonts/CrimsonPro-SemiBold.ttf"
+  },
+  "wp-content/themes/portfolio/resources/fonts/SpecialElite-Regular.ttf": {
+    "file": "assets/SpecialElite-Regular-Clp9cCPZ.ttf",
+    "src": "wp-content/themes/portfolio/resources/fonts/SpecialElite-Regular.ttf"
+  },
   "wp-content/themes/portfolio/resources/js/main.js": {
-    "file": "assets/js-l0sNRNKZ.js",
+    "file": "assets/js-D-Gd_YuR.js",
     "name": "js",
     "src": "wp-content/themes/portfolio/resources/js/main.js",
     "isEntry": true
+  },
+  "wp-content/themes/portfolio/resources/svg/approved.svg": {
+    "file": "assets/approved-CwwHuSSO.svg",
+    "src": "wp-content/themes/portfolio/resources/svg/approved.svg"
   }
 }

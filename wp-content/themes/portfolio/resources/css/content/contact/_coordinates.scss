@@ -1,0 +1,67 @@
+@use "../../base/breakpoints";
+
+.contact__section {
+  width: 100%;
+
+  .contact__grid {
+    display: grid;
+    grid-template-columns: auto minmax(auto, 800px);
+    gap: 8rem;
+    justify-content: start;
+
+    @include breakpoints.tablet {
+      grid-template-columns: 1fr;
+      gap: 4rem;
+    }
+
+    @include breakpoints.mobile {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .contact__info {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+
+      &--title {
+        color: var(--c-brown);
+        font-size: 1.5rem;
+        font-weight: 600;
+        font-family: var(--ff-primary), Georgia, serif;
+      }
+
+      .contact__details {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+
+        &--item {
+          display: inline-flex;
+          gap: 0.25rem;
+          color: var(--c-brown);
+          font-size: 0.875rem;
+          font-weight: 300;
+
+          & strong {
+            font-weight: 600;
+          }
+        }
+
+        &--link {
+          color: var(--c-red);
+          text-decoration: underline;
+
+          &:hover,
+          &:focus {
+            color: var(--c-brown);
+          }
+        }
+      }
+    }
+  }
+}

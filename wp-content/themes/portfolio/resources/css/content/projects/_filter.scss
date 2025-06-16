@@ -1,0 +1,51 @@
+@use '../../base/breakpoints';
+
+.projects__filters {
+  padding: 0 1.5rem 0;
+
+  @include breakpoints.mobile {
+    padding: 0 1.5rem 0;
+  }
+
+  @include breakpoints.tablet {
+    padding: 0 2rem 0;
+  }
+
+  @include breakpoints.desktop {
+    padding: 0 8.5rem 0;
+  }
+
+  .filter__list {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    &--item {
+      padding: 1rem;
+      border: 0.0625rem solid var(--c-red);
+      transition: all 0.2s ease;
+      color: var(--c-beige-light);
+
+      &:hover,
+      &:focus,
+      &.active {
+        background: var(--c-red);
+
+        .filter__list--link {
+          color: var(--c-beige-light);
+          font-weight: 500;
+        }
+      }
+    }
+
+    &--link {
+      color: var(--c-red);
+      font-family: var(--ff-secondary), system-ui;
+    }
+  }
+}

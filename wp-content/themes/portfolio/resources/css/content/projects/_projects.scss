@@ -1,0 +1,30 @@
+@use '../../base/breakpoints';
+
+.projects {
+  margin-top: 2rem;
+  background-color: var(--c-brown);
+}
+
+.pagination {
+  margin-top: 2rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  color: var(--c-beige-light);
+
+  span, a {
+    font-size: 1.25rem;
+    transition: all 0.2s ease;
+
+    &:hover,
+    &:focus {
+      color: var(--c-red);
+      text-decoration: underline;
+      font-weight: 500;
+      transform: scale(1.1);
+    }
+  }
+}

@@ -1,0 +1,192 @@
+@use '../base/breakpoints';
+
+.hero, .error-404, .single__hero, .home-page {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 4rem 0 0;
+  position: relative;
+  overflow: hidden;
+
+  @include breakpoints.desktop {
+    flex-direction: row;
+  }
+
+  &__container {
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoints.desktop {
+      width: 60%;
+    }
+  }
+
+  &__images {
+    width: 100%;
+    margin-top: 4rem;
+
+    @include breakpoints.desktop {
+      width: 40%;
+      margin-left: 4rem;
+    }
+  }
+
+  &__container, .error-404__container, .single__hero--container {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  &__text, .error-404__content {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__title, .error-404__title, .single__title {
+    color: var(--c-red);
+    font-size: 2.5rem;
+
+    @include breakpoints.tablet {
+      font-size: 3.5rem;
+    }
+
+    @include breakpoints.desktop {
+      font-size: 4rem;
+    }
+  }
+
+  &__subtitle {
+    color: var(--c-brown);
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    font-family: var(--ff-primary), Georgia, serif;
+
+    @include breakpoints.tablet {
+      font-size: 1.75rem;
+    }
+
+    @include breakpoints.desktop {
+      font-size: 2rem;
+    }
+  }
+
+  p, .error-404__text {
+    color: var(--c-brown);
+    font-size: 1.125rem;
+    width: 80%;
+
+    @include breakpoints.tablet {
+      width: 70%;
+    }
+
+    @include breakpoints.desktop {
+      width: 90%;
+    }
+  }
+
+  &__images {
+    .hero__figure {
+      &--container {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+        position: relative;
+
+        &:after {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          width: 100%;
+          height: 100%;
+          background-image: url('../svg/approved.svg');
+          background-repeat: no-repeat;
+          background-size: contain;
+          z-index: 10;
+        }
+      }
+
+      .hero__figure--box {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+        padding: 0.25rem;
+        align-items: center;
+        border: 0.0625rem dashed var(--g-brown-02);
+        max-width: 100%;
+        height: 100%;
+
+        &:first-child {
+          width: 50%;
+          transform: rotate(-8deg);
+          z-index: 1;
+          margin-right: -6rem;
+        }
+
+        &:last-child {
+          width: 60%;
+          transform: rotate(10deg);
+          z-index: 2;
+          margin-left: -4rem;
+        }
+      }
+
+      .hero__figure--box-int {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 0.0625rem solid var(--c-brown);
+        background: var(--c-beige-mid);
+        box-shadow: 0.25rem 0.25rem 0 0 var(--g-beige-01);
+        padding: 10%;
+        width: 100%;
+
+        .hero__figure--img {
+          width: 100%;
+          height: auto;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+}
+
+/*
+.home-page {
+  @include breakpoints.mobile {
+    &:after {
+      display: none;
+    }
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    right: -10rem;
+    top: 10rem;
+    rotate: -54deg;
+    width: 12rem;
+    height: 100%;
+    background-image: url('../svg/dossier.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 12;
+  }
+}
+*/
