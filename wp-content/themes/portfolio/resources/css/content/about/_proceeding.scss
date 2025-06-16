@@ -1,0 +1,57 @@
+@use '../../base/breakpoints';
+
+.methodology {
+
+  .methodology__steps {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+
+    .step {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: flex;
+      gap: 2rem;
+
+      &:nth-child(even) {
+        .step__number {
+          rotate: 4deg;
+          color: var(--c-brown);
+          background-color: var(--c-beige-dark);
+        }
+      }
+
+      &:hover,
+      &:focus {
+        @include breakpoints.desktop {
+          margin-left: 4rem;
+        }
+
+        @include breakpoints.desktop {
+          margin-left: 2rem;
+        }
+
+        .step__number {
+          transform: scale(1.2);
+          color: var(--c-beige-light);
+          background-color: var(--c-red);
+        }
+      }
+
+      .step__number {
+        font-size: 2.25rem;
+        color: var(--c-red);
+        background-color: var(--c-beige-mid);
+        min-width: 4rem;
+        max-height: 4rem;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        rotate: -4deg;
+        transition: all 0.3s ease-in-out;
+      }
+    }
+  }
+}

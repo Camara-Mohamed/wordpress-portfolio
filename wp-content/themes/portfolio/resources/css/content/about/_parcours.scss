@@ -1,0 +1,103 @@
+@use '../../base/breakpoints';
+
+.timeline {
+  &__container {
+    position: relative;
+
+    .timeline__items {
+      position: relative;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: flex;
+      flex-direction: column;
+      gap: 4rem;
+      padding: 1.5rem 0;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 0.25rem;
+        height: 100%;
+        background-color: var(--c-red);
+      }
+
+      .timeline__list {
+        position: relative;
+        padding: 2rem;
+        background-color: var(--c-beige-dark);
+        width: calc(50% - 2rem);
+        box-sizing: border-box;
+
+        &::before {
+          content: '';
+          position: absolute;
+          width: 1rem;
+          height: 1rem;
+          background-color: var(--c-red);
+          border-radius: 50%;
+          top: 2rem;
+        }
+
+        &--period {
+          font-weight: 600;
+          font-size: 1.25rem;
+          margin-bottom: 0.25rem;
+          color: var(--c-red);
+          font-family: var(--ff-secondary), system-ui;
+        }
+
+        &--content {
+          h3 {
+            font-family: var(--ff-primary), Georgia, serif;
+            color: var(--c-brown);
+          }
+        }
+
+        &:nth-child(odd) {
+          align-self: flex-end;
+          border-left: 0.125rem dashed var(--c-red);
+          text-align: left;
+
+          &::before {
+            left: -0.5rem;
+          }
+        }
+
+        &:nth-child(even) {
+          align-self: flex-start;
+          border-right: 0.125rem dashed var(--c-red);
+          text-align: right;
+
+          &::before {
+            right: -0.5rem;
+          }
+        }
+      }
+
+      @include breakpoints.mobile {
+        &::before {
+          left: 0;
+        }
+
+        & .timeline__list {
+          width: calc(100% - 1rem);
+
+          &:nth-child(even),
+          &:nth-child(odd) {
+            border-left: 0.125rem dashed var(--c-red);
+            border-right: none;
+            align-self: flex-start;
+            text-align: left;
+            left: 1rem; // Décalage
+
+            &::before {
+              left: -0.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

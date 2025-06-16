@@ -1,0 +1,52 @@
+@use '../base/breakpoints';
+
+.hero__actions, .error-404__actions, .single__links {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+
+  .hero__action, .error-404__action, .error-404__button, .single__link {
+    font-family: var(--ff-secondary), system-ui;
+    font-size: 1rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: .0625rem solid transparent;
+    padding: 1rem;
+
+    @include breakpoints.mobile {
+      padding: 0.875rem 1.25rem;
+    }
+  }
+
+  .single__link--disabled {
+    border: .0625rem solid var(--c-brown);
+  }
+
+  .hero__action--primary, .button__primary, .single__link--github {
+    background-color: var(--c-brown);
+    color: var(--c-beige-light);
+
+    &:hover,
+    &:focus {
+      background-color: var(--c-beige-light);
+      color: var(--c-brown);
+      border: 0.0625rem solid var(--c-brown);
+    }
+  }
+
+  .hero__action--secondary, .button__secondary, .single__link--live {
+    background-color: var(--c-red);
+    color: var(--c-beige-light);
+
+    &:hover,
+    &:focus {
+      background-color: var(--c-beige-light);
+      color: var(--c-red);
+      border: 0.0625rem solid var(--c-red);
+    }
+  }
+}

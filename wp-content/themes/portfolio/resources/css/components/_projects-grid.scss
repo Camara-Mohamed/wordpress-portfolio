@@ -1,0 +1,58 @@
+@use '../base/breakpoints';
+
+/*
+.projects,
+.featured {
+  position: relative;
+  background-image: url('../svg/tableau.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 2rem;
+    width: 12rem;
+    height: 12rem;
+    background-image: url('../svg/empreinte.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 0;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -2rem;
+    right: 4rem;
+    width: 16rem;
+    height: 16rem;
+    rotate: -54deg;
+    background-image: url('../svg/empreinte.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 0;
+  }
+}
+*/
+
+.projects__grid, .projects > .projects__grid {
+  display: grid;
+  gap: 2.5rem;
+  width: 100%;
+  grid-auto-rows: 1fr;
+  grid-template-columns: 1fr;
+  position: relative;
+  z-index: 2;
+
+  @media (min-width: 650px) {
+    justify-content: space-between;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include breakpoints.desktop {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+}

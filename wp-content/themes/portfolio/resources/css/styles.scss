@@ -1,8 +1,34 @@
-@use "utils/reset.css";
+@use 'utils/reset';
+@use 'base/fonts';
+@use 'base/breakpoints';
+@use 'base/variables';
+@use 'base/general';
 
-@use "general/header";
-@use "general/footer";
+@use 'general/header';
+@use 'general/footer';
+@use 'general/navigation';
+@use 'general/burger';
+@use 'general/hero';
 
-body {
-  background: greenyellow;
-}
+@use 'content/home/front';
+
+@use 'content/projects/projects';
+@use 'content/projects/filter';
+
+@use 'content/contact/coordinates';
+
+@use 'content/about/about';
+@use 'content/about/parcours';
+@use 'content/about/skills';
+@use 'content/about/proceeding';
+
+@use 'content/legales/legales';
+
+@use 'content/single-project/details';
+
+@use 'components/projects-grid';
+@use 'components/card';
+@use 'components/bottons';
+@use 'components/form';
+@use 'components/related';
+
