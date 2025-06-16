@@ -7,6 +7,7 @@ wp-content/themes/*
 !wp-content/themes/portfolio
 !wp-content/themes/portfolio/*
 !wp-content/themes/portfolio/**/*
+!README.md
 
 !vite.config.js
 !package.json
