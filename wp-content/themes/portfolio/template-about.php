@@ -29,7 +29,8 @@
                     <div class="timeline__items">
                         <?php while (have_rows('timeline')) : the_row(); ?>
                             <div class="timeline__list">
-                                <time datetime="<?= date('Y-m', strtotime(get_sub_field('period'))) ?>"> class="timeline__list--period"><?= get_sub_field('period') ?></time>
+                                <time datetime="<?= date('Y-m', strtotime(get_sub_field('period'))) ?>"
+                                      class="timeline__list--period"><?= get_sub_field('period') ?></time>
                                 <div class="timeline__list--content">
                                     <h3><?= get_sub_field('activity') ?></h3>
                                 </div>
