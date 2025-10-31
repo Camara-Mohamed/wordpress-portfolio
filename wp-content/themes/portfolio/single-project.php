@@ -36,6 +36,16 @@
 
             <article class="single__content">
                 <h2 class="sro"><?= __('Contenu', 'portfolio-detective'); ?></h2>
+
+                <?php if ($video = get_sub_field('video')) : ?>
+                    <div class="single__gallery--item">
+                        <video controls>
+                            <source src="<?= $video['url']; ?>" type="<?= $video['mime_type']; ?>">
+                            <?= __('Votre navigateur ne supporte pas la vidéo.', 'portfolio-detective'); ?>
+                        </video>
+                    </div>
+                <?php endif; ?>
+
                 <?php if (have_rows('sections')) : ?>
                     <?php while (have_rows('sections')) : the_row(); ?>
 
