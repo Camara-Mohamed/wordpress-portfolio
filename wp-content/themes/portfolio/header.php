@@ -9,19 +9,20 @@
     <meta name="author" content="Mohamed Camara">
     <meta name="keywords"
           content="<?= __('Mohamed Camara, portfolio, développeur web, designer Graphique, développeur, front-end, 
-          back-end, full-stack, HEPL, technique graphique, étudiant, wordpress, html, css, javascript', 'portfolio-detective') ?>">
+          back-end, full-stack, HEPL, technique graphique, étudiant, wordpress, html, css, javascript',
+                  'portfolio-detective') ?>">
     <meta name="description" content="<?php bloginfo('description'); ?>">
 
     <!-- Title -->
-    <title>
+    <!--    <title>
         <?php
-        if (is_front_page()) {
-            echo _e('Accueil', 'portfolio-detective').' -  '.get_bloginfo('name');
-        } else {
-            echo wp_title('', false).' - '.get_bloginfo('name');
-        }
-        ?>
-    </title>
+    /*        if (is_front_page()) {
+                echo _e('Accueil', 'portfolio-detective').' -  '.get_bloginfo('name');
+            } else {
+                echo wp_title('', false).' - '.get_bloginfo('name');
+            }
+            */ ?>
+    </title>-->
 
     <!-- Open Graph -->
     <meta property="og:title" content="<?php
@@ -60,11 +61,11 @@
 <noscript>
     <p class="no-js__message">
         <?php _e('Pour accéder à toutes les fonctionnalités de ce site, vous devez activer JavaScript.',
-            'portfolio-detective') ?> <br>
+                'portfolio-detective') ?> <br>
         <?php _e('Voici les', 'portfolio-detective') ?> <a href="https://www.enable-javascript.com/fr/" hreflang="fr"
-                                                          title="<?= __
-                                                          ('vers le site enable-javascript',
-                                                              'portfolio-detective') ?>"><?php _e('instructions pour activer JavaScript dans votre navigateur Web') ?></a>.
+                                                           title="<?= __
+                                                           ('vers le site enable-javascript',
+                                                                   'portfolio-detective') ?>"><?php _e('instructions pour activer JavaScript dans votre navigateur Web') ?></a>.
     </p>
 </noscript>
 
@@ -77,13 +78,14 @@
     <div class="header__container">
         <nav class="header__nav" aria-label="<?php _e('Navigation principale', 'portfolio-detective'); ?>">
             <h2 class="sro"><?php _e('Navigation principale',
-                    'portfolio-detective'); ?></h2>
+                        'portfolio-detective'); ?></h2>
             <a class="header__nav--title" href="<?= home_url('/'); ?>" itemprop="url"
                title="<?php _e('Aller à la page d\'accueil');
                ?>">
                 <svg xmlns="http://www.w3.org/2000/svg" width="51" height="51" viewBox="0 0 51 51" fill="none">
                     <g clip-path="url(#clip0_487_768)">
-                        <path d="M11.7219 25.5C11.7219 18.1132 17.7615 12.1245 25.2112 12.1245V0.5C11.2876 0.5 0 11.6924 0 25.5C0 39.3076 11.2876 50.5 25.2127 50.5V38.877C17.7631 38.877 11.7234 32.8883 11.7234 25.5015L11.7219 25.5Z" fill="#F5E8C9"/>
+                        <path d="M11.7219 25.5C11.7219 18.1132 17.7615 12.1245 25.2112 12.1245V0.5C11.2876 0.5 0 11.6924 0 25.5C0 39.3076 11.2876 50.5 25.2127 50.5V38.877C17.7631 38.877 11.7234 32.8883 11.7234 25.5015L11.7219 25.5Z"
+                              fill="#F5E8C9"/>
                         <path d="M51 50.5V36.5533V24.9303H39.2766H25.2127V36.5533H39.2766V50.5H51Z" fill="#C1272D"/>
                     </g>
                     <defs>
@@ -99,10 +101,12 @@
             <label for="burger-menu" class="header__nav--burger">
                 <span class="sro"><?php _e('Menu principal', 'portfolio-detective'); ?></span>
                 <svg class="burger-icon" viewBox="0 0 448 512" width="35" height="35">
-                    <path fill="currentColor" d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"/>
+                    <path fill="currentColor"
+                          d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"/>
                 </svg>
                 <svg class="close-icon" viewBox="0 0 384 512" width="35" height="35">
-                    <path fill="currentColor" d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/>
+                    <path fill="currentColor"
+                          d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/>
                 </svg>
             </label>
 
