@@ -870,29 +870,25 @@ body:has(#burger-menu:checked) {
   object-fit: contain;
 }
 
-/*
-.home-page {
-  @include breakpoints.mobile {
-    &:after {
-      display: none;
-    }
-  }
-
-  &:after {
-    content: "";
-    position: absolute;
-    right: -10rem;
-    top: 10rem;
-    rotate: -54deg;
-    width: 12rem;
-    height: 100%;
-    background-image: url('../svg/dossier.svg');
-    background-repeat: no-repeat;
-    background-size: contain;
-    z-index: 12;
+@media only screen and (max-width: 599px) {
+  .home-page:after {
+    display: none;
   }
 }
-*/
+.home-page:after {
+  content: "";
+  position: absolute;
+  right: -10rem;
+  top: 10rem;
+  rotate: -54deg;
+  width: 12rem;
+  height: 100%;
+  background-image: url("../svg/dossier.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 12;
+}
+
 .featured {
   margin-top: 2rem;
   background-color: var(--c-brown);
