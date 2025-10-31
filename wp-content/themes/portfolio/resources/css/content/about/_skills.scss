@@ -50,3 +50,51 @@
     }
   }
 }
+
+.skill__item {
+  perspective: 1000px;
+  cursor: pointer;
+
+  &--inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s cubic-bezier(0.25, 0.1, 0.25, 1);
+    transform-style: preserve-3d;
+  }
+
+  &:hover .skill__item--inner,
+  &:focus-within .skill__item--inner {
+    transform: rotateY(180deg);
+  }
+
+  &--front,
+  &--back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background: var(--c-beige-dark);
+    border: 0.125rem dashed var(--c-brown);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: all 0.3s ease;
+  }
+
+  &--front {
+    z-index: 2;
+    transform: rotateY(0deg);
+  }
+
+  &--back {
+    transform: rotateY(180deg);
+    background: var(--c-beige-mid);
+    color: var(--c-brown);
+    font-family: var(--ff-primary);
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+}
