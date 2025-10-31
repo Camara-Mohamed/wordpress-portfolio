@@ -1,6 +1,6 @@
 {
   "wp-content/themes/portfolio/resources/css/styles.scss": {
-    "file": "assets/css-Dz4lecwv.css",
+    "file": "assets/css-ZAYcyXf2.css",
     "src": "wp-content/themes/portfolio/resources/css/styles.scss",
     "isEntry": true
   },
@@ -43,7 +43,11 @@
     "isEntry": true
   },
   "wp-content/themes/portfolio/resources/svg/approved.svg": {
-    "file": "assets/approved-CwwHuSSO.svg",
+    "file": "assets/approved-CRFh322B.svg",
     "src": "wp-content/themes/portfolio/resources/svg/approved.svg"
+  },
+  "wp-content/themes/portfolio/resources/svg/dossier.svg": {
+    "file": "assets/dossier-By3I-XRY.svg",
+    "src": "wp-content/themes/portfolio/resources/svg/dossier.svg"
   }
 }

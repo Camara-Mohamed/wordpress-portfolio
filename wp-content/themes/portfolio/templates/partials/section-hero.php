@@ -11,11 +11,11 @@
                 <h3 class="hero__subtitle" itemprop="alternativeHeadline"><?= $subtitle ?></h3>
             <?php endif; ?>
 
+            <div class="hero__description" itemprop="description">
             <?php if ($description = get_field('hero_description')) : ?>
-                <p class="hero__description" itemprop="description">
                     <?= $description ?>
-                </p>
             <?php endif; ?>
+            </div>
         </div>
 
         <?php if (have_rows('hero_buttons')) : ?>
