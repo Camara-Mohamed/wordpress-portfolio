@@ -51,7 +51,7 @@
             ?>
         </nav>
 
-        <aside class="footer__aside">
+        <section class="footer__section">
             <h3 class="footer__resources--title"><?php _e('Ressources utilisées', 'portfolio-detective'); ?></h3>
             <?php
             wp_nav_menu([
@@ -61,9 +61,9 @@
                 'fallback_cb' => false
             ]);
             ?>
-        </aside>
+        </section>
 
-        <aside class="footer__aside">
+        <section class="footer__section">
             <h3 class="footer__sociales--title"><?php _e('Réseaux', 'portfolio-detective'); ?></h3>
             <?php
             wp_nav_menu([
@@ -73,7 +73,7 @@
                 'fallback_cb' => false
             ]);
             ?>
-        </aside>
+        </section>
     </div>
 
     <article class="footer__legal" itemscope itemtype="https://schema.org/CreativeWork">
