@@ -39,27 +39,24 @@
   }
 
   .single__section {
-    display: -webkit-box;
-    display: -webkit-flex;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    gap: 1.5rem;
+    gap: 2rem;
 
     &--container {
       display: grid;
-      grid-template-columns: minmax(12.5rem, 18.75rem) auto;
-      gap: 4rem;
+      grid-template-columns: minmax(12.5rem, 1fr) 2fr;
+      gap: 3rem;
       width: 100%;
 
       @include breakpoints.tablet {
-        grid-template-columns: minmax(8.5rem, 10.75rem) auto;
+        grid-template-columns: 1fr;
         gap: 2rem;
       }
 
       @include breakpoints.mobile {
         grid-template-columns: 1fr;
-        gap: 1rem;
+        gap: 1.5rem;
       }
     }
 
@@ -75,6 +72,17 @@
 
     &--content {
       color: var(--c-brown);
+      line-height: 1.6;
+
+      video {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        border-radius: 0.25rem;
+        object-fit: cover;
+        display: block;
+        margin: 1rem 0;
+      }
 
       & strong {
         font-weight: 600;
@@ -82,23 +90,26 @@
     }
   }
 
-  .single__gallery {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    margin: 4rem 0 0;
+  .single__gallery--container {
+    column-count: 3;
+    column-gap: 2rem;
+    margin-top: 2rem;
 
-    &--container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
+    .single__gallery--item {
+      break-inside: avoid;
+      margin-bottom: 2rem;
+      display: flex;
+      justify-content: center;
 
-      @include breakpoints.tablet {
-        grid-template-columns: repeat(2, 1fr);
+      img {
+        width: 100%;
+        height: auto;
+        display: block;
       }
 
-      @include breakpoints.mobile {
-        grid-template-columns: 1fr;
+      .single__gallery--image {
+        padding: 2rem;
+        border: 0.125rem dashed var(--c-beige-dark);
       }
     }
   }
