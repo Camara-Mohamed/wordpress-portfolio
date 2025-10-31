@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Portfolio Detective\n"
-"POT-Creation-Date: 2025-06-14 17:08+0200\n"
-"PO-Revision-Date: 2025-06-14 17:10+0200\n"
+"POT-Creation-Date: 2025-10-31 21:12+0100\n"
+"PO-Revision-Date: 2025-10-31 21:13+0100\n"
 "Last-Translator: \n"
 "Language-Team: Mohamed Camara camara.mohmd@gmail.com\n"
 "Language: fr_BE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.6\n"
+"X-Generator: Poedit 3.7\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: "
 "__;_e;esc_html__;esc_attr__;pll__;pll_e;portfolio_translated_url;pll_home_url\n"
@@ -67,7 +67,7 @@ msgstr "Navigation de pied de page"
 msgid "Mes informations"
 msgstr "Mes informations"
 
-#: footer.php:12 header.php:80
+#: footer.php:12 header.php:83
 msgid "Aller à la page d'accueil"
 msgstr "Aller à la page d'accueil"
 
@@ -202,11 +202,7 @@ msgstr ""
 "          back-end, full-stack, HEPL, technique graphique, étudiant, "
 "wordpress, html, css, javascript"
 
-#: header.php:19 header.php:29
-msgid "Accueil"
-msgstr "Accueil"
-
-#: header.php:59
+#: header.php:63
 msgid ""
 "Pour accéder à toutes les fonctionnalités de ce site, vous devez activer "
 "JavaScript."
@@ -214,55 +210,59 @@ msgstr ""
 "Pour accéder à toutes les fonctionnalités de ce site, vous devez activer "
 "JavaScript."
 
-#: header.php:61
+#: header.php:65
 msgid "Voici les"
 msgstr "Voici les"
 
-#: header.php:63
+#: header.php:67
 msgid "vers le site enable-javascript"
 msgstr "vers le site enable-javascript"
 
-#: header.php:64
+#: header.php:68
 msgid "instructions pour activer JavaScript dans votre navigateur Web"
 msgstr "instructions pour activer JavaScript dans votre navigateur Web"
 
-#: header.php:70
+#: header.php:74
 msgid "Aller au contenu principal"
 msgstr "Aller au contenu principal"
 
-#: header.php:75 header.php:77
+#: header.php:79 header.php:80
 msgid "Navigation principale"
 msgstr "Navigation principale"
 
-#: header.php:110
+#: header.php:102
+msgid "Menu principal"
+msgstr "Menu principal"
+
+#: header.php:117
 msgid "Aller à ma page : "
 msgstr "Aller à ma page : "
 
-#: header.php:112
+#: header.php:119
 msgid "Aller à ma page :"
 msgstr "Aller à ma page :"
 
-#: header.php:124
+#: header.php:131
 msgid "Changer en "
 msgstr "Changer en "
 
-#: header.php:125
+#: header.php:132
 msgid "Changer la langue en "
 msgstr "Changer la langue en "
 
-#: header.php:133
+#: header.php:140
 msgid "Cliquer pour allumer ou éteindre la lampe"
 msgstr "Cliquer pour allumer ou éteindre la lampe"
 
-#: header.php:134
+#: header.php:141
 msgid "Lampe éteinte"
 msgstr "Lampe éteinte"
 
-#: header.php:137
+#: header.php:144
 msgid "Allumer"
 msgstr "Allumer"
 
-#: header.php:138
+#: header.php:145
 msgid "Éteindre"
 msgstr "Éteindre"
 
@@ -302,7 +302,15 @@ msgstr "Voir le projet"
 msgid "Projet non disponible"
 msgstr "Projet non disponible"
 
-#: single-project.php:62
+#: single-project.php:38
+msgid "Contenu"
+msgstr "Contenu"
+
+#: single-project.php:44
+msgid "Votre navigateur ne supporte pas la vidéo."
+msgstr "Votre navigateur ne supporte pas la vidéo."
+
+#: single-project.php:73
 msgid "Voir l'image en plus grand"
 msgstr "Voir l'image en plus grand"
 
@@ -310,19 +318,19 @@ msgstr "Voir l'image en plus grand"
 msgid "Mon parcours"
 msgstr "Mon parcours"
 
-#: template-about.php:44
+#: template-about.php:45
 msgid "Mes compétences"
 msgstr "Mes compétences"
 
-#: template-about.php:53
+#: template-about.php:54
 msgid "Développement"
 msgstr "Développement"
 
-#: template-about.php:75
+#: template-about.php:79
 msgid "Design"
 msgstr "Design"
 
-#: template-about.php:100
+#: template-about.php:107
 msgid "Ma méthodologie"
 msgstr "Ma méthodologie"
 
@@ -341,14 +349,6 @@ msgstr "Adresse :"
 #: template-contact.php:24
 msgid "4031 Angleur, Belgique"
 msgstr "4031 Angleur, Belgique"
-
-#: template-contact.php:27
-msgid "Email :"
-msgstr "Email :"
-
-#: template-contact.php:29
-msgid "Envoyer un mail"
-msgstr "Envoyer un mail"
 
 #: template-contact.php:33
 msgid "Téléphone :"
@@ -476,13 +476,21 @@ msgid "Voir le projet :"
 msgstr "Voir le projet :"
 
 #: templates/partials/projects-card.php:4
-#| msgid "Voir"
 msgid "Voir "
 msgstr "Voir "
 
 #: templates/partials/projects-related.php:19
 msgid "Projets similaires"
 msgstr "Projets similaires"
+
+#~ msgid "Accueil"
+#~ msgstr "Accueil"
+
+#~ msgid "Email :"
+#~ msgstr "Email :"
+
+#~ msgid "Envoyer un mail"
+#~ msgstr "Envoyer un mail"
 
 #~ msgid "/me-contacter/"
 #~ msgstr "/me-contacter"

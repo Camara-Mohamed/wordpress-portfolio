@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Portfolio Detective\n"
-"POT-Creation-Date: 2025-06-14 17:09+0200\n"
-"PO-Revision-Date: 2025-06-14 17:10+0200\n"
+"POT-Creation-Date: 2025-10-31 21:13+0100\n"
+"PO-Revision-Date: 2025-10-31 21:15+0100\n"
 "Last-Translator: \n"
 "Language-Team: Mohamed Camara camara.mohmd@gmail.com\n"
 "Language: en_US\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.6\n"
+"X-Generator: Poedit 3.7\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: "
 "__;_e;esc_html__;esc_attr__;pll__;pll_e;portfolio_translated_url;pll_home_url\n"
@@ -67,7 +67,7 @@ msgstr "Footer navigation"
 msgid "Mes informations"
 msgstr "My information"
 
-#: footer.php:12 header.php:80
+#: footer.php:12 header.php:83
 msgid "Aller à la page d'accueil"
 msgstr "Go to home page"
 
@@ -203,66 +203,66 @@ msgstr ""
 " back-end, full-stack, HEPL, graphic technique, student, wordpress, html, "
 "css, javascript"
 
-#: header.php:19 header.php:29
-msgid "Accueil"
-msgstr "Home"
-
-#: header.php:59
+#: header.php:63
 msgid ""
 "Pour accéder à toutes les fonctionnalités de ce site, vous devez activer "
 "JavaScript."
 msgstr ""
 "To access all the features of this site, you need to activate JavaScript."
 
-#: header.php:61
+#: header.php:65
 msgid "Voici les"
 msgstr "Here are the"
 
-#: header.php:63
+#: header.php:67
 msgid "vers le site enable-javascript"
 msgstr "to the enable-javascript site"
 
-#: header.php:64
+#: header.php:68
 msgid "instructions pour activer JavaScript dans votre navigateur Web"
 msgstr "instructions for enabling JavaScript in your web browser"
 
-#: header.php:70
+#: header.php:74
 msgid "Aller au contenu principal"
 msgstr "Skip to main content"
 
-#: header.php:75 header.php:77
+#: header.php:79 header.php:80
 msgid "Navigation principale"
 msgstr "Main navigation"
 
-#: header.php:110
+#: header.php:102
+msgid "Menu principal"
+msgstr "Main navigation"
+
+#: header.php:117
 msgid "Aller à ma page : "
 msgstr "Go to my page: "
 
-#: header.php:112
+#: header.php:119
 msgid "Aller à ma page :"
 msgstr "Go to my page:"
 
-#: header.php:124
+#: header.php:131
 msgid "Changer en "
 msgstr "Switch to "
 
-#: header.php:125
+#: header.php:132
 msgid "Changer la langue en "
 msgstr "Change language to "
 
-#: header.php:133
+#: header.php:140
 msgid "Cliquer pour allumer ou éteindre la lampe"
 msgstr "Click to switch lamp on or off"
 
-#: header.php:134
+#: header.php:141
 msgid "Lampe éteinte"
 msgstr "Lamp off"
 
-#: header.php:137
+#: header.php:144
 msgid "Allumer"
 msgstr "Switch on"
 
-#: header.php:138
+#: header.php:145
 msgid "Éteindre"
 msgstr "Switch off"
 
@@ -302,7 +302,15 @@ msgstr "See the project"
 msgid "Projet non disponible"
 msgstr "Project not available"
 
-#: single-project.php:62
+#: single-project.php:38
+msgid "Contenu"
+msgstr "Content"
+
+#: single-project.php:44
+msgid "Votre navigateur ne supporte pas la vidéo."
+msgstr "Your browser does not support video."
+
+#: single-project.php:73
 msgid "Voir l'image en plus grand"
 msgstr "View larger image"
 
@@ -310,19 +318,19 @@ msgstr "View larger image"
 msgid "Mon parcours"
 msgstr "My background"
 
-#: template-about.php:44
+#: template-about.php:45
 msgid "Mes compétences"
 msgstr "My skills"
 
-#: template-about.php:53
+#: template-about.php:54
 msgid "Développement"
 msgstr "Development"
 
-#: template-about.php:75
+#: template-about.php:79
 msgid "Design"
 msgstr "Design"
 
-#: template-about.php:100
+#: template-about.php:107
 msgid "Ma méthodologie"
 msgstr "My methodology"
 
@@ -341,14 +349,6 @@ msgstr "Address:"
 #: template-contact.php:24
 msgid "4031 Angleur, Belgique"
 msgstr "4031 Angleur, Belgium"
-
-#: template-contact.php:27
-msgid "Email :"
-msgstr "Email:"
-
-#: template-contact.php:29
-msgid "Envoyer un mail"
-msgstr "Send an e-mail"
 
 #: template-contact.php:33
 msgid "Téléphone :"
@@ -482,6 +482,15 @@ msgstr "See "
 #: templates/partials/projects-related.php:19
 msgid "Projets similaires"
 msgstr "Related projects"
+
+#~ msgid "Accueil"
+#~ msgstr "Home"
+
+#~ msgid "Email :"
+#~ msgstr "Email:"
+
+#~ msgid "Envoyer un mail"
+#~ msgstr "Send an e-mail"
 
 #~ msgid "Travaillons ensemble"
 #~ msgstr "Working together"
