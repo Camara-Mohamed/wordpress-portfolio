@@ -9,7 +9,7 @@
 }
 
 /* Réglages de base */
-body {
+body:not(.wp-admin) {
   max-width: 1920px;
   margin: 0 auto;
   font-family: var(--ff-primary), Georgia, serif;
