@@ -50,3 +50,31 @@
     }
   }
 }
+
+.skill__item {
+  position: relative;
+  transition: all 0.3s ease;
+
+  .skill__desc {
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    margin-top: 0.5rem;
+
+    &--long {
+      display: none;
+      opacity: 0;
+    }
+  }
+
+  &:hover,
+  &:focus-within {
+    .skill__desc--short {
+      display: none;
+      opacity: 0;
+    }
+
+    .skill__desc--long {
+      display: block;
+      opacity: 1;
+    }
+  }
+}

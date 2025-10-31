@@ -65,7 +65,10 @@
                                                 ['alt' => get_sub_field('name')]
                                             ) ?>
                                         </div>
-                                        <p><?= get_sub_field('description') ?></p>
+                                        <p class="skill__desc skill__desc--short"><?= get_sub_field('short_description')
+                                            ?></p>
+                                        <p class="skill__desc skill__desc--long"><?= get_sub_field('description')
+                                            ?></p>
                                     </div>
                                 <?php endwhile; ?>
                             <?php endif; ?>
@@ -87,7 +90,10 @@
                                                 ['alt' => get_sub_field('name')]
                                             ) ?>
                                         </div>
-                                        <p><?= get_sub_field('description') ?></p>
+                                        <p class="skill__desc skill__desc--short"><?= get_sub_field('short_description')
+                                            ?></p>
+                                        <p class="skill__desc skill__desc--long"><?= get_sub_field('description')
+                                            ?></p>
                                     </div>
                                 <?php endwhile; ?>
                             <?php endif; ?>
