@@ -118,3 +118,17 @@
     font-size: 1.5rem;
   }
 }
+
+.projects__grid {
+  &:hover {
+    .project__card {
+      filter: grayscale(60%) brightness(0.85);
+      opacity: 0.8;
+    }
+
+    .project__card:hover {
+      filter: none;
+      opacity: 1;
+    }
+  }
+}
