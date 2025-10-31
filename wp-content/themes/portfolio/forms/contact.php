@@ -2,7 +2,7 @@
 
 use JetBrains\PhpStorm\NoReturn;
 
-#[NoReturn] function dw_handle_contact_form(): void
+#[NoReturn] function portfolio_handle_contact_form(): void
 {
 
     // Initialiser les données de session

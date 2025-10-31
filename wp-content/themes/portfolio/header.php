@@ -111,7 +111,7 @@
             </label>
 
             <ul class="header__nav--container">
-                <?php foreach (dw_get_navigation_links('header') as $link): ?>
+                <?php foreach (portfolio_get_navigation_links('header') as $link): ?>
                     <li class="nav__item<?= $link->current ? ' nav__item--current' : '' ?>">
                         <a href="<?= $link->href ?>" class="nav__item--link"
                            title="<?= __('Aller à ma page : ', 'portfolio-detective').
@@ -124,7 +124,7 @@
                 <?php endforeach; ?>
 
                 <li class="nav__item--language">
-                    <?php foreach (dw_get_languages() as $lang): ?>
+                    <?php foreach (portfolio_get_languages() as $lang): ?>
                         <a href="<?= $lang->url; ?>"
                            class="nav__link--language"
                            hreflang="<?= $lang->locale; ?>"

@@ -23,12 +23,12 @@
                                 <strong><?php _e('Adresse :', 'portfolio-detective'); ?></strong>
                                 <p><?php _e('4031 Angleur, Belgique') ?></p>
                             </li>
-                            <li class="contact__details--item">
-                                <strong><?php _e('Email :', 'portfolio-detective'); ?></strong>
+                            <!-- <li class="contact__details--item">
+                                <strong><?php /*_e('Email :', 'portfolio-detective'); */ ?></strong>
                                 <a href="mailto:camara.mohmd@gmail.com" title="<?php
-                                _e('Envoyer un mail', 'portfolio-detective');
-                                ?>">camara.mohmd@gmail.com</a>
-                            </li>
+                            /*                                _e('Envoyer un mail', 'portfolio-detective');
+                                                            */ ?>">camara.mohmd@gmail.com</a>
+                            </li> -->
                             <li class="contact__details--item">
                                 <strong><?php _e('Téléphone :', 'portfolio-detective'); ?></strong>
                                 <a href="tel:+32465298377" title="<?php

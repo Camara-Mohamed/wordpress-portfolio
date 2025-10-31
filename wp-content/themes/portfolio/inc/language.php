@@ -7,7 +7,7 @@ function portfolio_theme_setup(): void
 }
 add_action('after_setup_theme', 'portfolio_theme_setup');
 
-function dw_get_languages(): array
+function portfolio_get_languages(): array
 {
     if (!function_exists('pll_the_languages')) {
         return [];

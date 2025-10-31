@@ -12,7 +12,7 @@ msgstr ""
 "X-Generator: Poedit 3.6\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: "
-"__;_e;esc_html__;esc_attr__;pll__;pll_e;dw_translated_url;pll_home_url\n"
+"__;_e;esc_html__;esc_attr__;pll__;pll_e;portfolio_translated_url;pll_home_url\n"
 "X-Poedit-SearchPath-0: .\n"
 
 #: 404.php:7
