@@ -8,7 +8,7 @@ register_nav_menus([
     'footer-sociales' => 'Navigation de réseaux',
 ]);
 
-function dw_get_navigation_links(string $location): array
+function portfolio_get_navigation_links(string $location): array
 {
     $locations = get_nav_menu_locations();
     if (!isset($locations[$location])) {

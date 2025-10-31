@@ -23,8 +23,8 @@ add_action('after_setup_theme', function () {
 });
 
 // Gestion du formulaire
-add_action('admin_post_submit_contact_form', 'dw_handle_contact_form');
-add_action('admin_post_nopriv_submit_contact_form', 'dw_handle_contact_form');
+add_action('admin_post_submit_contact_form', 'portfolio_handle_contact_form');
+add_action('admin_post_nopriv_submit_contact_form', 'portfolio_handle_contact_form');
 
 // Réécrire les liens de paginations
 function simple_project_pagination() {
