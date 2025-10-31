@@ -1,7 +1,6 @@
 @use '../../base/breakpoints';
 
 .methodology {
-
   .methodology__steps {
     display: grid;
     grid-template-columns: 1fr;
@@ -12,6 +11,7 @@
       display: -webkit-flex;
       display: flex;
       gap: 2rem;
+      transition: margin 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
 
       &:nth-child(even) {
         .step__number {
@@ -50,7 +50,7 @@
         justify-content: center;
         align-items: center;
         rotate: -4deg;
-        transition: all 0.3s ease-in-out;
+        transition: all 0.5s ease-in-out;
       }
     }
   }
