@@ -93,10 +93,10 @@ const lampeApp = {
         this.lampeElement.classList.add(settings.lampe.lampeOffClass);
         this.lampeElement.classList.remove(settings.lampe.lampeOnClass);
 
-        this.rootElement.style.setProperty('--c-beige-light', '#E8E0C9');
-        this.rootElement.style.setProperty('--c-beige-mid', '#DCCBAA');
-        this.rootElement.style.setProperty('--c-beige-dark', '#C4B99C');
-        this.rootElement.style.setProperty('--c-brown', '#1E1812');
+        this.rootElement.style.setProperty('--c-beige-light', '#F2ECE0');
+        this.rootElement.style.setProperty('--c-beige-mid', '#E8DFC2');
+        this.rootElement.style.setProperty('--c-beige-dark', '#D9C6A7');
+        this.rootElement.style.setProperty('--c-brown', '#261C15');
     },
 }
 
