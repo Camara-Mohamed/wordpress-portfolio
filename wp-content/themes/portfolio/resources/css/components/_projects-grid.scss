@@ -1,58 +1,65 @@
 @use '../base/breakpoints';
 
-/*
 .projects,
 .featured {
   position: relative;
   background-image: url('../svg/tableau.svg');
   background-repeat: no-repeat;
-  background-size: cover;
+  background-position: center;
+  background-size: contain;
+  padding: 6rem 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   z-index: 1;
+  overflow: visible;
+  min-height: 90vh;
 
   &::before {
     content: "";
     position: absolute;
-    top: 0;
-    left: 2rem;
-    width: 12rem;
-    height: 12rem;
+    top: -2rem;
+    left: 0;
+    width: 14rem;
+    height: 14rem;
     background-image: url('../svg/empreinte.svg');
     background-repeat: no-repeat;
     background-size: contain;
+    opacity: 0.9;
     z-index: 0;
   }
 
   &::after {
     content: "";
     position: absolute;
-    bottom: -2rem;
-    right: 4rem;
-    width: 16rem;
-    height: 16rem;
+    bottom: -3rem;
+    right: 0;
+    width: 18rem;
+    height: 18rem;
     rotate: -54deg;
     background-image: url('../svg/empreinte.svg');
     background-repeat: no-repeat;
     background-size: contain;
+    opacity: 0.9;
     z-index: 0;
   }
-}
-*/
 
-.projects__grid, .projects > .projects__grid {
-  display: grid;
-  gap: 2.5rem;
-  width: 100%;
-  grid-auto-rows: 1fr;
-  grid-template-columns: 1fr;
-  position: relative;
-  z-index: 2;
+  .projects__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    width: 100%;
+    max-width: 1100px;
+    padding: 3rem;
+    position: relative;
+    z-index: 2;
 
-  @media (min-width: 650px) {
-    justify-content: space-between;
-    grid-template-columns: repeat(2, 1fr);
-  }
+    @media (min-width: 650px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
 
-  @include breakpoints.desktop {
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    @include breakpoints.desktop {
+      grid-template-columns: repeat(3, 1fr);
+    }
   }
 }
