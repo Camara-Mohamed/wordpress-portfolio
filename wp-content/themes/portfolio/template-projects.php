@@ -23,25 +23,24 @@ $current_page = max(1, get_query_var('paged') ?: get_query_var('page'));
             ]);
 
             if ($terms) : ?>
-                <ul class="filter__list">
-                    <li class="filter__list--item <?= !isset($_GET['filter']) ? 'active' : '' ?>">
-                        <a class="filter__list--link" href="<?= home_url(__('/mes-projets', 'portfolio-detective')); ?>"
-                           title="<?php _e('Voir tous les projets', 'portfolio-detective'); ?>">
-                            <?php _e('Tous', 'portfolio-detective'); ?>
+            <ul class="filter__list">
+                <li class="filter__list--item <?= !isset($_GET['filter']) ? 'active' : '' ?>">
+                    <a class="filter__list--link" href="<?= __('/mes-projets', 'portfolio-detective'); ?>"
+                       title="<?php _e('Voir tous les projets', 'portfolio-detective'); ?>">
+                        <?php _e('Tous', 'portfolio-detective'); ?>
+                    </a>
+                </li>
+
+                <?php foreach ($terms as $term) : ?>
+                    <li class="filter__list--item <?= isset($_GET['filter']) && $_GET['filter'] === $term->slug ? 'active' : '' ?>">
+                        <a href="<?= 'filter', $term->slug, get_post_type_archive_link('project') ?>"
+                           class="filter__list--link"
+                           title="<?= __('Voir les %s', 'portfolio-detective'), $term->name; ?>">
+                            <?= $term->name; ?>
                         </a>
                     </li>
-                    <?php foreach ($terms as $term) : ?>
-                        <li class="filter__list--item <?= isset($_GET['filter']) && $_GET['filter'] ===
-                        $term->slug ? 'active' : ''
-                        ?>">
-                            <a href="<?= add_query_arg('filter', $term->slug,
-                                get_post_type_archive_link('project')) ?>" class="filter__list--link"
-                               title="<?= _e('Voir les', 'portfolio-detective').' '.$term->name ?>">
-                                <?= $term->name ?>
-                            </a>
-                        </li>
-                    <?php endforeach; ?>
-                </ul>
+                <?php endforeach; ?>
+            </ul>
             <?php endif; ?>
         </section>
 

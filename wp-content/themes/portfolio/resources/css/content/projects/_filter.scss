@@ -16,8 +16,6 @@
   }
 
   .filter__list {
-    display: -webkit-box;
-    display: -webkit-flex;
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
@@ -26,10 +24,18 @@
     margin: 0;
 
     &--item {
-      padding: 1rem;
       border: 0.0625rem solid var(--c-red);
       transition: all 0.2s ease;
       color: var(--c-beige-light);
+
+      .filter__list--link {
+        display: block;
+        padding: 1rem;
+        color: var(--c-red);
+        font-family: var(--ff-secondary), system-ui;
+        text-decoration: none;
+        transition: all 0.2s ease;
+      }
 
       &:hover,
       &:focus,
@@ -39,13 +45,9 @@
         .filter__list--link {
           color: var(--c-beige-light);
           font-weight: 500;
+          text-decoration: underline;
         }
       }
-    }
-
-    &--link {
-      color: var(--c-red);
-      font-family: var(--ff-secondary), system-ui;
     }
   }
 }
