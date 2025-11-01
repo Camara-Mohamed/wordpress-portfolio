@@ -38,7 +38,6 @@ const lampeApp = {
         this.rootElement.style.setProperty('--c-beige-light', '#F8F3E0');
         this.rootElement.style.setProperty('--c-beige-mid', '#F5E8C9');
         this.rootElement.style.setProperty('--c-beige-dark', '#E0D3B4');
-        this.rootElement.style.setProperty('--c-brown', '#2A2118');
     },
 
     lampeTurnOff() {
@@ -52,7 +51,6 @@ const lampeApp = {
         this.rootElement.style.setProperty('--c-beige-light', '#F2ECE0');
         this.rootElement.style.setProperty('--c-beige-mid', '#E8DFC2');
         this.rootElement.style.setProperty('--c-beige-dark', '#D9C6A7');
-        this.rootElement.style.setProperty('--c-brown', '#261C15');
     },
 }
 
