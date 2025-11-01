@@ -54,4 +54,6 @@ const lampeApp = {
     },
 }
 
-lampeApp.init();
+document.addEventListener("DOMContentLoaded", () => {
+    lampeApp.init();
+});

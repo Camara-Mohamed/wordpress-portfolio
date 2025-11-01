@@ -4,6 +4,8 @@ const scrollApp = {
     scrollContainerElement: document.getElementById(settings.scroll.scrollContainerSelector),
 
     init() {
+        if (!this.scrollContentElement || !this.scrollContainerElement) return;
+
         window.addEventListener("scroll", () => {
             const bodyHeight = document.body.clientHeight;
             const scrollY = window.scrollY;
@@ -22,4 +24,6 @@ const scrollApp = {
     }
 }
 
-scrollApp.init();
+document.addEventListener("DOMContentLoaded", () => {
+    scrollApp.init();
+});
