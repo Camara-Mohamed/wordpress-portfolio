@@ -121,12 +121,12 @@
 
 .projects__grid {
   &:hover {
-    .project__card {
+    .project__card, .projets__coming, .featured__more {
       filter: grayscale(60%) brightness(0.85);
       opacity: 0.8;
     }
 
-    .project__card:hover {
+    .project__card:hover, .projets__coming:hover, .featured__more:hover {
       filter: none;
       opacity: 1;
     }
