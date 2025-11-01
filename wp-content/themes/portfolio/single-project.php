@@ -37,15 +37,6 @@
             <article class="single__content">
                 <h2 class="sro"><?= __('Contenu', 'portfolio-detective'); ?></h2>
 
-                <?php if ($video = get_sub_field('video')) : ?>
-                    <div class="single__gallery--item">
-                        <video controls>
-                            <source src="<?= $video['url']; ?>" type="<?= $video['mime_type']; ?>">
-                            <?= __('Votre navigateur ne supporte pas la vidéo.', 'portfolio-detective'); ?>
-                        </video>
-                    </div>
-                <?php endif; ?>
-
                 <?php if (have_rows('sections')) : ?>
                     <?php while (have_rows('sections')) : the_row(); ?>
 
@@ -60,8 +51,28 @@
                                     </div>
                                 </div>
                             </section>
+                        <?php endif; ?>
 
-                        <?php elseif (get_row_layout() == 'gallery') : ?>
+                    <?php endwhile; ?>
+                <?php endif; ?>
+            </article>
+
+            <article class="single__images">
+                <h2 class="sro"><?= __('Contenu', 'portfolio-detective'); ?></h2>
+
+                <?php if (have_rows('sections')) : ?>
+                    <?php while (have_rows('sections')) : the_row(); ?>
+
+                        <?php if ($video = get_sub_field('video')) : ?>
+                            <div class="single__gallery--item">
+                                <video controls>
+                                    <source src="<?= $video['url']; ?>" type="<?= $video['mime_type']; ?>">
+                                    <?= __('Votre navigateur ne supporte pas la vidéo.', 'portfolio-detective'); ?>
+                                </video>
+                            </div>
+                        <?php endif; ?>
+
+                        <?php if (get_row_layout() == 'gallery') : ?>
                             <section class="single__gallery">
                                 <h3 class="single__gallery--title"><?php the_sub_field('title'); ?></h3>
                                 <div class="single__gallery--container">
@@ -70,7 +81,7 @@
                                     if ($images) :
                                         foreach ($images as $image) : ?>
                                             <a href="<?= $image['url']; ?>" data-fancybox="gallery" title="<?= __
-                                            ('Voir l\'image en plus grand','portfolio-detective'); ?>">
+                                            ('Voir l\'image en plus grand', 'portfolio-detective'); ?>">
                                                 <figure class="single__gallery--item" itemprop="image" itemscope
                                                         itemtype="https://schema.org/ImageObject">
                                                     <img src="<?= $image['url']; ?>" alt="<?= $image['alt']; ?>"
