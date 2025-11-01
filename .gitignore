@@ -96,3 +96,4 @@ fabric.properties
 wp-content/themes/portfolio/public/
 wp-content/themes/portfolio/public/assets
 wp-content/themes/portfolio/public/.vite
+wp-content/themes/portfolio/public/.vite/manifest.json
