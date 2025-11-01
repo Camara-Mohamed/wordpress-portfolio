@@ -19,7 +19,7 @@
     background-image: url('../svg/tableau.svg');
     background-repeat: no-repeat;
     background-position: center;
-    background-size: calc(100% - 0rem) calc(100% - 2rem); // mettre 4rem espace en haut et en bas (Changer)
+    background-size: contain;
     min-height: 90vh;
   }
 
