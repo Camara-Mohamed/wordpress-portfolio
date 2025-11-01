@@ -14,15 +14,15 @@
     <meta name="description" content="<?php bloginfo('description'); ?>">
 
     <!-- Title -->
-    <!--    <title>
+    <title>
         <?php
-    /*        if (is_front_page()) {
-                echo _e('Accueil', 'portfolio-detective').' -  '.get_bloginfo('name');
-            } else {
-                echo wp_title('', false).' - '.get_bloginfo('name');
-            }
-            */ ?>
-    </title>-->
+        if (is_front_page()) {
+            echo _e('Accueil', 'portfolio-detective').' -  '.get_bloginfo('name');
+        } else {
+            echo wp_title('', false).' - '.get_bloginfo('name');
+        }
+        ?>
+    </title>
 
     <!-- Open Graph -->
     <meta property="og:title" content="<?php
