@@ -23,6 +23,8 @@ const scrollApp = {
     scrollContainerElement: document.getElementById(settings.scroll.scrollContainerSelector),
 
     init() {
+        if (!this.scrollContentElement || !this.scrollContainerElement) return;
+
         window.addEventListener("scroll", () => {
             const bodyHeight = document.body.clientHeight;
             const scrollY = window.scrollY;
@@ -41,7 +43,10 @@ const scrollApp = {
     }
 }
 
-scrollApp.init();
+document.addEventListener("DOMContentLoaded", () => {
+    scrollApp.init();
+});
+
 const lampeApp = {
     lampeContainerElement: document.querySelector(settings.lampe.lampeSelector),
     lampeElement: document.querySelector(settings.lampe.lampeImageSelector),
@@ -98,7 +103,10 @@ const lampeApp = {
     },
 }
 
-lampeApp.init();
+document.addEventListener("DOMContentLoaded", () => {
+    lampeApp.init();
+});
+
 
 function fancybox() {
     document.addEventListener("DOMContentLoaded", function () {
