@@ -33,7 +33,7 @@ $current_page = max(1, get_query_var('paged') ?: get_query_var('page'));
 
                 <?php foreach ($terms as $term) : ?>
                     <li class="filter__list--item <?= isset($_GET['filter']) && $_GET['filter'] === $term->slug ? 'active' : '' ?>">
-                        <a href="<?= 'filter', $term->slug, get_post_type_archive_link('project') ?>"
+                        <a href="<?= add_query_arg('filter', $term->slug, get_permalink(get_page_by_path('mes-projets'))) ?>"
                            class="filter__list--link"
                            title="<?= __('Voir les %s', 'portfolio-detective'), $term->name; ?>">
                             <?= $term->name; ?>
