@@ -166,27 +166,3 @@
     }
   }
 }
-
-
-/*.home-page {
-  @include breakpoints.mobile {
-    &:after {
-      display: none;
-    }
-  }
-
-  &:after {
-    content: "";
-    position: absolute;
-    right: -10rem;
-    top: 10rem;
-    rotate: -54deg;
-    width: 12rem;
-    height: 100%;
-    background-image: url('../svg/dossier.svg');
-    background-repeat: no-repeat;
-    background-size: contain;
-    z-index: 12;
-  }
-}*/
-
