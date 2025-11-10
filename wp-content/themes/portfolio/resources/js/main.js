@@ -98,9 +98,9 @@ const lampeApp = {
         this.lampeElement.classList.add(settings.lampe.lampeOffClass);
         this.lampeElement.classList.remove(settings.lampe.lampeOnClass);
 
-        this.rootElement.style.setProperty('--c-beige-light', '#F2ECE0');
-        this.rootElement.style.setProperty('--c-beige-mid', '#E8DFC2');
-        this.rootElement.style.setProperty('--c-beige-dark', '#D9C6A7');
+        this.rootElement.style.setProperty('--c-beige-light', '#F7F2DE');
+        this.rootElement.style.setProperty('--c-beige-mid', '#EFDAA9');
+        this.rootElement.style.setProperty('--c-beige-dark', '#D6C49A');
     },
 }
 
