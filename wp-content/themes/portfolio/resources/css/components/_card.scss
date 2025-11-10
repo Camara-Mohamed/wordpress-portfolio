@@ -13,6 +13,7 @@
   height: 100%;
   position: relative;
   width: 100%;
+  aspect-ratio: 1/1;
 
   &:nth-child(odd) {
     transform: rotate(-1deg);

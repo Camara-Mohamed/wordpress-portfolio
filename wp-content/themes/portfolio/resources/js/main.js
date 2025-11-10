@@ -17,6 +17,7 @@ export const settings = {
         hiddenSelector: "sro",
     }
 }
+
 const scrollApp = {
 
     scrollContentElement: document.querySelector(settings.scroll.scrollSelector),
@@ -106,7 +107,6 @@ const lampeApp = {
 document.addEventListener("DOMContentLoaded", () => {
     lampeApp.init();
 });
-
 
 function fancybox() {
     document.addEventListener("DOMContentLoaded", function () {
