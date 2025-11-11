@@ -65,14 +65,14 @@
                 <?php if (have_rows('sections')) : ?>
                     <?php while (have_rows('sections')) : the_row(); ?>
 
-                        <?php if ($video = get_sub_field('video')) : ?>
+                            <!--                        <?php /*if ($video = get_sub_field('video')) : */ ?>
                             <div class="single__gallery--item">
                                 <video controls>
-                                    <source src="<?= $video['url']; ?>" type="<?= $video['mime_type']; ?>">
-                                    <?= __('Votre navigateur ne supporte pas la vidéo.', 'portfolio-detective'); ?>
+                                    <source src="<?php /*= $video['url']; */ ?>" type="<?php /*= $video['mime_type']; */ ?>">
+                                    <?php /*= __('Votre navigateur ne supporte pas la vidéo.', 'portfolio-detective'); */ ?>
                                 </video>
                             </div>
-                        <?php endif; ?>
+                        --><?php /*endif; */ ?>
 
                         <?php if (get_row_layout() == 'gallery') : ?>
                             <section class="single__gallery">
