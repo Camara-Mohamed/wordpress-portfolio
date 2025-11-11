@@ -15,6 +15,7 @@
                         <?php if ($github = get_field('github')) : ?>
                             <a href="<?= $github ?>" class="single__link single__link--github"
                                itemprop="url"
+                               target="_blank"
                                title="<?php _e('Lien vers le dépôt du projet', 'portfolio-detective'); ?>">
                                 <?php _e('En savoir plus', 'portfolio-detective'); ?>
                             </a>
@@ -22,6 +23,7 @@
 
                         <?php if ($live = get_field('live')) : ?>
                             <a href="<?= $live ?>" class="single__link single__link--live" itemprop="url"
+                               target="_blank"
                                title="<?php _e('Voir le projet', 'portfolio-detective'); ?>">
                                 <?php _e('Voir le projet', 'portfolio-detective'); ?>
                             </a>
