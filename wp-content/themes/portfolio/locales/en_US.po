@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Portfolio Detective\n"
-"POT-Creation-Date: 2025-10-31 21:13+0100\n"
-"PO-Revision-Date: 2025-10-31 21:15+0100\n"
+"POT-Creation-Date: 2025-11-13 09:48+0100\n"
+"PO-Revision-Date: 2025-11-13 09:48+0100\n"
 "Last-Translator: \n"
 "Language-Team: Mohamed Camara camara.mohmd@gmail.com\n"
 "Language: en_US\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.7\n"
+"X-Generator: Poedit 3.8\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: "
 "__;_e;esc_html__;esc_attr__;pll__;pll_e;portfolio_translated_url;pll_home_url\n"
@@ -39,15 +39,15 @@ msgstr "Back to home page"
 msgid "Retour à l'accueil"
 msgstr "Back to home"
 
-#: 404.php:18 front-page.php:65 single-project.php:8 template-projects.php:28
+#: 404.php:18 front-page.php:62 single-project.php:8 template-projects.php:28
 msgid "/mes-projets"
 msgstr "/my-projects"
 
-#: 404.php:20 front-page.php:67
+#: 404.php:20 front-page.php:64
 msgid "Voir la liste de mes projets"
 msgstr "See the list of my projects"
 
-#: 404.php:21 front-page.php:68 front-page.php:69
+#: 404.php:21 front-page.php:65 front-page.php:70
 msgid "Voir tous mes projets"
 msgstr "View all my projects"
 
@@ -183,11 +183,11 @@ msgstr "Go to :"
 msgid "Projets à la une"
 msgstr "Featured projects"
 
-#: front-page.php:63
+#: front-page.php:67
 msgid "Voir plus de projets"
 msgstr "View more projects"
 
-#: front-page.php:76
+#: front-page.php:78
 msgid "Aucun projet pour le moment."
 msgstr "No projects available yet."
 
@@ -202,6 +202,10 @@ msgstr ""
 "end, \n"
 " back-end, full-stack, HEPL, graphic technique, student, wordpress, html, "
 "css, javascript"
+
+#: header.php:20
+msgid "Accueil"
+msgstr "Home"
 
 #: header.php:63
 msgid ""
@@ -286,31 +290,27 @@ msgstr "Back to my projects list"
 msgid "Retour aux projets"
 msgstr "Back to projects"
 
-#: single-project.php:18
+#: single-project.php:19
 msgid "Lien vers le dépôt du projet"
 msgstr "Link to project submission"
 
-#: single-project.php:19
+#: single-project.php:20
 msgid "En savoir plus"
 msgstr "Read more"
 
-#: single-project.php:25 single-project.php:26
+#: single-project.php:27 single-project.php:28
 msgid "Voir le projet"
 msgstr "See the project"
 
-#: single-project.php:30
+#: single-project.php:32
 msgid "Projet non disponible"
 msgstr "Project not available"
 
-#: single-project.php:38
+#: single-project.php:40 single-project.php:63
 msgid "Contenu"
 msgstr "Content"
 
-#: single-project.php:44
-msgid "Votre navigateur ne supporte pas la vidéo."
-msgstr "Your browser does not support video."
-
-#: single-project.php:73
+#: single-project.php:86
 msgid "Voir l'image en plus grand"
 msgstr "View larger image"
 
@@ -443,31 +443,32 @@ msgstr "See all projects"
 msgid "Tous"
 msgstr "All"
 
-#: template-projects.php:39
-msgid "Voir les"
-msgstr "See the"
+#: template-projects.php:38
+#, php-format
+msgid "Voir les %s"
+msgstr "See the %s"
 
-#: template-projects.php:50
+#: template-projects.php:49
 msgid "Mes projets"
 msgstr "My projects"
 
-#: template-projects.php:55
+#: template-projects.php:54
 msgid "Les projets"
 msgstr "The projects"
 
-#: template-projects.php:86
+#: template-projects.php:85
 msgid "D'autres projets arrivent"
 msgstr "More projects arrived"
 
-#: template-projects.php:93
+#: template-projects.php:92
 msgid "Aucun projet trouvé."
 msgstr "No projects found."
 
-#: template-projects.php:102
+#: template-projects.php:101
 msgid "Précédent"
 msgstr "Previous"
 
-#: template-projects.php:104
+#: template-projects.php:103
 msgid "Suivant"
 msgstr "Next"
 
@@ -483,8 +484,8 @@ msgstr "See "
 msgid "Projets similaires"
 msgstr "Related projects"
 
-#~ msgid "Accueil"
-#~ msgstr "Home"
+#~ msgid "Votre navigateur ne supporte pas la vidéo."
+#~ msgstr "Your browser does not support video."
 
 #~ msgid "Email :"
 #~ msgstr "Email:"

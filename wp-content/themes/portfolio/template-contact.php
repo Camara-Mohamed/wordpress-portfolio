@@ -32,7 +32,7 @@
                             <li class="contact__details--item">
                                 <strong><?php _e('Téléphone :', 'portfolio-detective'); ?></strong>
                                 <a href="tel:+32465298377" title="<?php
-                                _e('Appeler à ce numèro', 'portfolio-detective');
+                                __('Appeler à ce numèro', 'portfolio-detective');
                                 ?>">+32 (0) 465 29 83 77</a>
                             </li>
                             <li class="contact__details--item">
