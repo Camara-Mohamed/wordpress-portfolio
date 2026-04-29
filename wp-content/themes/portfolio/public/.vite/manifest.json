@@ -1,8 +1,22 @@
 {
   "wp-content/themes/portfolio/resources/css/styles.scss": {
-    "file": "assets/css-DTZTPvHx.css",
+    "file": "assets/css-BpEE_rC_.css",
+    "name": "css",
+    "names": [
+      "css.css"
+    ],
     "src": "wp-content/themes/portfolio/resources/css/styles.scss",
-    "isEntry": true
+    "isEntry": true,
+    "assets": [
+      "assets/SpecialElite-Regular-Clp9cCPZ.ttf",
+      "assets/CrimsonPro-ExtraLight-D73yLFlQ.ttf",
+      "assets/CrimsonPro-Light-H4hacKAA.ttf",
+      "assets/CrimsonPro-Regular-BsyHc0zN.ttf",
+      "assets/CrimsonPro-Medium-b4GPo3W7.ttf",
+      "assets/CrimsonPro-SemiBold-DmDD5b4W.ttf",
+      "assets/CrimsonPro-Bold-DzjgCKSH.ttf",
+      "assets/CrimsonPro-ExtraBold-CI59QYVA.ttf"
+    ]
   },
   "wp-content/themes/portfolio/resources/fonts/CrimsonPro-Bold.ttf": {
     "file": "assets/CrimsonPro-Bold-DzjgCKSH.ttf",
@@ -37,21 +51,9 @@
     "src": "wp-content/themes/portfolio/resources/fonts/SpecialElite-Regular.ttf"
   },
   "wp-content/themes/portfolio/resources/js/main.js": {
-    "file": "assets/js-DeJ-N5aJ.js",
+    "file": "assets/js-BgJmI7tq.js",
     "name": "js",
     "src": "wp-content/themes/portfolio/resources/js/main.js",
     "isEntry": true
-  },
-  "wp-content/themes/portfolio/resources/svg/approved.svg": {
-    "file": "assets/approved-CwwHuSSO.svg",
-    "src": "wp-content/themes/portfolio/resources/svg/approved.svg"
-  },
-  "wp-content/themes/portfolio/resources/svg/empreinte.svg": {
-    "file": "assets/empreinte-Cdtj7qGM.svg",
-    "src": "wp-content/themes/portfolio/resources/svg/empreinte.svg"
-  },
-  "wp-content/themes/portfolio/resources/svg/tableau.svg": {
-    "file": "assets/tableau-CfsydrCx.svg",
-    "src": "wp-content/themes/portfolio/resources/svg/tableau.svg"
   }
 }
